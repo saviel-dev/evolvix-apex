@@ -515,10 +515,40 @@ function ExponentialSection() {
   );
 }
 
+function TrustStrip() {
+  const { lang } = useLang();
+  const isEs = lang === "es";
+  const stats = [
+    { value: "40%", label: isEs ? "Reducción de retrasos en comercio internacional" : "Reduction in international trade delays" },
+    { value: "60%", label: isEs ? "Menos tiempo en reporting con BI" : "Less time spent on reporting with BI" },
+    { value: "5", label: isEs ? "Mercados activos — Europa, MENA y Américas" : "Active markets — Europe, MENA & Americas" },
+    { value: "95%", label: isEs ? "Proyectos entregados en plazo y presupuesto" : "Projects delivered on time and on budget" },
+  ];
+  return (
+    <section className="border-t border-b border-hairline bg-surface/20">
+      <div className="container-edge py-10 grid grid-cols-2 gap-8 md:grid-cols-4">
+        {stats.map((s) => (
+          <Reveal key={s.value + s.label} variant="up">
+            <div className="flex flex-col gap-1">
+              <span className="font-display text-3xl font-extrabold text-gold md:text-4xl">
+                {s.value}
+              </span>
+              <span className="text-xs font-light leading-snug text-smoke max-w-[14ch]">
+                {s.label}
+              </span>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Index() {
   return (
     <>
       <HeroSection />
+      <TrustStrip />
       <ManifestoSection />
       <EBLESection />
       <ExponentialSection />
@@ -529,3 +559,5 @@ function Index() {
     </>
   );
 }
+
+
