@@ -9,27 +9,7 @@
    Lujo tecnológico · Minimalismo autoritario
    ============================================ */
 
-@font-face {
-  font-family: "Clash Display";
-  src: url("https://fonts.cdnfonts.com/s/64202/ClashDisplay-Extrabold.woff") format("woff");
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Clash Display";
-  src: url("https://fonts.cdnfonts.com/s/64202/ClashDisplay-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Clash Display";
-  src: url("https://fonts.cdnfonts.com/s/64202/ClashDisplay-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@500,700,800&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap");
 
@@ -75,20 +55,25 @@
   --radius: 0.125rem;
 
   /* EVOLVIX absolute black aesthetic */
-  --background: oklch(0.05 0 0);            /* #050505 */
-  --foreground: oklch(0.97 0 0);            /* titanium white */
+  --background: oklch(0.05 0 0);
+  /* #050505 */
+  --foreground: oklch(0.97 0 0);
+  /* titanium white */
   --card: oklch(0.07 0 0);
   --card-foreground: oklch(0.97 0 0);
   --popover: oklch(0.07 0 0);
   --popover-foreground: oklch(0.97 0 0);
 
-  --primary: oklch(0.97 0 0);                /* titanium white */
+  --primary: oklch(0.97 0 0);
+  /* titanium white */
   --primary-foreground: oklch(0.05 0 0);
   --secondary: oklch(0.12 0 0);
   --secondary-foreground: oklch(0.97 0 0);
   --muted: oklch(0.12 0 0);
-  --muted-foreground: oklch(0.62 0 0);       /* smoke gray */
-  --accent: oklch(0.68 0.19 254);            /* electric blue */
+  --muted-foreground: oklch(0.62 0 0);
+  /* smoke gray */
+  --accent: oklch(0.68 0.19 254);
+  /* electric blue */
   --accent-foreground: oklch(0.05 0 0);
   --destructive: oklch(0.62 0.22 27);
   --destructive-foreground: oklch(0.97 0 0);
@@ -107,28 +92,20 @@
   --surface: oklch(0.07 0 0);
 
   /* Gradients & shadows */
-  --gradient-fade-bottom: linear-gradient(
-    180deg,
-    transparent 0%,
-    oklch(0.05 0 0 / 0.4) 50%,
-    oklch(0.05 0 0) 100%
-  );
-  --gradient-fade-top: linear-gradient(
-    180deg,
-    oklch(0.05 0 0) 0%,
-    oklch(0.05 0 0 / 0.4) 40%,
-    transparent 100%
-  );
-  --gradient-vignette: radial-gradient(
-    ellipse at center,
-    transparent 40%,
-    oklch(0.05 0 0 / 0.7) 100%
-  );
-  --gradient-electric: linear-gradient(
-    135deg,
-    oklch(0.68 0.19 254) 0%,
-    oklch(0.82 0.12 254) 100%
-  );
+  --gradient-fade-bottom: linear-gradient(180deg,
+      transparent 0%,
+      oklch(0.05 0 0 / 0.4) 50%,
+      oklch(0.05 0 0) 100%);
+  --gradient-fade-top: linear-gradient(180deg,
+      oklch(0.05 0 0) 0%,
+      oklch(0.05 0 0 / 0.4) 40%,
+      transparent 100%);
+  --gradient-vignette: radial-gradient(ellipse at center,
+      transparent 40%,
+      oklch(0.05 0 0 / 0.7) 100%);
+  --gradient-electric: linear-gradient(135deg,
+      oklch(0.68 0.19 254) 0%,
+      oklch(0.82 0.12 254) 100%);
 
   --shadow-glow: 0 0 40px oklch(0.68 0.19 254 / 0.35),
     0 0 80px oklch(0.68 0.19 254 / 0.15);
@@ -169,7 +146,10 @@
     color: var(--color-background);
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--font-display);
     font-weight: 800;
     letter-spacing: -0.025em;
@@ -178,7 +158,11 @@
 
   /* Hide native cursor on devices with fine pointers — replaced by magnetic cursor */
   @media (hover: hover) and (pointer: fine) {
-    body, a, button, [role="button"] {
+
+    body,
+    a,
+    button,
+    [role="button"] {
       cursor: none;
     }
   }
@@ -188,6 +172,7 @@
   .font-display {
     font-family: var(--font-display);
   }
+
   .font-sans {
     font-family: var(--font-sans);
   }
@@ -199,6 +184,7 @@
     line-height: 0.92;
     letter-spacing: -0.035em;
   }
+
   .text-display-lg {
     font-family: var(--font-display);
     font-weight: 800;
@@ -206,6 +192,7 @@
     line-height: 0.95;
     letter-spacing: -0.03em;
   }
+
   .text-display-md {
     font-family: var(--font-display);
     font-weight: 700;
@@ -234,12 +221,15 @@
   .hairline {
     border-color: var(--color-hairline);
   }
+
   .border-hairline {
     border: 1px solid var(--color-hairline);
   }
+
   .border-t-hairline {
     border-top: 1px solid var(--color-hairline);
   }
+
   .border-b-hairline {
     border-bottom: 1px solid var(--color-hairline);
   }
@@ -270,6 +260,7 @@
       opacity 1.2s var(--ease-out-expo),
       transform 1.2s var(--ease-out-expo);
   }
+
   .reveal-up.is-visible {
     opacity: 1;
     transform: translateY(0);
@@ -279,39 +270,52 @@
     opacity: 0;
     transition: opacity 1.6s var(--ease-out-expo);
   }
+
   .reveal-fade.is-visible {
     opacity: 1;
   }
 
   /* Pulse glow for map dots */
   @keyframes pulse-glow {
-    0%, 100% {
+
+    0%,
+    100% {
       box-shadow:
         0 0 0 0 oklch(0.68 0.19 254 / 0.6),
         0 0 12px 2px oklch(0.68 0.19 254 / 0.5);
     }
+
     50% {
       box-shadow:
         0 0 0 14px oklch(0.68 0.19 254 / 0),
         0 0 24px 4px oklch(0.68 0.19 254 / 0.7);
     }
   }
+
   .animate-pulse-glow {
     animation: pulse-glow 2.4s var(--ease-in-out-expo) infinite;
   }
 
   /* Marquee */
   @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
   }
+
   .animate-marquee {
     animation: marquee 40s linear infinite;
   }
 
   /* Loader logo draw */
   @keyframes draw {
-    to { stroke-dashoffset: 0; }
+    to {
+      stroke-dashoffset: 0;
+    }
   }
 
   /* Hover line for links */
@@ -319,6 +323,7 @@
     position: relative;
     display: inline-block;
   }
+
   .link-line::after {
     content: "";
     position: absolute;
@@ -331,6 +336,7 @@
     transform-origin: right;
     transition: transform 0.6s var(--ease-out-expo);
   }
+
   .link-line:hover::after {
     transform: scaleX(1);
     transform-origin: left;

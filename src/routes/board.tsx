@@ -4,6 +4,7 @@ import b1 from "@/assets/board-1.jpg";
 import b2 from "@/assets/board-2.jpg";
 import b3 from "@/assets/board-3.jpg";
 import b4 from "@/assets/board-4.jpg";
+import { useLang } from "@/lib/LanguageContext";
 
 export const Route = createFileRoute("/board")({
   head: () => ({
@@ -21,52 +22,29 @@ export const Route = createFileRoute("/board")({
   component: BoardPage,
 });
 
-const MEMBERS = [
-  {
-    name: "Adrián Vallejo",
-    role: "Chairman & Group CEO",
-    img: b1,
-    bio: "Veintidós años liderando holdings industriales en Europa y MENA. Arquitecto de la integración multi-divisional de Evolvix.",
-  },
-  {
-    name: "Helena Marchetti",
-    role: "Chief Investment Officer",
-    img: b2,
-    bio: "Antigua jefa de allocación en un fondo soberano europeo. Diseña la arquitectura de capital del Grupo.",
-  },
-  {
-    name: "Jonathan Reeves",
-    role: "Head of Global Strategy",
-    img: b3,
-    bio: "Senior Advisor en M&A transfronterizo. Coordina due diligence y expansión de las divisiones operativas.",
-  },
-  {
-    name: "Mei-Lin Tanaka",
-    role: "Chief Technology Officer",
-    img: b4,
-    bio: "Lidera la división de Innovation & Digital Infrastructure desde Singapore. Especialista en data fabric y AI aplicada.",
-  },
-];
+const MEMBER_IMGS = [b1, b2, b3, b4];
 
 function BoardPage() {
+  const { t } = useLang();
+  const p = t.boardPage;
+
   return (
     <>
       <section className="relative bg-background pt-44 pb-12 md:pt-56 md:pb-20">
         <div className="container-edge">
           <Reveal variant="up">
-            <p className="text-eyebrow">Section · The Board</p>
+            <p className="text-eyebrow">{p.sectionEyebrow}</p>
           </Reveal>
           <Reveal variant="up" delay={100}>
             <h1 className="mt-8 text-display-xl text-titanium max-w-[16ch]">
-              Visionary minds.
+              {p.headingLine1}
               <br />
-              <span className="text-smoke">Relentless execution.</span>
+              <span className="text-smoke">{p.headingLine2}</span>
             </h1>
           </Reveal>
           <Reveal variant="up" delay={200}>
             <p className="mt-10 max-w-2xl text-base font-light leading-relaxed text-platinum md:text-lg">
-              Un equipo diseñado para liderar la complejidad global. Estrategia,
-              capital y tecnología bajo un mismo mandato.
+              {p.body}
             </p>
           </Reveal>
         </div>
@@ -75,7 +53,7 @@ function BoardPage() {
       <section className="relative bg-background">
         <div className="container-edge pb-24 md:pb-32">
           <div className="grid grid-cols-1 gap-px overflow-hidden border border-hairline bg-hairline md:grid-cols-2">
-            {MEMBERS.map((m, i) => (
+            {p.members.map((m, i) => (
               <Reveal
                 key={m.name}
                 variant="up"
@@ -84,7 +62,7 @@ function BoardPage() {
               >
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <img
-                    src={m.img}
+                    src={MEMBER_IMGS[i]}
                     alt={`${m.name}, ${m.role}`}
                     width={800}
                     height={1024}

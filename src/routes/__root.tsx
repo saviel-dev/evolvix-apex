@@ -11,6 +11,7 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Loader } from "../components/Loader";
 import { MagneticCursor } from "../components/MagneticCursor";
+import { LanguageProvider } from "../lib/LanguageContext";
 
 function NotFoundComponent() {
   return (
@@ -70,7 +71,7 @@ export const Route = createRootRoute({
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>
@@ -84,7 +85,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   return (
-    <>
+    <LanguageProvider>
       <Loader />
       <MagneticCursor />
       <Header />
@@ -92,6 +93,6 @@ function RootComponent() {
         <Outlet />
       </main>
       <Footer />
-    </>
+    </LanguageProvider>
   );
 }

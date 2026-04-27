@@ -7,6 +7,7 @@ import innovationImg from "@/assets/unit-innovation.jpg";
 import { Reveal } from "@/components/Reveal";
 import { GlobalMap, FOOTPRINT_CITIES } from "@/components/GlobalMap";
 import { useEffect, useRef } from "react";
+import { useLang } from "@/lib/LanguageContext";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,40 +29,12 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const UNITS = [
-  {
-    code: "01",
-    title: "Strategic Logistics & Supply Chain",
-    short: "Logistics",
-    copy: "Sincronización absoluta. Convertimos la complejidad logística en una ventaja competitiva global.",
-    img: logisticsImg,
-  },
-  {
-    code: "02",
-    title: "Global Consulting & Business Intelligence",
-    short: "Consulting",
-    copy: "Inteligencia que precede a la acción. Diseñamos la hoja de ruta para la expansión de grupos líderes.",
-    img: consultingImg,
-  },
-  {
-    code: "03",
-    title: "Asset Management & Investment",
-    short: "Capital",
-    copy: "Solidez en la gestión, visión en la inversión. Arquitectura financiera de alta precisión.",
-    img: assetsImg,
-  },
-  {
-    code: "04",
-    title: "Innovation & Digital Infrastructure",
-    short: "Innovation",
-    copy: "Construyendo el mañana, hoy. Infraestructura digital para que las corporaciones operen sin límites.",
-    img: innovationImg,
-  },
-];
+const UNIT_IMGS = [logisticsImg, consultingImg, assetsImg, innovationImg];
 
 function HeroSection() {
   const heroRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
+  const { t } = useLang();
 
   // Subtle parallax on hero image
   useEffect(() => {
@@ -92,37 +65,37 @@ function HeroSection() {
           fetchPriority="high"
         />
         <div className="absolute inset-0 bg-[var(--gradient-vignette)]" />
+        <div className="absolute inset-0 bg-[var(--gradient-fade-top)]" />
         <div className="absolute inset-0 bg-[var(--gradient-fade-bottom)]" />
         <div className="absolute inset-0 bg-grid opacity-40" />
       </div>
 
       {/* Top eyebrow row */}
-      <div className="container-edge absolute inset-x-0 top-24 flex items-center justify-between text-mono-label text-smoke md:top-32">
+      <div className="container-edge absolute inset-x-0 top-24 flex items-center justify-between text-mono-label text-titanium md:top-32">
         <span className="flex items-center gap-3">
           <span className="h-1.5 w-1.5 rounded-full bg-electric animate-pulse-glow" />
-          Live · Holding Index
+          {t.hero.liveLabel}
         </span>
         <span className="hidden md:inline">N 40°25′ · W 03°41′</span>
       </div>
 
       <div className="container-edge relative flex min-h-[100svh] flex-col justify-end pb-20 pt-44 md:pt-56">
         <Reveal variant="up">
-          <p className="text-eyebrow">Evolvix Global Group · MMXXVI</p>
+          <p className="text-eyebrow !text-titanium drop-shadow-md">{t.hero.eyebrow}</p>
         </Reveal>
 
         <Reveal variant="up" delay={120}>
           <h1 className="mt-8 text-display-xl text-titanium max-w-[18ch]">
-            The Architecture
+            {t.hero.headingLine1}
             <br />
-            <span className="text-platinum">of</span> Success.
+            <span className="text-platinum">{t.hero.headingOf}</span> {t.hero.headingLine2.replace(/^(del|of) /, "")}
           </h1>
         </Reveal>
 
         <div className="mt-12 grid grid-cols-1 items-end gap-10 md:grid-cols-12">
           <Reveal variant="up" delay={240} className="md:col-span-6 md:col-start-7">
             <p className="max-w-md text-base font-light leading-relaxed text-platinum md:text-lg">
-              Lideramos la evolución de activos y servicios estratégicos.
-              Transformamos la visión en valor tangible a escala internacional.
+              {t.hero.body}
             </p>
 
             <div className="mt-10 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
@@ -130,7 +103,7 @@ function HeroSection() {
                 to="/ecosystem"
                 className="group relative inline-flex items-center gap-4 border border-titanium px-7 py-4 text-mono-label text-titanium transition-colors duration-500 hover:bg-titanium hover:text-background"
               >
-                <span>Explore the Ecosystem</span>
+                <span>{t.hero.ctaPrimary}</span>
                 <svg width="22" height="10" viewBox="0 0 22 10" fill="none" aria-hidden>
                   <path
                     d="M0 5 H20 M16 1 L20 5 L16 9"
@@ -140,7 +113,7 @@ function HeroSection() {
                 </svg>
               </Link>
               <Link to="/board" className="text-mono-label text-smoke link-line">
-                Meet the Board →
+                {t.hero.ctaSecondary}
               </Link>
             </div>
           </Reveal>
@@ -157,9 +130,9 @@ function HeroSection() {
                 "Singapore · Innovation Division",
                 "ISO/IEC 27001",
                 "MMXXVI Edition",
-              ].map((t, j) => (
+              ].map((text, j) => (
                 <span key={`${i}-${j}`} className="flex items-center gap-16">
-                  {t}
+                  {text}
                   <span className="h-1 w-1 rounded-full bg-smoke/60" />
                 </span>
               )),
@@ -172,23 +145,21 @@ function HeroSection() {
 }
 
 function ManifestoSection() {
+  const { t } = useLang();
   return (
     <section className="relative bg-background">
       <div className="container-edge grid grid-cols-1 gap-16 py-32 md:grid-cols-12 md:py-44">
         <Reveal variant="up" className="md:col-span-4">
-          <p className="text-eyebrow">§ 01 — Manifesto</p>
+          <p className="text-eyebrow">{t.manifesto.eyebrow}</p>
         </Reveal>
         <Reveal variant="up" delay={120} className="md:col-span-8">
           <p className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-titanium md:text-5xl">
-            We do not follow markets.
+            {t.manifesto.headingLine1}
             <br />
-            <span className="text-smoke">We engineer their structure.</span>
+            <span className="text-smoke">{t.manifesto.headingLine2}</span>
           </p>
           <p className="mt-10 max-w-2xl text-base font-light leading-relaxed text-platinum">
-            Evolvix Global opera como un sistema integrado de cuatro divisiones
-            interdependientes — capital, logística, inteligencia e infraestructura
-            digital — diseñado para sostener crecimiento sin fricción a escala
-            internacional.
+            {t.manifesto.body}
           </p>
         </Reveal>
       </div>
@@ -197,24 +168,31 @@ function ManifestoSection() {
 }
 
 function UnitsPreview() {
+  const { t } = useLang();
   return (
     <section className="relative bg-background">
       <div className="container-edge border-t border-hairline">
         <Reveal variant="up" className="flex items-end justify-between py-10">
           <div>
-            <p className="text-eyebrow">§ 02 — Business Units</p>
+            <p className="text-eyebrow">{t.units.eyebrow}</p>
             <h2 className="mt-4 text-display-md text-titanium max-w-[16ch]">
-              Four divisions. One architecture.
+              {t.units.heading}
             </h2>
           </div>
           <Link to="/ecosystem" className="hidden text-mono-label text-titanium link-line md:inline">
-            See full ecosystem →
+            {t.units.seeAll}
           </Link>
         </Reveal>
       </div>
 
-      {UNITS.map((u, i) => (
-        <UnitFullScreen key={u.code} unit={u} reverse={i % 2 === 1} />
+      {t.units.items.map((unit, i) => (
+        <UnitFullScreen
+          key={unit.title}
+          unit={{ ...unit, code: String(i + 1).padStart(2, "0"), img: UNIT_IMGS[i] }}
+          reverse={i % 2 === 1}
+          totalUnits={t.units.items.length}
+          divisionBriefLabel={t.units.divisionBrief}
+        />
       ))}
     </section>
   );
@@ -223,9 +201,13 @@ function UnitsPreview() {
 function UnitFullScreen({
   unit,
   reverse,
+  totalUnits,
+  divisionBriefLabel,
 }: {
-  unit: (typeof UNITS)[number];
+  unit: { code: string; title: string; short: string; copy: string; img: string };
   reverse: boolean;
+  totalUnits: number;
+  divisionBriefLabel: string;
 }) {
   const imgWrapRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLImageElement>(null);
@@ -267,7 +249,7 @@ function UnitFullScreen({
           />
           <div className="absolute inset-0 bg-[var(--gradient-vignette)]" />
           <div className="absolute left-6 top-6 text-mono-label text-titanium md:left-10 md:top-10">
-            {unit.code} / {String(UNITS.length).padStart(2, "0")}
+            {unit.code} / {String(totalUnits).padStart(2, "0")}
           </div>
         </div>
 
@@ -291,7 +273,7 @@ function UnitFullScreen({
                 to="/ecosystem"
                 className="mt-10 inline-flex items-center gap-3 text-mono-label text-titanium link-line"
               >
-                Division Brief
+                {divisionBriefLabel}
                 <svg width="18" height="8" viewBox="0 0 18 8" fill="none" aria-hidden>
                   <path d="M0 4 H16 M13 1 L17 4 L13 7" stroke="currentColor" />
                 </svg>
@@ -305,20 +287,20 @@ function UnitFullScreen({
 }
 
 function FootprintPreview() {
+  const { t } = useLang();
   return (
     <section className="relative border-t border-hairline bg-background">
       <div className="container-edge py-24 md:py-32">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:items-end">
           <Reveal variant="up" className="md:col-span-7">
-            <p className="text-eyebrow">§ 03 — Global Footprint</p>
+            <p className="text-eyebrow">{t.footprint.eyebrow}</p>
             <h2 className="mt-6 text-display-lg text-titanium max-w-[14ch]">
-              Four nodes. One operating system.
+              {t.footprint.heading}
             </h2>
           </Reveal>
           <Reveal variant="up" delay={120} className="md:col-span-5">
             <p className="text-base font-light leading-relaxed text-platinum">
-              Una red coordinada que sincroniza capital, mercado y ejecución
-              entre Europa, Oriente Medio y Asia-Pacífico.
+              {t.footprint.body}
             </p>
           </Reveal>
         </div>
@@ -345,26 +327,26 @@ function FootprintPreview() {
 }
 
 function BoardPreview() {
+  const { t } = useLang();
   return (
     <section className="relative border-t border-hairline bg-background">
       <div className="container-edge py-24 md:py-32">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
           <Reveal variant="up" className="md:col-span-5">
-            <p className="text-eyebrow">§ 04 — The Board</p>
+            <p className="text-eyebrow">{t.board.eyebrow}</p>
             <h2 className="mt-6 text-display-lg text-titanium max-w-[16ch]">
-              Visionary minds. <span className="text-smoke">Relentless execution.</span>
+              {t.board.headingLine1} <span className="text-smoke">{t.board.headingLine2}</span>
             </h2>
           </Reveal>
           <Reveal variant="up" delay={140} className="md:col-span-6 md:col-start-7">
             <p className="text-base font-light leading-relaxed text-platinum">
-              Un equipo diseñado para liderar la complejidad global —
-              estrategia, capital y tecnología bajo un mismo mandato.
+              {t.board.body}
             </p>
             <Link
               to="/board"
               className="mt-8 inline-flex text-mono-label text-titanium link-line"
             >
-              Meet the Board →
+              {t.board.cta}
             </Link>
           </Reveal>
         </div>
