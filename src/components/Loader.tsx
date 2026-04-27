@@ -1,6 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { EvolvixMark } from "./EvolvixMark";
-
 /**
  * Loader shown once per session: line-art logo draws to 100%, then fades.
  */
@@ -114,9 +112,7 @@ export function Loader() {
           }}
         />
       </div>
-      {/* Suppress fallback EvolvixMark visual reference (kept for tree-shake check) */}
       <span className="sr-only">
-        <EvolvixMark size={1} />
         Loading Evolvix Global
       </span>
     </div>

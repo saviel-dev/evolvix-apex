@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
-import logisticsImg from "@/assets/unit-logistics.jpg";
-import consultingImg from "@/assets/unit-consulting.jpg";
-import assetsImg from "@/assets/unit-assets.jpg";
-import innovationImg from "@/assets/unit-innovation.jpg";
+import logisticsImg from "@/assets/images/unit-logistics.jpg";
+import consultingImg from "@/assets/images/unit-consulting.jpg";
+import assetsImg from "@/assets/images/unit-assets.jpg";
+import innovationImg from "@/assets/images/unit-innovation.jpg";
 import { useLang } from "@/lib/LanguageContext";
 
 export const Route = createFileRoute("/ecosystem")({

@@ -1,6 +1,6 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { EvolvixMark } from "./EvolvixMark";
+import logo from "@/assets/resources/logo.png";
 import { useLang } from "@/lib/LanguageContext";
 
 const NAV_KEYS = [
@@ -37,7 +37,7 @@ export function Header() {
     >
       <div className="container-edge flex h-16 items-center justify-between md:h-20">
         <Link to="/" className="flex items-center gap-3 text-titanium">
-          <EvolvixMark size={28} />
+          <img src={logo} alt="Evolvix Logo" className="h-10 w-auto md:h-12" />
           <span className="font-display text-[1.05rem] font-extrabold tracking-[0.18em]">
             EVOLVIX
           </span>

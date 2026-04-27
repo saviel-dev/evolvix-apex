@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-architecture.jpg";
-import logisticsImg from "@/assets/unit-logistics.jpg";
-import consultingImg from "@/assets/unit-consulting.jpg";
-import assetsImg from "@/assets/unit-assets.jpg";
-import innovationImg from "@/assets/unit-innovation.jpg";
+import heroImg from "@/assets/images/hero-architecture.jpg";
+import logisticsImg from "@/assets/images/unit-logistics.jpg";
+import consultingImg from "@/assets/images/unit-consulting.jpg";
+import assetsImg from "@/assets/images/unit-assets.jpg";
+import innovationImg from "@/assets/images/unit-innovation.jpg";
 import { Reveal } from "@/components/Reveal";
 import { GlobalMap, FOOTPRINT_CITIES } from "@/components/GlobalMap";
 import { useEffect, useRef } from "react";
