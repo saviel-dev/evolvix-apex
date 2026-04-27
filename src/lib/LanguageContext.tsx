@@ -5,7 +5,7 @@ export type Lang = "en" | "es";
 export const translations = {
   en: {
     nav: {
-      ecosystem: "Services",
+      services: "Divisions",
       footprint: "Footprint",
       board: "Our Team",
       contact: "Contact",
@@ -13,21 +13,21 @@ export const translations = {
     partnerAccess: "Contact Us",
 
     hero: {
-      eyebrow: "Evolvix Global · Technology & Strategy",
+      eyebrow: "Evolvix Global Holding",
       liveLabel: "Live · Global Operations",
-      headingLine1: "We Design",
-      headingLine2: "Your Future.",
-      headingOf: "Your",
-      body: "We don't just build solutions — we architect the future of your business. We fuse disruptive innovation with global strategy to transform local businesses into international benchmarks.",
-      ctaPrimary: "Explore Our Services",
+      headingLine1: "Evolvix Global —",
+      headingLine2: "Architecture of Success.",
+      headingOf: "",
+      body: "We don't seek clients, we select partners to expand a legacy.",
+      ctaPrimary: "Explore Divisions",
       ctaSecondary: "Meet Our Team →",
     },
 
     manifesto: {
       eyebrow: "§ 01 — Our Promise",
-      headingLine1: "We don't follow trends.",
-      headingLine2: "We set the standard.",
-      body: "Evolvix Global is a consulting and technology development agency that combines disruptive innovation with global strategy. Our programs are not generic — they are designed by Fortune 500 directors and executed by certified coaches, delivering measurable results in productivity, innovation and talent retention.",
+      headingLine1: "The Power of a",
+      headingLine2: "Global Holding.",
+      body: "Our mission is to articulate the growth of leading companies through centralized management of excellence — optimizing synergies across engineering, energy and strategic services to maximize impact in international markets. We are the benchmark for Spanish business expansion worldwide, building today the infrastructure and services that will define the global market of the next decade.",
     },
 
     units: {
@@ -59,15 +59,14 @@ export const translations = {
 
     // Investment Thesis
     thesis: {
-      eyebrow: "§ 04 — Investment Thesis",
+      eyebrow: "§ 04 — Competitive Advantage",
       headingLine1: "A geographically shielded",
       headingLine2: "multi-asset ecosystem.",
       body: "Evolvix is structured as a diversified holding — not a single business, but an integrated group of strategic assets designed to grow in parallel, hedge each other, and compound value across cycles.",
       pillars: [
-        { label: "Geographic Diversification", detail: "7 operational nodes across 4 continents, insulated from regional volatility." },
-        { label: "Multi-Asset Structure", detail: "Energy, infrastructure, services and capital under one coordinated mandate." },
-        { label: "Compounding Growth", detail: "Each division reinforces the others — creating synergies that accelerate the whole." },
-        { label: "Long-Horizon Vision", detail: "Built for decades, not quarters. Capital allocation aligned with structural megatrends." },
+        { label: "Sector Diversification", detail: "Energy, Engineering, BPO and Real Estate. If one sector fluctuates, others compensate." },
+        { label: "Geographic Arbitrage", detail: "Leveraging Egypt's operational costs, EU technology, Dubai capital and Miami's commercial access." },
+        { label: "Scalability", detail: "Brands operate under a shared matrix that reduces structural costs and maximizes net margin." },
       ],
     },
 
@@ -84,62 +83,18 @@ export const translations = {
       ],
     },
 
-    ecosystemPage: {
-      sectionEyebrow: "Section · Services",
-      heading: "Our services.",
-      body: "Eight specialized divisions working as a single integrated system. Strategy, technology, talent and operations — all aligned to accelerate your growth.",
-      divisionLabel: "Division",
-      ctaHeading: "Ready to transform your business?",
-      ctaBtn: "Contact Us Now",
-      units: [
-        {
-          title: "Strategic Consulting & Global Vision",
-          headline: "Strategy that opens markets.",
-          body: "We help you design and execute an international expansion plan with clarity and precision. We identify opportunities, mitigate risks and build a roadmap adapted to your industry and goals.",
-          metrics: [{ k: "Clients served", v: "200+" }, { k: "Industries", v: "12" }, { k: "Avg. growth", v: "+47%" }],
-        },
-        {
-          title: "Disruptive Technology & Engineering",
-          headline: "Technology built for your business.",
-          body: "We develop custom digital solutions — from web platforms and mobile apps to automation systems and AI integrations. We use cutting-edge tools to make your operation faster, smarter and more competitive.",
-          metrics: [{ k: "Projects delivered", v: "150+" }, { k: "Tech stack", v: "20+" }, { k: "On-time delivery", v: "97%" }],
-        },
-        {
-          title: "Leadership & Talent Acceleration",
-          headline: "Your team is your biggest asset.",
-          body: "Our training programs are designed by executives with Fortune 500 experience and delivered by certified coaches. We measure every outcome — productivity, innovation capacity and talent retention — so you can see the impact.",
-          metrics: [{ k: "Programs", v: "30+" }, { k: "Professionals trained", v: "5,000+" }, { k: "Retention rate", v: "+62%" }],
-        },
-        {
-          title: "High-Impact Project Management",
-          headline: "Execution without excuses.",
-          body: "We take ownership of your most critical projects and deliver them efficiently. From planning to closure, we apply proven methodologies (PMI, Agile, Scrum) to keep everything on track.",
-          metrics: [{ k: "Projects managed", v: "300+" }, { k: "On-budget rate", v: "94%" }, { k: "Methodologies", v: "5" }],
-        },
-        {
-          title: "Digital Security & Business Resilience",
-          headline: "Your operation, protected.",
-          body: "We implement digital security strategies that safeguard your data, your systems and your continuity. From vulnerability assessment to incident response — we keep your business running, no matter what.",
-          metrics: [{ k: "Security audits", v: "80+" }, { k: "Incidents resolved", v: "99.8%" }, { k: "Compliance", v: "ISO 27001" }],
-        },
-        {
-          title: "Business Intelligence & Automation",
-          headline: "Data that drives decisions.",
-          body: "We transform your raw data into actionable intelligence. We automate repetitive processes so your team can focus on what really matters — strategy and growth.",
-          metrics: [{ k: "Dashboards built", v: "120+" }, { k: "Processes automated", v: "400+" }, { k: "Avg. time saved", v: "35%" }],
-        },
-        {
-          title: "Export & Import Engineering",
-          headline: "Your product, in any market.",
-          body: "We support you through every stage of international trade — from regulatory compliance and logistics to market entry strategy. We have experience in markets across North America, Europe and Latin America.",
-          metrics: [{ k: "Markets served", v: "25+" }, { k: "Trade corridors", v: "40+" }, { k: "Compliance rate", v: "100%" }],
-        },
-        {
-          title: "Intelligent Supply Chain Management",
-          headline: "Smarter logistics.",
-          body: "We optimize your supply chain from end to end — reducing costs, improving delivery times and increasing resilience. We use technology and data to help you make smarter logistical decisions.",
-          metrics: [{ k: "Chains optimized", v: "60+" }, { k: "Avg. cost reduction", v: "−28%" }, { k: "Lead time", v: "−40%" }],
-        },
+    exponential: {
+      eyebrow: "§ 02 — The Exponential Factor",
+      heading: "EVOLVIX is not just a name. It's a methodology of growth.",
+      body: "Every letter is a pillar of profitability designed to scale businesses into global leaders.",
+      pillars: [
+        { letter: "E", title: "Excellence", desc: "European operational standards." },
+        { letter: "V", title: "Vision", desc: "Anticipation of emerging markets." },
+        { letter: "O", title: "Opportunity", desc: "Identification of undervalued assets." },
+        { letter: "L", title: "Legacy", desc: "Building long-term structures." },
+        { letter: "V", title: "Velocity", desc: "Agility in decision making and execution." },
+        { letter: "I", title: "Innovation", desc: "Technology applied to traditional sectors." },
+        { letter: "X", title: "Exponential Factor", desc: "The value multiplier applied to every holding company." },
       ],
     },
 
@@ -159,21 +114,21 @@ export const translations = {
     },
 
     boardPage: {
-      sectionEyebrow: "Section · Our Team",
-      headingLine1: "Experienced professionals.",
-      headingLine2: "Committed to your success.",
-      body: "Our team combines deep industry expertise with a genuine passion for helping businesses grow. Each member brings certified methodologies and real-world results to every engagement.",
+      sectionEyebrow: "Section · Leadership",
+      headingLine1: "Visionary minds.",
+      headingLine2: "Relentless execution.",
+      body: "The Evolvix Global board brings together a senior team of strategists, engineers and capital allocators with proven track records across Europe, the Middle East and the Americas. Each member operates at the intersection of institutional experience and entrepreneurial drive.",
       members: [
-        { name: "Adrián Vallejo", role: "Founder & CEO", bio: "Strategist with over 15 years of experience leading technology transformation projects for companies across three continents. Passionate about building businesses that last." },
-        { name: "Helena Marchetti", role: "Head of Strategic Consulting", bio: "Expert in international expansion and market entry strategy. She has guided more than 80 companies in their first steps into global markets." },
-        { name: "Jonathan Reeves", role: "Director of Technology", bio: "Full-stack engineer and solutions architect. Leads our development team with a focus on delivering robust, scalable and future-proof digital products." },
-        { name: "Mei-Lin Tanaka", role: "Head of Talent & Leadership", bio: "Certified executive coach with experience in Fortune 500 organizations. She designs the training programs that transform teams into high-performance units." },
+        { name: "Grupo EBLE — Executive Board", role: "Holding Leadership", bio: "Evolvix Global operates under the strategic umbrella of Grupo EBLE — a diversified Spanish holding whose pillars are Excellence, Boldness, Legacy and Execution. The board directs capital, operations and expansion across all four divisions." },
+        { name: "Division Principals", role: "Operational Leadership", bio: "Each Evolvix division is led by a dedicated principal with deep sector expertise: energy concessions & grid infrastructure, high-complexity engineering, institutional BPO operations, and real-estate asset management." },
+        { name: "Strategic Advisors", role: "International Advisory Council", bio: "An international advisory council supports the group across key jurisdictions — Spain/EU for legal & funding access, Dubai/MENA for capital formation, and Miami for Americas market connectivity." },
+        { name: "Investor Relations", role: "Capital & Partnerships", bio: "Dedicated investor relations management for institutional capital, sovereign mandates and co-investment structures. The group targets 24-month expansion into new markets with tangible asset backing." },
       ],
     },
 
     contactPage: {
       sectionEyebrow: "Section · Contact",
-      heading: "Let's talk.",
+      heading: "We don't seek clients, we select partners to expand a legacy.",
       body: "We'd love to learn more about your business and explore how we can help you grow. Reach out — our team responds within 24 business hours.",
       accessLabel: "Get In Touch",
       accessHeading: "Tell us about your project.",
@@ -197,7 +152,7 @@ export const translations = {
 
   es: {
     nav: {
-      ecosystem: "Servicios",
+      services: "Divisiones",
       footprint: "Presencia",
       board: "Nuestro Equipo",
       contact: "Contacto",
@@ -205,21 +160,21 @@ export const translations = {
     partnerAccess: "Contáctanos",
 
     hero: {
-      eyebrow: "Evolvix Global · Tecnología y Estrategia",
+      eyebrow: "Evolvix Global Holding",
       liveLabel: "En vivo · Operaciones Globales",
-      headingLine1: "Diseñamos",
-      headingLine2: "tu Futuro.",
-      headingOf: "tu",
-      body: "No solo construimos soluciones — diseñamos el futuro de tu empresa. Fusionamos innovación disruptiva con estrategia global para transformar negocios locales en referentes internacionales.",
-      ctaPrimary: "Explorar Servicios",
+      headingLine1: "Evolvix Global —",
+      headingLine2: "Arquitectura del Éxito.",
+      headingOf: "",
+      body: "No buscamos clientes, seleccionamos partners para expandir un legado.",
+      ctaPrimary: "Explorar Divisiones",
       ctaSecondary: "Conoce al Equipo →",
     },
 
     manifesto: {
       eyebrow: "§ 01 — Nuestra Promesa",
-      headingLine1: "No seguimos las tendencias.",
-      headingLine2: "Marcamos el estándar.",
-      body: "Evolvix Global es una agencia de consultoría y desarrollo tecnológico que fusiona innovación disruptiva con estrategia global. Nuestros programas no son genéricos — están diseñados por directores de empresas Fortune 500 y ejecutados por coaches certificados, con resultados medibles en productividad, innovación y retención de talento.",
+      headingLine1: "La Fuerza de un",
+      headingLine2: "Holding Global.",
+      body: "Nuestra misión es articular el crecimiento de empresas líderes mediante una gestión centralizada de excelencia, optimizando sinergias en los sectores de ingeniería, energía y servicios estratégicos para maximizar el impacto en mercados internacionales. Proyectamos a Grupo EBLE como el referente de expansión empresarial española en el mundo — construyendo hoy las infraestructuras y servicios que definirán el mercado global de la próxima década.",
     },
 
     units: {
@@ -242,15 +197,14 @@ export const translations = {
     },
 
     thesis: {
-      eyebrow: "§ 04 — Tesis de Inversión",
+      eyebrow: "§ 04 — Ventaja Competitiva",
       headingLine1: "Un ecosistema multi-activo",
       headingLine2: "geográficamente protegido.",
       body: "Evolvix se estructura como un holding diversificado — no es un negocio único, sino un grupo integrado de activos estratégicos diseñados para crecer en paralelo, protegerse entre sí y capitalizar valor a través de los ciclos.",
       pillars: [
-        { label: "Diversificación Geográfica", detail: "7 nodos operativos en 4 continentes, aislados de la volatilidad regional." },
-        { label: "Estructura Multi-Activo", detail: "Energía, infraestructura, servicios y capital bajo un mandato coordinado." },
-        { label: "Crecimiento Compuesto", detail: "Cada división refuerza a las demás — creando sinergias que aceleran el conjunto." },
-        { label: "Visión a Largo Plazo", detail: "Construido para décadas, no para trimestres. Asignación de capital alineada con megatendencias estructurales." },
+        { label: "Diversificación Sectorial", detail: "Energía, Ingeniería, BPO y Real Estate. Si un sector fluctúa, los otros compensan." },
+        { label: "Arbitraje Geográfico", detail: "Aprovechamos costes de Egipto, tecnología de España/Francia, capital de Dubái y apertura de Miami." },
+        { label: "Escalabilidad", detail: "Nuestras marcas operan bajo una matriz compartida que reduce costes estructurales y maximiza margen." },
       ],
     },
 
@@ -274,62 +228,18 @@ export const translations = {
       cta: "Conoce al Equipo →",
     },
 
-    ecosystemPage: {
-      sectionEyebrow: "Sección · Servicios",
-      heading: "Nuestros servicios.",
-      body: "Ocho divisiones especializadas trabajando como un único sistema integrado. Estrategia, tecnología, talento y operaciones — todo alineado para acelerar tu crecimiento.",
-      divisionLabel: "División",
-      ctaHeading: "¿Listo para transformar tu empresa?",
-      ctaBtn: "Contáctanos Ahora",
-      units: [
-        {
-          title: "Consultoría Estratégica y Visión Global",
-          headline: "Estrategia que abre mercados.",
-          body: "Te ayudamos a diseñar y ejecutar un plan de expansión internacional con claridad y precisión. Identificamos oportunidades, mitigamos riesgos y construimos una hoja de ruta adaptada a tu industria y objetivos.",
-          metrics: [{ k: "Clientes atendidos", v: "200+" }, { k: "Industrias", v: "12" }, { k: "Crecimiento promedio", v: "+47%" }],
-        },
-        {
-          title: "Tecnología e Ingeniería Disruptiva",
-          headline: "Tecnología construida para tu negocio.",
-          body: "Desarrollamos soluciones digitales a medida — desde plataformas web y apps móviles hasta sistemas de automatización e integraciones de IA. Usamos herramientas de vanguardia para hacer tu operación más rápida, inteligente y competitiva.",
-          metrics: [{ k: "Proyectos entregados", v: "150+" }, { k: "Stack tecnológico", v: "20+" }, { k: "Entrega a tiempo", v: "97%" }],
-        },
-        {
-          title: "Liderazgo y Aceleración del Talento",
-          headline: "Tu equipo es tu mayor activo.",
-          body: "Nuestros programas de formación están diseñados por ejecutivos con experiencia Fortune 500 y ejecutados por coaches certificados. Medimos cada resultado — productividad, capacidad de innovación y retención de talento — para que puedas ver el impacto.",
-          metrics: [{ k: "Programas", v: "30+" }, { k: "Profesionales formados", v: "5,000+" }, { k: "Tasa de retención", v: "+62%" }],
-        },
-        {
-          title: "Gestión de Proyectos de Alto Impacto",
-          headline: "Ejecución sin excusas.",
-          body: "Tomamos la responsabilidad de tus proyectos más críticos y los entregamos de forma eficiente. Desde la planificación hasta el cierre, aplicamos metodologías probadas (PMI, Agile, Scrum) para mantener todo en curso.",
-          metrics: [{ k: "Proyectos gestionados", v: "300+" }, { k: "Dentro del presupuesto", v: "94%" }, { k: "Metodologías", v: "5" }],
-        },
-        {
-          title: "Seguridad Digital y Resiliencia Empresarial",
-          headline: "Tu operación, protegida.",
-          body: "Implementamos estrategias de seguridad digital que protegen tus datos, sistemas y continuidad operativa. Desde auditorías de vulnerabilidad hasta respuesta ante incidentes — mantenemos tu negocio funcionando, pase lo que pase.",
-          metrics: [{ k: "Auditorías de seguridad", v: "80+" }, { k: "Incidentes resueltos", v: "99.8%" }, { k: "Cumplimiento", v: "ISO 27001" }],
-        },
-        {
-          title: "Inteligencia de Negocio y Automatización",
-          headline: "Datos que impulsan decisiones.",
-          body: "Transformamos tus datos en inteligencia accionable. Automatizamos procesos repetitivos para que tu equipo pueda centrarse en lo que realmente importa — estrategia y crecimiento.",
-          metrics: [{ k: "Dashboards creados", v: "120+" }, { k: "Procesos automatizados", v: "400+" }, { k: "Tiempo ahorrado (prom.)", v: "35%" }],
-        },
-        {
-          title: "Ingeniería de Exportación e Importación Global",
-          headline: "Tu producto, en cualquier mercado.",
-          body: "Te acompañamos en cada etapa del comercio internacional — desde el cumplimiento regulatorio y la logística hasta la estrategia de entrada al mercado. Tenemos experiencia en Norteamérica, Europa y Latinoamérica.",
-          metrics: [{ k: "Mercados atendidos", v: "25+" }, { k: "Corredores comerciales", v: "40+" }, { k: "Tasa de cumplimiento", v: "100%" }],
-        },
-        {
-          title: "Gestión de Cadenas de Suministro Inteligentes",
-          headline: "Logística más inteligente.",
-          body: "Optimizamos tu cadena de suministro de extremo a extremo — reduciendo costos, mejorando tiempos de entrega y aumentando la resiliencia. Usamos tecnología y datos para ayudarte a tomar decisiones logísticas más inteligentes.",
-          metrics: [{ k: "Cadenas optimizadas", v: "60+" }, { k: "Reducción de costos", v: "−28%" }, { k: "Tiempo de entrega", v: "−40%" }],
-        },
+    exponential: {
+      eyebrow: "§ 02 — El Factor Exponencial",
+      heading: "EVOLVIX no es un nombre. Es una metodología de crecimiento.",
+      body: "Cada letra es un pilar de rentabilidad diseñado para escalar negocios a líderes globales.",
+      pillars: [
+        { letter: "E", title: "Excellence", desc: "Estándares operativos europeos." },
+        { letter: "V", title: "Vision", desc: "Anticipación de mercados emergentes." },
+        { letter: "O", title: "Opportunity", desc: "Identificación de activos infravalorados." },
+        { letter: "L", title: "Legacy", desc: "Construcción de estructuras a largo plazo." },
+        { letter: "V", title: "Velocity", desc: "Agilidad en la toma de decisiones y ejecución." },
+        { letter: "I", title: "Innovation", desc: "Tecnología aplicada a sectores tradicionales." },
+        { letter: "X", title: "Exponential Factor", desc: "El multiplicador de valor que aplicamos a cada empresa del holding." },
       ],
     },
 
@@ -349,21 +259,21 @@ export const translations = {
     },
 
     boardPage: {
-      sectionEyebrow: "Sección · Nuestro Equipo",
-      headingLine1: "Profesionales con experiencia.",
-      headingLine2: "Comprometidos con tu éxito.",
-      body: "Nuestro equipo combina profundo conocimiento de la industria con una genuina pasión por ayudar a los negocios a crecer. Cada miembro aporta metodologías certificadas y resultados reales en cada proyecto.",
+      sectionEyebrow: "Sección · Liderazgo",
+      headingLine1: "Mentes visionarias.",
+      headingLine2: "Ejecución implacable.",
+      body: "El consejo directivo de Evolvix Global reúne a un equipo senior de estrategas, ingenieros y gestores de capital con trayectorias probadas en Europa, Oriente Medio y las Américas. Cada miembro opera en la intersección entre la experiencia institucional y el impulso emprendedor.",
       members: [
-        { name: "Adrián Vallejo", role: "Fundador & CEO", bio: "Estratega con más de 15 años de experiencia liderando proyectos de transformación tecnológica en empresas de tres continentes. Apasionado por construir negocios que perduran." },
-        { name: "Helena Marchetti", role: "Directora de Consultoría Estratégica", bio: "Experta en expansión internacional y estrategia de entrada a mercados. Ha guiado a más de 80 empresas en sus primeros pasos hacia mercados globales." },
-        { name: "Jonathan Reeves", role: "Director de Tecnología", bio: "Ingeniero full-stack y arquitecto de soluciones. Lidera nuestro equipo de desarrollo con un enfoque en entregar productos digitales robustos, escalables y preparados para el futuro." },
-        { name: "Mei-Lin Tanaka", role: "Directora de Talento y Liderazgo", bio: "Coach ejecutiva certificada con experiencia en organizaciones Fortune 500. Diseña los programas de formación que transforman equipos en unidades de alto rendimiento." },
+        { name: "Grupo EBLE — Consejo Ejecutivo", role: "Liderazgo del Holding", bio: "Evolvix Global opera bajo el paraguas estratégico de Grupo EBLE — un holding español diversificado cuyos pilares son Excelencia, Audacia, Legado y Ejecución. El consejo dirige el capital, las operaciones y la expansión de las cuatro divisiones." },
+        { name: "Directores de División", role: "Liderazgo Operacional", bio: "Cada división de Evolvix está liderada por un director con profunda especialización sectorial: concesiones energéticas e infraestructura de red, ingeniería de alta complejidad, operaciones BPO institucionales y gestión de activos inmobiliarios." },
+        { name: "Consejeros Estratégicos", role: "Consejo Asesor Internacional", bio: "Un consejo asesor internacional apoya al grupo en jurisdicciones clave — España/UE para acceso jurídico y fondos, Dubái/MENA para captación de capital, y Miami para conectividad con los mercados de las Américas." },
+        { name: "Relaciones con Inversores", role: "Capital y Alianzas", bio: "Gestión dedicada de relaciones con inversores para capital institucional, mandatos soberanos y estructuras de co-inversión. El grupo proyecta expansión a nuevos mercados en 24 meses con respaldo de activos tangibles." },
       ],
     },
 
     contactPage: {
       sectionEyebrow: "Sección · Contacto",
-      heading: "Hablemos.",
+      heading: "No buscamos clientes, seleccionamos partners para expandir un legado.",
       body: "Nos encantaría conocer más sobre tu negocio y explorar cómo podemos ayudarte a crecer. Escríbenos — nuestro equipo responde en 24 horas hábiles.",
       accessLabel: "Ponte en Contacto",
       accessHeading: "Cuéntanos sobre tu proyecto.",

@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/images/hero-architecture.jpg";
-import logisticsImg from "@/assets/images/unit-logistics.jpg";
+import energyImg from "@/assets/images/subestacion electrica.png";
 import consultingImg from "@/assets/images/unit-consulting.jpg";
 import assetsImg from "@/assets/images/unit-assets.jpg";
 import innovationImg from "@/assets/images/unit-innovation.jpg";
@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const UNIT_IMGS = [logisticsImg, consultingImg, assetsImg, innovationImg];
+const UNIT_IMGS = [energyImg, consultingImg, assetsImg, innovationImg];
 
 function HeroSection() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -100,7 +100,7 @@ function HeroSection() {
 
             <div className="mt-10 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
               <Link
-                to="/ecosystem"
+                to="#services"
                 className="group relative inline-flex items-center gap-4 border border-titanium px-7 py-4 text-mono-label text-titanium transition-colors duration-500 hover:bg-titanium hover:text-background"
               >
                 <span>{t.hero.ctaPrimary}</span>
@@ -119,17 +119,16 @@ function HeroSection() {
           </Reveal>
         </div>
 
-        {/* Marquee footer */}
         <div className="mt-20 overflow-hidden border-t border-hairline pt-6">
           <div className="flex w-max animate-marquee gap-16 text-mono-label text-smoke">
             {[...Array(2)].flatMap((_, i) =>
               [
-                "Madrid · Operations Hub",
-                "London · Financial Intelligence",
-                "Dubai · Emerging Logistics",
-                "Singapore · Innovation Division",
-                "ISO/IEC 27001",
-                "MMXXVI Edition",
+                "Madrid · Central Operations",
+                "París · Innovation Hub",
+                "Miami · Americas Gateway",
+                "Dubái · Capital & Emerging Markets",
+                "El Cairo · Infrastructure & MENA",
+                "GRUPO EBLE · Global Holding",
               ].map((text, j) => (
                 <span key={`${i}-${j}`} className="flex items-center gap-16">
                   {text}
@@ -167,31 +166,104 @@ function ManifestoSection() {
   );
 }
 
+const EBLE_PILLARS = [
+  {
+    letter: "E",
+    title: "Excellence",
+    titleEs: "Excelencia",
+    desc: "Our metric is perfection. Across every division, the standard is absolute excellence.",
+    descEs: "Nuestra métrica es la perfección. En cada división, el estándar es la excelencia absoluta.",
+  },
+  {
+    letter: "B",
+    title: "Boldness",
+    titleEs: "Audacia",
+    desc: "We do not fear complex markets. Our boldness allows us to lead where others cannot reach.",
+    descEs: "No tememos a los mercados complejos. Nuestra audacia nos permite liderar donde otros no llegan.",
+  },
+  {
+    letter: "L",
+    title: "Legacy",
+    titleEs: "Legado",
+    desc: "We do not work for the current quarter, but for the next generations. We build legacy.",
+    descEs: "No trabajamos para el trimestre actual, sino para las próximas generaciones. Construimos legado.",
+  },
+  {
+    letter: "E",
+    title: "Execution",
+    titleEs: "Ejecución",
+    desc: "Strategy is worthless without results. We are experts at making things happen.",
+    descEs: "La estrategia no vale nada sin resultados. Somos expertos en hacer que las cosas sucedan.",
+  },
+];
+
+function EBLESection() {
+  const { lang } = useLang();
+  const isEs = lang === "es";
+  return (
+    <section className="relative bg-background border-t border-hairline overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom-left,rgba(197,160,89,0.04)_0%,transparent_60%)]" />
+      <div className="container-edge relative z-10 py-24 md:py-32">
+        <Reveal variant="up">
+          <p className="text-eyebrow text-gold">
+            {isEs ? "§ — Grupo EBLE · El Valor de Nuestras Siglas" : "§ — Grupo EBLE · The Value of Our Acronym"}
+          </p>
+          <h2 className="mt-6 font-display text-3xl font-extrabold tracking-tight text-titanium md:text-4xl max-w-[22ch]">
+            {isEs
+              ? "Los pilares del holding global español."
+              : "The pillars of the Spanish global holding."}
+          </h2>
+          <p className="mt-6 max-w-2xl text-base font-light leading-relaxed text-smoke">
+            {isEs
+              ? "EBLE no es un acrónimo vacío. Es el pilar conceptual bajo el que opera Evolvix Global como holding multisectorial."
+              : "EBLE is not an empty acronym. It is the conceptual pillar under which Evolvix Global operates as a multi-sector holding."}
+          </p>
+        </Reveal>
+
+        <div className="mt-16 grid grid-cols-2 gap-px overflow-hidden border border-hairline bg-hairline md:grid-cols-4">
+          {EBLE_PILLARS.map((p, i) => (
+            <Reveal key={`${p.letter}-${i}`} variant="up" delay={i * 80}>
+              <div className="group bg-background p-8 md:p-10 h-full flex flex-col gap-4 transition-colors duration-500 hover:bg-surface/40">
+                <span className="font-display text-5xl font-bold text-gold/70 mb-2 transition-transform duration-500 group-hover:scale-110 origin-left">
+                  {p.letter}
+                </span>
+                <p className="font-display text-base font-bold tracking-tight text-titanium leading-tight">
+                  {isEs ? p.titleEs : p.title}
+                </p>
+                <p className="text-sm font-light leading-relaxed text-smoke mt-auto">
+                  {isEs ? p.descEs : p.desc}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function UnitsPreview() {
   const { t } = useLang();
   return (
-    <section className="relative bg-background">
+    <section id="services" className="relative bg-background">
       <div className="container-edge border-t border-hairline">
         <Reveal variant="up" className="flex items-end justify-between py-10">
           <div>
-            <p className="text-eyebrow">{t.units.eyebrow}</p>
+            <p className="text-eyebrow">{t.holdings.eyebrow}</p>
             <h2 className="mt-4 text-display-md text-titanium max-w-[16ch]">
-              {t.units.heading}
+              {t.holdings.heading}
             </h2>
           </div>
-          <Link to="/ecosystem" className="hidden text-mono-label text-titanium link-line md:inline">
-            {t.units.seeAll}
-          </Link>
         </Reveal>
       </div>
 
-      {t.units.items.map((unit, i) => (
+      {t.holdings.items.map((unit, i) => (
         <UnitFullScreen
-          key={unit.title}
-          unit={{ ...unit, code: String(i + 1).padStart(2, "0"), img: UNIT_IMGS[i] }}
+          key={unit.name}
+          unit={{ ...unit, img: UNIT_IMGS[i] }}
           reverse={i % 2 === 1}
-          totalUnits={t.units.items.length}
-          divisionBriefLabel={t.units.divisionBrief}
+          totalUnits={t.holdings.items.length}
+          divisionBriefLabel="Details"
         />
       ))}
     </section>
@@ -204,7 +276,7 @@ function UnitFullScreen({
   totalUnits,
   divisionBriefLabel,
 }: {
-  unit: { code: string; title: string; short: string; copy: string; img: string };
+  unit: { code: string; name: string; tagline: string; body: string; img: string };
   reverse: boolean;
   totalUnits: number;
   divisionBriefLabel: string;
@@ -227,6 +299,16 @@ function UnitFullScreen({
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const getRouteForCode = (code: string) => {
+    switch (code) {
+      case "EVX-01": return "/services/energy";
+      case "EVX-02": return "/services/engineering";
+      case "EVX-03": return "/services/bpo";
+      case "EVX-04": return "/services/asset-management";
+      default: return "/";
+    }
+  };
+
   return (
     <article className="relative border-t border-hairline">
       <div
@@ -241,7 +323,7 @@ function UnitFullScreen({
           <img
             ref={innerRef}
             src={unit.img}
-            alt={unit.title}
+            alt={unit.name}
             width={1600}
             height={1024}
             loading="lazy"
@@ -256,21 +338,21 @@ function UnitFullScreen({
         <div className="flex items-center border-hairline md:border-l">
           <div className="container-edge w-full py-20 md:py-0">
             <Reveal variant="up">
-              <p className="text-eyebrow">{unit.short}</p>
+              <p className="text-eyebrow text-gold">{unit.tagline}</p>
             </Reveal>
             <Reveal variant="up" delay={100}>
               <h3 className="mt-6 text-display-md text-titanium max-w-[18ch]">
-                {unit.title}
+                {unit.name}
               </h3>
             </Reveal>
             <Reveal variant="up" delay={200}>
               <p className="mt-8 max-w-md text-base font-light leading-relaxed text-platinum">
-                {unit.copy}
+                {unit.body}
               </p>
             </Reveal>
             <Reveal variant="up" delay={300}>
               <Link
-                to="/ecosystem"
+                to={getRouteForCode(unit.code)}
                 className="mt-10 inline-flex items-center gap-3 text-mono-label text-titanium link-line"
               >
                 {divisionBriefLabel}
@@ -312,7 +394,7 @@ function FootprintPreview() {
         <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden border border-hairline bg-hairline md:grid-cols-4">
           {FOOTPRINT_CITIES.map((c) => (
             <div key={c.name} className="bg-background p-6 md:p-8">
-              <p className="text-mono-label text-electric">
+              <p className="text-mono-label text-gold">
                 {c.name}, {c.country}
               </p>
               <p className="mt-4 font-display text-2xl font-extrabold tracking-tight text-titanium">
@@ -363,8 +445,8 @@ function InvestmentThesis() {
       <div className="container-edge py-24 md:py-36">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:items-end">
           <Reveal variant="up" className="md:col-span-5">
-            <p className="text-eyebrow text-bright-blue">{p.eyebrow}</p>
-            <h2 className="mt-6 text-display-lg text-titanium max-w-[14ch]">
+            <p className="text-eyebrow text-gold">{p.eyebrow}</p>
+            <h2 className="mt-6 font-display text-3xl font-extrabold leading-tight tracking-tight text-titanium max-w-[18ch] md:text-4xl">
               {p.headingLine1}{" "}
               <span className="text-gold">{p.headingLine2}</span>
             </h2>
@@ -376,11 +458,11 @@ function InvestmentThesis() {
           </Reveal>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-px overflow-hidden border border-hairline bg-hairline sm:grid-cols-2 md:grid-cols-4">
+        <div className="mt-16 grid grid-cols-1 gap-px overflow-hidden border border-hairline bg-hairline sm:grid-cols-2 md:grid-cols-3">
           {p.pillars.map((pillar, i) => (
             <Reveal key={pillar.label} variant="up" delay={i * 80}>
               <div className="bg-background p-8 md:p-10 h-full flex flex-col gap-4">
-                <span className="text-mono-label text-electric">{String(i + 1).padStart(2, "0")}</span>
+                <span className="text-mono-label text-gold">{String(i + 1).padStart(2, "0")}</span>
                 <p className="font-display text-lg font-bold tracking-tight text-titanium leading-tight">
                   {pillar.label}
                 </p>
@@ -396,44 +478,38 @@ function InvestmentThesis() {
   );
 }
 
-function HoldingDivisions() {
-  const { t } = useLang();
-  const p = t.holdings;
-  return (
-    <section className="relative bg-background border-t border-hairline">
-      <div className="container-edge py-16 md:py-24">
-        <Reveal variant="up" className="flex items-end justify-between py-6">
-          <div>
-            <p className="text-eyebrow text-bright-blue">{p.eyebrow}</p>
-            <h2 className="mt-4 text-display-md text-titanium max-w-[18ch]">
-              {p.heading}
-            </h2>
-          </div>
-          <span className="hidden text-mono-label text-gold md:inline">{p.seeAll}</span>
-        </Reveal>
-      </div>
 
-      <div className="border-t border-hairline">
-        {p.items.map((item, i) => (
-          <Reveal key={item.code} variant="up" delay={i * 60}>
-            <article className="container-edge grid grid-cols-1 gap-8 border-b border-hairline py-10 md:grid-cols-12 md:items-center md:py-14">
-              <div className="md:col-span-2">
-                <span className="font-display text-4xl font-extrabold tracking-tighter text-hairline/60 select-none">
-                  {item.code}
+
+function ExponentialSection() {
+  const { t } = useLang();
+  // We use type assertion since it might complain if TS isn't synced yet
+  const p = (t as any).exponential;
+
+  if (!p) return null;
+
+  return (
+    <section className="relative bg-background border-t border-hairline py-24 md:py-32 overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(197,160,89,0.05)_0%,transparent_70%)]" />
+      <div className="container-edge relative z-10">
+        <Reveal variant="up" className="max-w-3xl">
+          <p className="text-eyebrow text-gold">{p.eyebrow}</p>
+          <h2 className="mt-6 text-display-md text-titanium leading-[1.1]">{p.heading}</h2>
+          <p className="mt-8 text-base font-light leading-relaxed text-platinum">{p.body}</p>
+        </Reveal>
+
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {p.pillars.map((pillar: any, i: number) => (
+            <Reveal key={pillar.letter} variant="up" delay={i * 50}>
+              <div className="group border border-hairline bg-surface/30 backdrop-blur-sm p-8 h-full flex flex-col transition-colors duration-500 hover:border-gold/30 hover:bg-surface">
+                <span className="font-display text-5xl font-bold text-gold/80 mb-6 transition-transform duration-500 group-hover:scale-110 origin-left">
+                  {pillar.letter}
                 </span>
+                <h3 className="font-display text-xl font-semibold text-titanium mb-3">{pillar.title}</h3>
+                <p className="text-sm font-light leading-relaxed text-smoke">{pillar.desc}</p>
               </div>
-              <div className="md:col-span-4">
-                <p className="text-mono-label text-bright-blue mb-2">{item.tagline}</p>
-                <h3 className="font-display text-xl font-bold tracking-tight text-titanium">
-                  {item.name}
-                </h3>
-              </div>
-              <p className="text-sm font-light leading-relaxed text-smoke md:col-span-5 md:col-start-8">
-                {item.body}
-              </p>
-            </article>
-          </Reveal>
-        ))}
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -444,8 +520,9 @@ function Index() {
     <>
       <HeroSection />
       <ManifestoSection />
+      <EBLESection />
+      <ExponentialSection />
       <InvestmentThesis />
-      <HoldingDivisions />
       <UnitsPreview />
       <FootprintPreview />
       <BoardPreview />

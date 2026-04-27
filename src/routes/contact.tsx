@@ -42,11 +42,12 @@ function ContactPage() {
     formData.append("_template", "table");
 
     try {
+      // Use URLSearchParams to avoid CORS preflight block on FormSubmit
       const res = await fetch("https://formsubmit.co/ajax/saviel.dev@gmail.com", {
         method: "POST",
-        body: JSON.stringify(Object.fromEntries(formData)),
+        body: new URLSearchParams(formData as any).toString(),
         headers: { 
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
           "Accept": "application/json" 
         }
       });

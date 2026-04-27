@@ -10,19 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as FootprintRouteImport } from './routes/footprint'
-import { Route as EcosystemRouteImport } from './routes/ecosystem'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BoardRouteImport } from './routes/board'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ServicesEngineeringRouteImport } from './routes/services.engineering'
+import { Route as ServicesEnergyRouteImport } from './routes/services.energy'
+import { Route as ServicesBpoRouteImport } from './routes/services.bpo'
+import { Route as ServicesAssetManagementRouteImport } from './routes/services.asset-management'
 
 const FootprintRoute = FootprintRouteImport.update({
   id: '/footprint',
   path: '/footprint',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EcosystemRoute = EcosystemRouteImport.update({
-  id: '/ecosystem',
-  path: '/ecosystem',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -40,43 +38,100 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesEngineeringRoute = ServicesEngineeringRouteImport.update({
+  id: '/services/engineering',
+  path: '/services/engineering',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesEnergyRoute = ServicesEnergyRouteImport.update({
+  id: '/services/energy',
+  path: '/services/energy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesBpoRoute = ServicesBpoRouteImport.update({
+  id: '/services/bpo',
+  path: '/services/bpo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesAssetManagementRoute = ServicesAssetManagementRouteImport.update({
+  id: '/services/asset-management',
+  path: '/services/asset-management',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/board': typeof BoardRoute
   '/contact': typeof ContactRoute
-  '/ecosystem': typeof EcosystemRoute
   '/footprint': typeof FootprintRoute
+  '/services/asset-management': typeof ServicesAssetManagementRoute
+  '/services/bpo': typeof ServicesBpoRoute
+  '/services/energy': typeof ServicesEnergyRoute
+  '/services/engineering': typeof ServicesEngineeringRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/board': typeof BoardRoute
   '/contact': typeof ContactRoute
-  '/ecosystem': typeof EcosystemRoute
   '/footprint': typeof FootprintRoute
+  '/services/asset-management': typeof ServicesAssetManagementRoute
+  '/services/bpo': typeof ServicesBpoRoute
+  '/services/energy': typeof ServicesEnergyRoute
+  '/services/engineering': typeof ServicesEngineeringRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/board': typeof BoardRoute
   '/contact': typeof ContactRoute
-  '/ecosystem': typeof EcosystemRoute
   '/footprint': typeof FootprintRoute
+  '/services/asset-management': typeof ServicesAssetManagementRoute
+  '/services/bpo': typeof ServicesBpoRoute
+  '/services/energy': typeof ServicesEnergyRoute
+  '/services/engineering': typeof ServicesEngineeringRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/board' | '/contact' | '/ecosystem' | '/footprint'
+  fullPaths:
+    | '/'
+    | '/board'
+    | '/contact'
+    | '/footprint'
+    | '/services/asset-management'
+    | '/services/bpo'
+    | '/services/energy'
+    | '/services/engineering'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/board' | '/contact' | '/ecosystem' | '/footprint'
-  id: '__root__' | '/' | '/board' | '/contact' | '/ecosystem' | '/footprint'
+  to:
+    | '/'
+    | '/board'
+    | '/contact'
+    | '/footprint'
+    | '/services/asset-management'
+    | '/services/bpo'
+    | '/services/energy'
+    | '/services/engineering'
+  id:
+    | '__root__'
+    | '/'
+    | '/board'
+    | '/contact'
+    | '/footprint'
+    | '/services/asset-management'
+    | '/services/bpo'
+    | '/services/energy'
+    | '/services/engineering'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BoardRoute: typeof BoardRoute
   ContactRoute: typeof ContactRoute
-  EcosystemRoute: typeof EcosystemRoute
   FootprintRoute: typeof FootprintRoute
+  ServicesAssetManagementRoute: typeof ServicesAssetManagementRoute
+  ServicesBpoRoute: typeof ServicesBpoRoute
+  ServicesEnergyRoute: typeof ServicesEnergyRoute
+  ServicesEngineeringRoute: typeof ServicesEngineeringRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -86,13 +141,6 @@ declare module '@tanstack/react-router' {
       path: '/footprint'
       fullPath: '/footprint'
       preLoaderRoute: typeof FootprintRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/ecosystem': {
-      id: '/ecosystem'
-      path: '/ecosystem'
-      fullPath: '/ecosystem'
-      preLoaderRoute: typeof EcosystemRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -116,6 +164,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/engineering': {
+      id: '/services/engineering'
+      path: '/services/engineering'
+      fullPath: '/services/engineering'
+      preLoaderRoute: typeof ServicesEngineeringRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/energy': {
+      id: '/services/energy'
+      path: '/services/energy'
+      fullPath: '/services/energy'
+      preLoaderRoute: typeof ServicesEnergyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/bpo': {
+      id: '/services/bpo'
+      path: '/services/bpo'
+      fullPath: '/services/bpo'
+      preLoaderRoute: typeof ServicesBpoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/asset-management': {
+      id: '/services/asset-management'
+      path: '/services/asset-management'
+      fullPath: '/services/asset-management'
+      preLoaderRoute: typeof ServicesAssetManagementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -123,8 +199,11 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BoardRoute: BoardRoute,
   ContactRoute: ContactRoute,
-  EcosystemRoute: EcosystemRoute,
   FootprintRoute: FootprintRoute,
+  ServicesAssetManagementRoute: ServicesAssetManagementRoute,
+  ServicesBpoRoute: ServicesBpoRoute,
+  ServicesEnergyRoute: ServicesEnergyRoute,
+  ServicesEngineeringRoute: ServicesEngineeringRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

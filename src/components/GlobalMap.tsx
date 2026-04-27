@@ -36,12 +36,12 @@ const ARCS: [City, City][] = CITIES.flatMap((a, i) =>
   CITIES.slice(i + 1).map<[City, City]>((b) => [a, b]),
 );
 
-// Electric blue palette
-const ELECTRIC = "oklch(0.68 0.19 254)";
-const ELECTRIC_BRIGHT = "oklch(0.85 0.14 254)";
-const LAND_FILL = "#0e0e10";
-const LAND_STROKE = "rgba(255,255,255,0.07)";
-const OCEAN = "#050507";
+// Gold/Copper palette
+const ELECTRIC = "#C5A059";
+const ELECTRIC_BRIGHT = "#B86E3A";
+const LAND_FILL = "#111115";
+const LAND_STROKE = "rgba(197, 160, 89, 0.1)";
+const OCEAN = "#0B0B0D";
 
 export function GlobalMap() {
   return (

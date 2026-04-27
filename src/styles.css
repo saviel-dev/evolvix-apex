@@ -9,9 +9,7 @@
    Lujo tecnológico · Minimalismo autoritario
    ============================================ */
 
-@import url("https://api.fontshare.com/v2/css?f[]=clash-display@500,700,800&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap");
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -19,8 +17,8 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
-  --font-display: "Clash Display", "Inter", system-ui, sans-serif;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Montserrat", system-ui, sans-serif;
+  --font-sans: "Open Sans", system-ui, sans-serif;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -58,27 +56,22 @@
 :root {
   --radius: 0.125rem;
 
-  /* EVOLVIX absolute black aesthetic */
-  --background: oklch(0.05 0 0);
-  /* #050505 */
-  --foreground: oklch(0.97 0 0);
-  /* titanium white */
-  --card: oklch(0.07 0 0);
+  /* EVOLVIX Oxford Black aesthetic */
+  --background: #0B0B0D;
+  --foreground: #FFFFFF; /* pure white */
+  --card: #0B0B0D;
   --card-foreground: oklch(0.97 0 0);
-  --popover: oklch(0.07 0 0);
+  --popover: #1A1A1B;
   --popover-foreground: oklch(0.97 0 0);
 
-  --primary: oklch(0.97 0 0);
-  /* titanium white */
-  --primary-foreground: oklch(0.05 0 0);
-  --secondary: oklch(0.12 0 0);
-  --secondary-foreground: oklch(0.97 0 0);
-  --muted: oklch(0.12 0 0);
+  --primary: #FFFFFF;
+  --primary-foreground: #0B0B0D;
+  --secondary: #16161A;
+  --secondary-foreground: #FFFFFF;
+  --muted: #16161A;
   --muted-foreground: oklch(0.62 0 0);
-  /* smoke gray */
-  --accent: oklch(0.68 0.19 254);
-  /* electric blue */
-  --accent-foreground: oklch(0.05 0 0);
+  --accent: #C5A059; /* Gold accent */
+  --accent-foreground: #0B0B0D;
   --destructive: oklch(0.62 0.22 27);
   --destructive-foreground: oklch(0.97 0 0);
 
@@ -87,13 +80,13 @@
   --ring: oklch(0.68 0.19 254);
 
   /* Brand semantic tokens */
-  --titanium: oklch(0.97 0 0);
+  --titanium: #FFFFFF;
   --smoke: oklch(0.62 0 0);
-  --platinum: oklch(0.82 0 0);
-  --electric: oklch(0.68 0.19 254);
-  --electric-glow: oklch(0.78 0.16 254 / 0.5);
-  --hairline: oklch(1 0 0 / 0.08);
-  --surface: oklch(0.07 0 0);
+  --platinum: #E2E8F0;
+  --electric: #C5A059; /* Gold */
+  --electric-glow: #B86E3A; /* Copper */
+  --hairline: rgba(255, 255, 255, 0.06);
+  --surface: #0B0B0D;
 
   /* Gradients & shadows */
   --gradient-fade-bottom: linear-gradient(180deg,
@@ -155,9 +148,10 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    font-weight: 800;
-    letter-spacing: -0.025em;
-    line-height: 0.95;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    line-height: 1.1;
   }
 
   /* Hide native cursor on devices with fine pointers — replaced by magnetic cursor */
@@ -183,26 +177,29 @@
 
   .text-display-xl {
     font-family: var(--font-display);
-    font-weight: 800;
-    font-size: clamp(3rem, 9vw, 9rem);
-    line-height: 0.92;
-    letter-spacing: -0.035em;
+    font-weight: 700;
+    font-size: clamp(2.5rem, 7vw, 7rem);
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
 
   .text-display-lg {
     font-family: var(--font-display);
-    font-weight: 800;
-    font-size: clamp(2.25rem, 5vw, 5rem);
-    line-height: 1.05;
-    letter-spacing: -0.03em;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.15;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
 
   .text-display-md {
     font-family: var(--font-display);
-    font-weight: 700;
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
+    font-weight: 600;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
 
   .text-eyebrow {
