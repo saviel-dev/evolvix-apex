@@ -76,10 +76,10 @@ export const translations = {
       heading: "Four assets. One group.",
       seeAll: "Full portfolio →",
       items: [
-        { code: "EVX-01", name: "EVOLVIX Energy Division", tagline: "Sovereign energy infrastructure", body: "Renewable and conventional energy assets across emerging and developed markets. Long-term concessions, grid infrastructure and energy trading." },
-        { code: "EVX-02", name: "EVOLVIX Engineering & Infra", tagline: "Critical infrastructure at scale", body: "Design, build and operate of mission-critical infrastructure — logistics parks, data centers, transport corridors and industrial assets." },
-        { code: "EVX-03", name: "EVOLVIX Global Services", tagline: "BPO at institutional grade", body: "Business process outsourcing for global corporations. Finance, compliance, tech support and back-office operations delivered at Fortune 500 standards." },
-        { code: "EVX-04", name: "EVOLVIX Asset Management", tagline: "Capital with precision", body: "Multi-class portfolio management: private equity, infrastructure debt, sovereign mandates and alternative vehicles for institutional capital." },
+        { code: "EVX-01", name: "Global Trade & Engineering", tagline: "Import · Export · Logistics", body: "We manage your international trade and engineering operations end-to-end, reducing friction and maximizing global reach." },
+        { code: "EVX-02", name: "Business Intelligence", tagline: "Data · Automation · Decisions", body: "We convert your business data into strategic decisions. Intelligent automation that eliminates waste and accelerates results." },
+        { code: "EVX-03", name: "Digital Security", tagline: "Cybersecurity · Compliance · Resilience", body: "We protect your critical assets with enterprise-grade security, minimizing risk exposure and ensuring operational continuity." },
+        { code: "EVX-04", name: "Project Execution", tagline: "Planning · Delivery · Control", body: "We run your high-impact initiatives with precision. On time, on budget, aligned with your strategic goals." },
       ],
     },
 
@@ -213,10 +213,10 @@ export const translations = {
       heading: "Cuatro activos. Un grupo.",
       seeAll: "Portafolio completo →",
       items: [
-        { code: "EVX-01", name: "EVOLVIX Energy Division", tagline: "Infraestructura energética soberana", body: "Activos de energía renovable y convencional en mercados emergentes y desarrollados. Concesiones a largo plazo, infraestructura de red y comercialización de energía." },
-        { code: "EVX-02", name: "EVOLVIX Engineering & Infra", tagline: "Infraestructura crítica a escala", body: "Diseño, construcción y operación de infraestructura de misión crítica: parques logísticos, centros de datos, corredores de transporte y activos industriales." },
-        { code: "EVX-03", name: "EVOLVIX Global Services", tagline: "BPO de nivel institucional", body: "Externalización de procesos de negocio para corporaciones globales. Finanzas, cumplimiento, soporte técnico y operaciones back-office bajo estándares Fortune 500." },
-        { code: "EVX-04", name: "EVOLVIX Asset Management", tagline: "Capital con precisión", body: "Gestión de portafolios multi-clase: capital privado, deuda de infraestructura, mandatos soberanos y vehículos alternativos para capital institucional." },
+        { code: "EVX-01", name: "Comercio Global e Ingeniería", tagline: "Importación · Exportación · Logística", body: "Gestionamos tus operaciones de comercio internacional e ingeniería de extremo a extremo, reduciendo fricción y maximizando tu alcance global." },
+        { code: "EVX-02", name: "Inteligencia de Negocio", tagline: "Datos · Automatización · Decisiones", body: "Convertimos tus datos en decisiones estratégicas. Automatización inteligente que elimina ineficiencias y acelera resultados." },
+        { code: "EVX-03", name: "Seguridad Digital", tagline: "Ciberseguridad · Cumplimiento · Resiliencia", body: "Protegemos tus activos críticos con seguridad empresarial avanzada, minimizando la exposición al riesgo y asegurando la continuidad operativa." },
+        { code: "EVX-04", name: "Ejecución de Proyectos", tagline: "Planificación · Entrega · Control", body: "Dirigimos tus iniciativas de alto impacto con precisión. En tiempo, en presupuesto, alineados con tus objetivos estratégicos." },
       ],
     },
 

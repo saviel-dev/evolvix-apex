@@ -85,7 +85,7 @@ function HeroSection() {
         </Reveal>
 
         <Reveal variant="up" delay={120}>
-          <h1 className="mt-8 text-display-xl text-titanium max-w-[18ch]">
+          <h1 className="mt-8 text-display-lg text-titanium max-w-[18ch]">
             {t.hero.headingLine1}
             <br />
             <span className="text-platinum">{t.hero.headingOf}</span> {t.hero.headingLine2.replace(/^(del|of) /, "")}
