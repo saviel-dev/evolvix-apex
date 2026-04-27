@@ -215,8 +215,8 @@ function EBLESection() {
           </h2>
           <p className="mt-6 max-w-2xl text-base font-light leading-relaxed text-smoke">
             {isEs
-              ? "EBLE no es un acrónimo vacío. Es el pilar conceptual bajo el que opera Evolvix Global como holding multisectorial."
-              : "EBLE is not an empty acronym. It is the conceptual pillar under which Evolvix Global operates as a multi-sector holding."}
+              ? "EBLE no es un acrónimo vacío. Es el pilar conceptual sobre el que Grupo EBLE construye su identidad como holding multisectorial de origen español."
+              : "EBLE is not an empty acronym. It is the foundational pillar upon which Grupo EBLE builds its identity as a Spanish-origin multi-sector holding."}
           </p>
         </Reveal>
 
@@ -521,7 +521,7 @@ function TrustStrip() {
   const stats = [
     { value: "40%", label: isEs ? "Reducción de retrasos en comercio internacional" : "Reduction in international trade delays" },
     { value: "60%", label: isEs ? "Menos tiempo en reporting con BI" : "Less time spent on reporting with BI" },
-    { value: "5", label: isEs ? "Mercados activos — Europa, MENA y Américas" : "Active markets — Europe, MENA & Americas" },
+    { value: "5", label: isEs ? "Ciudades: Madrid, París, Miami, Dubái y El Cairo" : "Cities: Madrid, Paris, Miami, Dubai & Cairo" },
     { value: "95%", label: isEs ? "Proyectos entregados en plazo y presupuesto" : "Projects delivered on time and on budget" },
   ];
   return (

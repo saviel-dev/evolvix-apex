@@ -13,47 +13,47 @@ export const translations = {
     partnerAccess: "Contact Us",
 
     hero: {
-      eyebrow: "Evolvix Global — B2B Technology & Business Services",
+      eyebrow: "Evolvix Global — B2B Business Services",
       liveLabel: "Live · Active in 5 Markets",
-      headingLine1: "We solve complex",
-      headingLine2: "business challenges.",
+      headingLine1: "Your business,",
+      headingLine2: "running smoothly.",
       headingOf: "",
-      body: "From global trade operations to cybersecurity and project execution — we deliver measurable results for companies that need to move fast and scale smart.",
-      ctaPrimary: "See Our Services",
-      ctaSecondary: "Schedule a Free Call →",
+      body: "We handle the operational challenges that slow companies down — international trade, data decisions, digital security and project delivery. You focus on growth. We handle the rest.",
+      ctaPrimary: "See How We Help",
+      ctaSecondary: "Book a Free Call →",
     },
 
     manifesto: {
       eyebrow: "§ 01 — What We Do",
-      headingLine1: "Four services.",
-      headingLine2: "One reliable partner.",
-      body: "Evolvix Global is a B2B business services group operating across global trade, business intelligence, cybersecurity and project management. We work with companies that are growing internationally, dealing with operational complexity, or need a reliable execution partner — and we deliver concrete, measurable results.",
+      headingLine1: "We make hard",
+      headingLine2: "things simple.",
+      body: "Running a business across borders is complicated. Managing data is overwhelming. Security feels like a full-time job. Project timelines slip. We fix all of that — with real teams, proven methods, and results you can measure from day one.",
     },
 
     units: {
       eyebrow: "§ 02 — Our Services",
-      heading: "Eight divisions. One vision.",
+      heading: "Four ways we help you grow.",
       seeAll: "See all services →",
       divisionBrief: "Learn More",
       items: [
-        { short: "Strategy", title: "Strategic Consulting & Global Vision", copy: "We design your roadmap for international expansion. Clear strategy, real decisions and measurable results from day one." },
-        { short: "Tech", title: "Disruptive Technology & Engineering", copy: "Innovative solutions tailored to your business. From custom software to advanced automation — we build the tools that set you apart." },
-        { short: "Talent", title: "Leadership & Talent Acceleration", copy: "Customized programs with performance metrics. We develop leaders who drive transformation from within your organization." },
-        { short: "Projects", title: "High-Impact Project Management", copy: "Efficient execution of your most critical initiatives. We keep your projects on time, on budget, and aligned with your strategic goals." },
+        { short: "Trade", title: "Global Trade & Engineering", copy: "Expanding internationally shouldn't mean months of delays. We manage your full import/export cycle so you can grow across borders without the headaches." },
+        { short: "Data", title: "Business Intelligence", copy: "Your business generates data every day. We turn it into dashboards, automation and clear decisions so your team stops guessing and starts growing." },
+        { short: "Security", title: "Digital Security", copy: "One breach can shut you down. We audit, protect and keep you compliant — so security stops being a worry and starts being a strength." },
+        { short: "Projects", title: "Project Execution", copy: "Great ideas fail when execution falls apart. We embed in your team, manage the moving parts, and deliver on time. Every time." },
       ],
     },
 
     footprint: {
-      eyebrow: "§ 03 — Global Footprint",
-      heading: "Seven nodes. One system.",
-      body: "A geographically diversified network spanning four continents — Madrid, London, Paris, Miami, Cairo, Dubai and Singapore — engineered to synchronize capital, logistics and intelligence across any time zone.",
+      eyebrow: "§ 03 — Where We Operate",
+      heading: "Present where your business needs us.",
+      body: "We operate across five key markets — Madrid, Paris, Miami, Dubai and Cairo — so whether you're expanding into Europe, MENA or the Americas, there's an Evolvix team close to your operation.",
     },
 
     board: {
-      eyebrow: "§ 04 — Why Work With Us",
-      headingLine1: "Senior-level experts.",
-      headingLine2: "Proven execution.",
-      body: "Our team has delivered projects across Europe, the Middle East and the Americas. We bring institutional expertise without bureaucratic overhead — you get direct access to senior specialists who are invested in your outcomes.",
+      eyebrow: "§ 04 — Why Teams Choose Us",
+      headingLine1: "People who deliver.",
+      headingLine2: "Not just consultants.",
+      body: "We've worked across Europe, the Middle East and the Americas. You get senior people who have done the work before — not a junior team learning on your time or your budget.",
       cta: "Meet the Team →",
     },
 
@@ -76,10 +76,10 @@ export const translations = {
       heading: "Four assets. One group.",
       seeAll: "Full portfolio →",
       items: [
-        { code: "EVX-01", name: "Global Trade & Engineering", tagline: "Import · Export · Logistics", body: "Managing international operations is slow, error-prone and expensive. We take over your full import/export cycle — customs, logistics, supplier coordination and compliance — so you grow across borders without the overhead. Companies using our trade desk reduce delays by up to 40%." },
-        { code: "EVX-02", name: "Business Intelligence", tagline: "Data · Automation · Decisions", body: "Most businesses sit on data they never use. We build dashboards, automate manual processes and connect your systems so every decision is backed by real-time insight. Average client cuts reporting time by 60% in the first 90 days." },
-        { code: "EVX-03", name: "Digital Security", tagline: "Cybersecurity · Compliance · Resilience", body: "One security incident can shut down operations and destroy client trust. We audit your vulnerabilities, implement protection layers and keep your systems compliant — so you stay operational and credible, even under attack." },
-        { code: "EVX-04", name: "Project Execution", tagline: "Planning · Delivery · Control", body: "Strategic projects fail not because of bad ideas, but because of poor execution. We embed a senior project team into your operations, manage stakeholders and deliver on schedule. 95% of our projects close within agreed scope and timeline." },
+        { code: "EVX-01", name: "Global Trade & Engineering", tagline: "Import · Export · Logistics", body: "Expanding internationally shouldn’t mean months of delays and customs headaches. We handle your full import/export cycle — logistics, suppliers and compliance — so you grow across borders without the overhead. Clients typically cut cross-border delays by 40%." },
+        { code: "EVX-02", name: "Business Intelligence", tagline: "Data · Automation · Clarity", body: "Your business generates data every day — but most of it never gets used. We build dashboards and automations that turn raw numbers into clear decisions. Teams cut reporting time by 60% within 90 days." },
+        { code: "EVX-03", name: "Digital Security", tagline: "Cybersecurity · Compliance · Peace of mind", body: "A single breach can shut you down and cost you clients. We audit your systems, plug the gaps and keep you compliant — so security is one less thing to worry about, and one more reason clients trust you." },
+        { code: "EVX-04", name: "Project Execution", tagline: "On time · On budget · Done right", body: "Great ideas fail when execution falls apart. We embed directly into your team, manage the moving parts and deliver. 95% of our projects close within scope and on schedule." },
       ],
     },
 
@@ -128,11 +128,11 @@ export const translations = {
 
     contactPage: {
       sectionEyebrow: "Section · Contact",
-      heading: "Ready to solve a real business challenge?",
-      body: "Whether you're scaling internationally, facing operational bottlenecks, or need a trusted execution partner — let's talk. Our team responds within one business day.",
-      accessLabel: "Get In Touch",
-      accessHeading: "Tell us about your challenge.",
-      accessBody: "Share a few details about your business and what you're trying to solve. A specialist will get back to you within 24 hours — no commitment required.",
+      heading: "Got a problem we can solve?",
+      body: "Doesn't matter if it's big or small — tell us what's going on and we'll get back to you within one business day. No pitch, no pressure.",
+      accessLabel: "Start a conversation",
+      accessHeading: "What's the challenge?",
+      accessBody: "Give us a quick overview of your situation. A real person from our team will read it and reply within 24 hours.",
       fields: {
         name: "Full Name",
         namePlaceholder: "E.g. Maria González",
@@ -209,16 +209,17 @@ export const translations = {
     },
 
     holdings: {
-      eyebrow: "§ 05 — Portafolio del Grupo",
-      heading: "Cuatro activos. Un grupo.",
-      seeAll: "Portafolio completo →",
+      eyebrow: "§ 05 — Nuestros Servicios",
+      heading: "Cuatro formas de ayudarte a crecer.",
+      seeAll: "Ver todos →",
       items: [
-        { code: "EVX-01", name: "Comercio Global e Ingeniería", tagline: "Importación · Exportación · Logística", body: "Gestionar operaciones internacionales es lento, caro y propenso a errores. Gestionamos tu ciclo completo de importación/exportación — aduanas, logística, proveedores y cumplimiento — para que crezcas sin fricción. Nuestros clientes reducen retrasos operativos hasta un 40%." },
-        { code: "EVX-02", name: "Inteligencia de Negocio", tagline: "Datos · Automatización · Decisiones", body: "La mayoría de las empresas tienen datos que nunca usan. Construimos dashboards, automatizamos procesos manuales y conectamos tus sistemas para que cada decisión esté respaldada por datos en tiempo real. El tiempo de reporte se reduce un 60% en los primeros 90 días." },
-        { code: "EVX-03", name: "Seguridad Digital", tagline: "Ciberseguridad · Cumplimiento · Resiliencia", body: "Un incidente de seguridad puede detener tu operación y destruir la confianza de tus clientes. Auditamos tus vulnerabilidades, implementamos capas de protección y mantenemos tus sistemas en cumplimiento — para que sigas operando y siendo creíble, incluso bajo ataque." },
-        { code: "EVX-04", name: "Ejecución de Proyectos", tagline: "Planificación · Entrega · Control", body: "Los proyectos estratégicos no fracasan por malas ideas, sino por mala ejecución. Integramos un equipo senior en tu operación, gestionamos stakeholders y entregamos en plazo. El 95% de nuestros proyectos cierran dentro del alcance y tiempo acordados." },
+        { code: "EVX-01", name: "Comercio Global e Ingeniería", tagline: "Importación · Exportación · Logística", body: "Expandirte internacionalmente no debería significar meses de retrasos y papeleo aduanero. Gestionamos tu ciclo completo de importación y exportación — logística, proveedores y cumplimiento — para que crezcas sin fricción. Los clientes suelen reducir sus retrasos un 40%." },
+        { code: "EVX-02", name: "Inteligencia de Negocio", tagline: "Datos · Automatización · Claridad", body: "Tu empresa genera datos cada día — pero la mayoría nunca se usan. Construimos dashboards y automatizaciones que convierten números en decisiones claras. Los equipos ahorran un 60% del tiempo de reporte en los primeros 90 días." },
+        { code: "EVX-03", name: "Seguridad Digital", tagline: "Ciberseguridad · Cumplimiento · Tranquilidad", body: "Una única brecha puede cerrarte el negocio y costarte clientes. Auditamos tus sistemas, tapamos los agujeros y te mantenemos en cumplimiento — para que la seguridad deje de ser una preocupación y se convierta en una ventaja." },
+        { code: "EVX-04", name: "Ejecución de Proyectos", tagline: "En plazo · En presupuesto · Bien hecho", body: "Las buenas ideas fracasan cuando la ejecución falla. Nos integramos en tu equipo, gestionamos las piezas móviles y entregamos. El 95% de nuestros proyectos cierran dentro del alcance y en plazo." },
       ],
     },
+
 
     board: {
       eyebrow: "§ 06 — Por Qué Trabajar con Nosotros",
@@ -273,11 +274,11 @@ export const translations = {
 
     contactPage: {
       sectionEyebrow: "Sección · Contacto",
-      heading: "¿Tienes un reto empresarial que resolver?",
-      body: "Tanto si estás escalando internacionalmente, enfrentando cuellos de botella operativos, o necesitas un socio de ejecución de confianza — hablemos. Nuestro equipo responde en un día hábil.",
-      accessLabel: "Ponte en Contacto",
-      accessHeading: "Cuéntanos tu reto.",
-      accessBody: "Comparte algunos detalles sobre tu empresa y lo que intentas resolver. Un especialista te responderá en 24 horas — sin compromiso previo.",
+      heading: "¿Tienes un problema que podamos resolver?",
+      body: "No importa si es grande o pequeño. Cuéntanos qué está pasando y te respondemos en un día hábil. Sin presentaciones, sin presión.",
+      accessLabel: "Empezar una conversación",
+      accessHeading: "¿Cuál es el reto?",
+      accessBody: "Déjanos un resumen de tu situación. Una persona real de nuestro equipo lo leerá y te responderá en menos de 24 horas.",
       fields: {
         name: "Nombre Completo",
         namePlaceholder: "Ej. María González",
