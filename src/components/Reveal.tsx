@@ -43,9 +43,8 @@ export function Reveal({
   const base = variant === "up" ? "reveal-up" : "reveal-fade";
 
   return (
-    // @ts-expect-error dynamic tag
     <As
-      ref={ref}
+      ref={ref as React.Ref<HTMLElement>}
       className={`${base} ${visible ? "is-visible" : ""} ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
