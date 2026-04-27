@@ -192,8 +192,8 @@
   .text-display-lg {
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: clamp(2.5rem, 6vw, 6rem);
-    line-height: 0.95;
+    font-size: clamp(2.25rem, 5vw, 5rem);
+    line-height: 1.05;
     letter-spacing: -0.03em;
   }
 
