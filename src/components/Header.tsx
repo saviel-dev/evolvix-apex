@@ -113,7 +113,7 @@ export function Header() {
             <span className="font-display text-[1.05rem] font-extrabold tracking-[0.18em]">
               EVOLVIX
             </span>
-            <span className="hidden text-mono-label text-platinum sm:inline">
+            <span className="text-mono-label text-platinum">
               GLOBAL
             </span>
           </Link>
@@ -275,7 +275,7 @@ export function Header() {
         <div className="flex h-16 items-center justify-between border-b border-hairline px-6 md:h-20">
           <Link to="/" onClick={() => setOpen(false)} className="flex items-center gap-2.5 text-titanium">
             <img src={logo} alt="Evolvix Logo" className="h-8 w-auto" />
-            <span className="font-display text-sm font-extrabold tracking-[0.18em]">EVOLVIX</span>
+            <span className="font-display text-sm font-extrabold tracking-[0.18em]">EVOLVIX GLOBAL</span>
           </Link>
           <button
             onClick={() => setOpen(false)}

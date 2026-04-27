@@ -224,7 +224,7 @@ function EBLESection() {
           {EBLE_PILLARS.map((p, i) => (
             <Reveal key={`${p.letter}-${i}`} variant="up" delay={i * 80}>
               <div className="group bg-background p-8 md:p-10 h-full flex flex-col gap-4 transition-colors duration-500 hover:bg-surface/40">
-                <span className="font-display text-5xl font-bold text-gold/70 mb-2 transition-transform duration-500 group-hover:scale-110 origin-left">
+                <span className="font-mono text-5xl font-bold text-gold/70 mb-2 transition-transform duration-500 group-hover:scale-110 origin-left">
                   {p.letter}
                 </span>
                 <p className="font-display text-base font-bold tracking-tight text-titanium leading-tight">
@@ -501,7 +501,7 @@ function ExponentialSection() {
           {p.pillars.map((pillar: any, i: number) => (
             <Reveal key={pillar.letter} variant="up" delay={i * 50}>
               <div className="group border border-hairline bg-surface/30 backdrop-blur-sm p-8 h-full flex flex-col transition-colors duration-500 hover:border-gold/30 hover:bg-surface">
-                <span className="font-display text-5xl font-bold text-gold/80 mb-6 transition-transform duration-500 group-hover:scale-110 origin-left">
+                <span className="font-mono text-5xl font-bold text-gold/80 mb-6 transition-transform duration-500 group-hover:scale-110 origin-left">
                   {pillar.letter}
                 </span>
                 <h3 className="font-display text-xl font-semibold text-titanium mb-3">{pillar.title}</h3>
