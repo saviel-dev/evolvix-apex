@@ -156,7 +156,7 @@ function ManifestoSection() {
           <p className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-titanium md:text-5xl">
             {t.manifesto.headingLine1}
             <br />
-            <span className="text-smoke">{t.manifesto.headingLine2}</span>
+            <span className="text-gold">{t.manifesto.headingLine2}</span>
           </p>
           <p className="mt-10 max-w-2xl text-base font-light leading-relaxed text-platinum">
             {t.manifesto.body}
@@ -363,10 +363,10 @@ function InvestmentThesis() {
       <div className="container-edge py-24 md:py-36">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:items-end">
           <Reveal variant="up" className="md:col-span-5">
-            <p className="text-eyebrow">{p.eyebrow}</p>
+            <p className="text-eyebrow text-bright-blue">{p.eyebrow}</p>
             <h2 className="mt-6 text-display-lg text-titanium max-w-[14ch]">
               {p.headingLine1}{" "}
-              <span className="text-smoke">{p.headingLine2}</span>
+              <span className="text-gold">{p.headingLine2}</span>
             </h2>
           </Reveal>
           <Reveal variant="up" delay={120} className="md:col-span-6 md:col-start-7">
@@ -404,12 +404,12 @@ function HoldingDivisions() {
       <div className="container-edge py-16 md:py-24">
         <Reveal variant="up" className="flex items-end justify-between py-6">
           <div>
-            <p className="text-eyebrow">{p.eyebrow}</p>
+            <p className="text-eyebrow text-bright-blue">{p.eyebrow}</p>
             <h2 className="mt-4 text-display-md text-titanium max-w-[18ch]">
               {p.heading}
             </h2>
           </div>
-          <span className="hidden text-mono-label text-smoke md:inline">{p.seeAll}</span>
+          <span className="hidden text-mono-label text-gold md:inline">{p.seeAll}</span>
         </Reveal>
       </div>
 
@@ -423,7 +423,7 @@ function HoldingDivisions() {
                 </span>
               </div>
               <div className="md:col-span-4">
-                <p className="text-mono-label text-electric mb-2">{item.tagline}</p>
+                <p className="text-mono-label text-bright-blue mb-2">{item.tagline}</p>
                 <h3 className="font-display text-xl font-bold tracking-tight text-titanium">
                   {item.name}
                 </h3>

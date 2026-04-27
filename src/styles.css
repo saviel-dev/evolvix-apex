@@ -49,6 +49,10 @@
   --color-electric-glow: var(--electric-glow);
   --color-hairline: var(--hairline);
   --color-surface: var(--surface);
+  
+  /* Additional Highlight Colors */
+  --color-gold: #c5a059;
+  --color-bright-blue: #4da3ff;
 }
 
 :root {
