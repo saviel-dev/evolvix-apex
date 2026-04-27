@@ -8,6 +8,52 @@ import { Reveal } from "@/components/Reveal";
 import { GlobalMap, FOOTPRINT_CITIES } from "@/components/GlobalMap";
 import { useEffect, useRef } from "react";
 import { useLang } from "@/lib/LanguageContext";
+import gsap from "gsap";
+
+function TypingText({
+  text,
+  delay = 0,
+  className = "",
+}: {
+  text: string;
+  delay?: number;
+  className?: string;
+}) {
+  const containerRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    // Build DOM: split by words first to prevent weird line breaks, then wrap characters
+    const words = text.split(" ");
+    el.innerHTML = words
+      .map((word) => {
+        const chars = word
+          .split("")
+          .map((ch) => `<span class="letter" style="opacity:0; display:inline-block">${ch}</span>`)
+          .join("");
+        return `<span style="display:inline-block; white-space:nowrap">${chars}</span>`;
+      })
+      .join(`<span class="letter" style="display:inline-block; opacity:0">&nbsp;</span>`);
+
+    const letters = el.querySelectorAll(".letter");
+
+    gsap.to(letters, {
+      opacity: 1,
+      duration: 0.25,
+      stagger: 0.04,
+      ease: "power1.out",
+      delay: delay / 1000, // convert ms to seconds
+    });
+
+    return () => {
+      gsap.killTweensOf(letters);
+    };
+  }, [text, delay]);
+
+  return <span ref={containerRef} className={className} />;
+}
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -86,9 +132,10 @@ function HeroSection() {
 
         <Reveal variant="up" delay={120}>
           <h1 className="mt-8 text-display-lg text-titanium max-w-[18ch]">
-            {t.hero.headingLine1}
+            <TypingText text={t.hero.headingLine1} delay={300} />
             <br />
-            <span className="text-platinum">{t.hero.headingOf}</span> {t.hero.headingLine2.replace(/^(del|of) /, "")}
+            {t.hero.headingOf && <span className="text-platinum"><TypingText text={t.hero.headingOf} delay={300 + (t.hero.headingLine1.length * 40)} /> </span>}
+            <TypingText text={t.hero.headingLine2.replace(/^(del|of) /, "")} delay={300 + ((t.hero.headingLine1.length + (t.hero.headingOf?.length || 0)) * 40)} />
           </h1>
         </Reveal>
 
@@ -529,7 +576,7 @@ function TrustStrip() {
       <div className="container-edge py-10 grid grid-cols-2 gap-8 md:grid-cols-4">
         {stats.map((s) => (
           <Reveal key={s.value + s.label} variant="up">
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col items-center text-center gap-1">
               <span className="font-display text-3xl font-extrabold text-gold md:text-4xl">
                 {s.value}
               </span>
