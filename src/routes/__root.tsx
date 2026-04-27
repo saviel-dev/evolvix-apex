@@ -2,11 +2,8 @@ import {
   Outlet,
   Link,
   createRootRoute,
-  HeadContent,
-  Scripts,
 } from "@tanstack/react-router";
 
-import appCss from "../styles.css?url";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Loader } from "../components/Loader";
@@ -36,52 +33,9 @@ function NotFoundComponent() {
 }
 
 export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "theme-color", content: "#050505" },
-      { title: "Evolvix Global — The Architecture of Success" },
-      {
-        name: "description",
-        content:
-          "Evolvix Global leads the evolution of strategic assets and services. International holding across logistics, capital, intelligence and digital infrastructure.",
-      },
-      { name: "author", content: "Evolvix Global Group" },
-      { property: "og:title", content: "Evolvix Global — The Architecture of Success" },
-      {
-        property: "og:description",
-        content:
-          "International holding leading the evolution of strategic assets and services.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "preconnect", href: "https://fonts.cdnfonts.com" },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en" className="dark" suppressHydrationWarning>
-      <head>
-        <HeadContent />
-      </head>
-      <body className="bg-background text-foreground">
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   return (
