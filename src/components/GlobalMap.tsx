@@ -24,6 +24,9 @@ type City = {
 const CITIES: City[] = [
   { name: "Madrid",    country: "ES",  coordinates: [-3.70,  40.41], role: "Operations Hub" },
   { name: "London",   country: "UK",  coordinates: [-0.12,  51.50], role: "Financial Intelligence" },
+  { name: "Paris",    country: "FR",  coordinates: [2.35,   48.85], role: "European Capital" },
+  { name: "Miami",    country: "US",  coordinates: [-80.19, 25.77], role: "Americas Gateway" },
+  { name: "Cairo",    country: "EG",  coordinates: [31.23,  30.06], role: "Africa & MENA Bridge" },
   { name: "Dubai",    country: "UAE", coordinates: [55.27,  25.20], role: "Emerging Logistics" },
   { name: "Singapore",country: "SG",  coordinates: [103.82,  1.35], role: "Innovation Division" },
 ];

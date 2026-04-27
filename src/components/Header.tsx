@@ -46,7 +46,7 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-9 md:flex">
+        <nav className="hidden items-center gap-7 lg:gap-9 lg:flex">
           {NAV_KEYS.map((item) => (
             <Link
               key={item.to}
@@ -59,7 +59,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-4 md:flex">
+        <div className="hidden items-center gap-4 lg:flex">
           {/* Language switcher */}
           <button
             onClick={toggle}
@@ -84,7 +84,7 @@ export function Header() {
         <button
           aria-label="Open menu"
           onClick={() => setOpen((s) => !s)}
-          className="flex h-10 w-10 items-center justify-center md:hidden"
+          className="flex h-10 w-10 items-center justify-center lg:hidden"
         >
           <span className="flex flex-col gap-[5px]">
             <span
@@ -103,7 +103,7 @@ export function Header() {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden overflow-hidden bg-background border-t border-hairline transition-[max-height] duration-500 ${
+        className={`lg:hidden overflow-hidden bg-background border-t border-hairline transition-[max-height] duration-500 ${
           open ? "max-h-96" : "max-h-0"
         }`}
       >

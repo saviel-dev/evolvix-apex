@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import logo from "@/assets/resources/logo.png";
+
 /**
  * Loader shown once per session: line-art logo draws to 100%, then fades.
  */
@@ -44,58 +46,18 @@ export function Loader() {
       }}
     >
       <div
-        className="text-titanium"
+        className="flex items-center justify-center h-40 w-40 rounded-full border border-hairline/60 bg-hairline/10"
         style={{
-          // animate stroke draw via CSS variable trick: we redraw at each render
-          ["--p" as never]: `${progress}`,
+          opacity: 0.2 + (progress / 100) * 0.8,
+          transform: `scale(${0.95 + (progress / 100) * 0.05})`,
+          transition: "opacity 0.1s, transform 0.1s"
         }}
       >
-        <svg
-          viewBox="0 0 100 100"
-          width={140}
-          height={140}
-          fill="none"
-          stroke="currentColor"
-          strokeWidth={1}
-          strokeLinecap="square"
-          aria-hidden
-          style={{
-            // pathLength normalization
-          }}
-        >
-          <circle
-            cx="50" cy="50" r="46"
-            pathLength={1}
-            strokeDasharray={1}
-            strokeDashoffset={1 - progress / 100}
-          />
-          <circle
-            cx="50" cy="50" r="32"
-            pathLength={1}
-            strokeDasharray={1}
-            strokeDashoffset={1 - progress / 100}
-            opacity={0.5}
-          />
-          <line
-            x1="4" y1="50" x2="96" y2="50"
-            pathLength={1}
-            strokeDasharray={1}
-            strokeDashoffset={1 - progress / 100}
-          />
-          <line
-            x1="50" y1="18" x2="50" y2="82"
-            pathLength={1}
-            strokeDasharray={1}
-            strokeDashoffset={1 - progress / 100}
-            opacity={0.4}
-          />
-          <path
-            d="M34 30 L66 30 M34 30 L34 70 M34 50 L60 50 M34 70 L66 70"
-            pathLength={1}
-            strokeDasharray={1}
-            strokeDashoffset={1 - progress / 100}
-          />
-        </svg>
+        <img
+          src={logo}
+          alt="Evolvix Logo"
+          className="h-20 w-auto"
+        />
       </div>
       <div className="mt-12 flex w-[min(420px,72vw)] items-center justify-between text-mono-label text-smoke">
         <span>EVOLVIX&nbsp;GLOBAL</span>

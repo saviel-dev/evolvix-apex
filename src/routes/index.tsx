@@ -355,11 +355,97 @@ function BoardPreview() {
   );
 }
 
+function InvestmentThesis() {
+  const { t } = useLang();
+  const p = t.thesis;
+  return (
+    <section className="relative bg-background border-t border-hairline">
+      <div className="container-edge py-24 md:py-36">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:items-end">
+          <Reveal variant="up" className="md:col-span-5">
+            <p className="text-eyebrow">{p.eyebrow}</p>
+            <h2 className="mt-6 text-display-lg text-titanium max-w-[14ch]">
+              {p.headingLine1}{" "}
+              <span className="text-smoke">{p.headingLine2}</span>
+            </h2>
+          </Reveal>
+          <Reveal variant="up" delay={120} className="md:col-span-6 md:col-start-7">
+            <p className="text-base font-light leading-relaxed text-platinum max-w-xl">
+              {p.body}
+            </p>
+          </Reveal>
+        </div>
+
+        <div className="mt-16 grid grid-cols-1 gap-px overflow-hidden border border-hairline bg-hairline sm:grid-cols-2 md:grid-cols-4">
+          {p.pillars.map((pillar, i) => (
+            <Reveal key={pillar.label} variant="up" delay={i * 80}>
+              <div className="bg-background p-8 md:p-10 h-full flex flex-col gap-4">
+                <span className="text-mono-label text-electric">{String(i + 1).padStart(2, "0")}</span>
+                <p className="font-display text-lg font-bold tracking-tight text-titanium leading-tight">
+                  {pillar.label}
+                </p>
+                <p className="text-sm font-light leading-relaxed text-smoke mt-auto">
+                  {pillar.detail}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function HoldingDivisions() {
+  const { t } = useLang();
+  const p = t.holdings;
+  return (
+    <section className="relative bg-background border-t border-hairline">
+      <div className="container-edge py-16 md:py-24">
+        <Reveal variant="up" className="flex items-end justify-between py-6">
+          <div>
+            <p className="text-eyebrow">{p.eyebrow}</p>
+            <h2 className="mt-4 text-display-md text-titanium max-w-[18ch]">
+              {p.heading}
+            </h2>
+          </div>
+          <span className="hidden text-mono-label text-smoke md:inline">{p.seeAll}</span>
+        </Reveal>
+      </div>
+
+      <div className="border-t border-hairline">
+        {p.items.map((item, i) => (
+          <Reveal key={item.code} variant="up" delay={i * 60}>
+            <article className="container-edge grid grid-cols-1 gap-8 border-b border-hairline py-10 md:grid-cols-12 md:items-center md:py-14">
+              <div className="md:col-span-2">
+                <span className="font-display text-4xl font-extrabold tracking-tighter text-hairline/60 select-none">
+                  {item.code}
+                </span>
+              </div>
+              <div className="md:col-span-4">
+                <p className="text-mono-label text-electric mb-2">{item.tagline}</p>
+                <h3 className="font-display text-xl font-bold tracking-tight text-titanium">
+                  {item.name}
+                </h3>
+              </div>
+              <p className="text-sm font-light leading-relaxed text-smoke md:col-span-5 md:col-start-8">
+                {item.body}
+              </p>
+            </article>
+          </Reveal>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Index() {
   return (
     <>
       <HeroSection />
       <ManifestoSection />
+      <InvestmentThesis />
+      <HoldingDivisions />
       <UnitsPreview />
       <FootprintPreview />
       <BoardPreview />

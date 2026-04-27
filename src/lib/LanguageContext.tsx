@@ -44,9 +44,9 @@ export const translations = {
     },
 
     footprint: {
-      eyebrow: "§ 03 — Global Presence",
-      heading: "Local roots. Global reach.",
-      body: "A coordinated network of operations connecting businesses across North America, Europe, Latin America and beyond — wherever your growth takes you.",
+      eyebrow: "§ 03 — Global Footprint",
+      heading: "Seven nodes. One system.",
+      body: "A geographically diversified network spanning four continents — Madrid, London, Paris, Miami, Cairo, Dubai and Singapore — engineered to synchronize capital, logistics and intelligence across any time zone.",
     },
 
     board: {
@@ -55,6 +55,33 @@ export const translations = {
       headingLine2: "Real results.",
       body: "Our team is made up of professionals with experience in Fortune 500 companies, certified in high-performance methodologies and committed to delivering tangible value to every partner.",
       cta: "Meet Our Team →",
+    },
+
+    // Investment Thesis
+    thesis: {
+      eyebrow: "§ 04 — Investment Thesis",
+      headingLine1: "A geographically shielded",
+      headingLine2: "multi-asset ecosystem.",
+      body: "Evolvix is structured as a diversified holding — not a single business, but an integrated group of strategic assets designed to grow in parallel, hedge each other, and compound value across cycles.",
+      pillars: [
+        { label: "Geographic Diversification", detail: "7 operational nodes across 4 continents, insulated from regional volatility." },
+        { label: "Multi-Asset Structure", detail: "Energy, infrastructure, services and capital under one coordinated mandate." },
+        { label: "Compounding Growth", detail: "Each division reinforces the others — creating synergies that accelerate the whole." },
+        { label: "Long-Horizon Vision", detail: "Built for decades, not quarters. Capital allocation aligned with structural megatrends." },
+      ],
+    },
+
+    // Holding Divisions
+    holdings: {
+      eyebrow: "§ 05 — Group Portfolio",
+      heading: "Four assets. One group.",
+      seeAll: "Full portfolio →",
+      items: [
+        { code: "EVX-01", name: "EVOLVIX Energy Division", tagline: "Sovereign energy infrastructure", body: "Renewable and conventional energy assets across emerging and developed markets. Long-term concessions, grid infrastructure and energy trading." },
+        { code: "EVX-02", name: "EVOLVIX Engineering & Infra", tagline: "Critical infrastructure at scale", body: "Design, build and operate of mission-critical infrastructure — logistics parks, data centers, transport corridors and industrial assets." },
+        { code: "EVX-03", name: "EVOLVIX Global Services", tagline: "BPO at institutional grade", body: "Business process outsourcing for global corporations. Finance, compliance, tech support and back-office operations delivered at Fortune 500 standards." },
+        { code: "EVX-04", name: "EVOLVIX Asset Management", tagline: "Capital with precision", body: "Multi-class portfolio management: private equity, infrastructure debt, sovereign mandates and alternative vehicles for institutional capital." },
+      ],
     },
 
     ecosystemPage: {
@@ -123,6 +150,9 @@ export const translations = {
       details: {
         Madrid: { hours: "GMT+1 · 09:00–20:00", focus: ["Strategic Consulting", "European Operations", "Tech Development"], coords: "40.4168° N · 3.7038° W" },
         London: { hours: "GMT+0 · 08:00–18:00", focus: ["Financial Advisory", "International Trade", "Investor Relations"], coords: "51.5074° N · 0.1276° W" },
+        Paris: { hours: "GMT+1 · 09:00–18:00", focus: ["European Strategy", "Infrastructure", "Investment Structuring"], coords: "48.8566° N · 2.3522° E" },
+        Miami: { hours: "EST · 09:00–18:00", focus: ["Americas Expansion", "LatAm Trade", "Capital Management"], coords: "25.7617° N · 80.1918° W" },
+        Cairo: { hours: "GMT+2 · 09:00–18:00", focus: ["African Logistics", "MENA Connectivity", "Energy Infrastructure"], coords: "30.0444° N · 31.2357° E" },
         Dubai: { hours: "GMT+4 · 08:00–20:00", focus: ["MENA Expansion", "Emerging Markets", "Logistics Hub"], coords: "25.2048° N · 55.2708° E" },
         Singapore: { hours: "GMT+8 · 09:00–21:00", focus: ["APAC Tech", "Innovation Division", "AI & Automation"], coords: "1.3521° N · 103.8198° E" },
       },
@@ -206,13 +236,38 @@ export const translations = {
     },
 
     footprint: {
-      eyebrow: "§ 03 — Presencia Global",
-      heading: "Raíces locales. Alcance global.",
-      body: "Una red coordinada de operaciones que conecta empresas en Norteamérica, Europa, Latinoamérica y más allá — donde tu crecimiento te lleve.",
+      eyebrow: "§ 03 — Huella Global",
+      heading: "Siete nodos. Un sistema.",
+      body: "Una red geográficamente diversificada en cuatro continentes — Madrid, Londres, París, Miami, El Cairo, Dubái y Singapur — diseñada para sincronizar capital, logística e inteligencia en cualquier huso horario.",
+    },
+
+    thesis: {
+      eyebrow: "§ 04 — Tesis de Inversión",
+      headingLine1: "Un ecosistema multi-activo",
+      headingLine2: "geográficamente protegido.",
+      body: "Evolvix se estructura como un holding diversificado — no es un negocio único, sino un grupo integrado de activos estratégicos diseñados para crecer en paralelo, protegerse entre sí y capitalizar valor a través de los ciclos.",
+      pillars: [
+        { label: "Diversificación Geográfica", detail: "7 nodos operativos en 4 continentes, aislados de la volatilidad regional." },
+        { label: "Estructura Multi-Activo", detail: "Energía, infraestructura, servicios y capital bajo un mandato coordinado." },
+        { label: "Crecimiento Compuesto", detail: "Cada división refuerza a las demás — creando sinergias que aceleran el conjunto." },
+        { label: "Visión a Largo Plazo", detail: "Construido para décadas, no para trimestres. Asignación de capital alineada con megatendencias estructurales." },
+      ],
+    },
+
+    holdings: {
+      eyebrow: "§ 05 — Portafolio del Grupo",
+      heading: "Cuatro activos. Un grupo.",
+      seeAll: "Portafolio completo →",
+      items: [
+        { code: "EVX-01", name: "EVOLVIX Energy Division", tagline: "Infraestructura energética soberana", body: "Activos de energía renovable y convencional en mercados emergentes y desarrollados. Concesiones a largo plazo, infraestructura de red y comercialización de energía." },
+        { code: "EVX-02", name: "EVOLVIX Engineering & Infra", tagline: "Infraestructura crítica a escala", body: "Diseño, construcción y operación de infraestructura de misión crítica: parques logísticos, centros de datos, corredores de transporte y activos industriales." },
+        { code: "EVX-03", name: "EVOLVIX Global Services", tagline: "BPO de nivel institucional", body: "Externalización de procesos de negocio para corporaciones globales. Finanzas, cumplimiento, soporte técnico y operaciones back-office bajo estándares Fortune 500." },
+        { code: "EVX-04", name: "EVOLVIX Asset Management", tagline: "Capital con precisión", body: "Gestión de portafolios multi-clase: capital privado, deuda de infraestructura, mandatos soberanos y vehículos alternativos para capital institucional." },
+      ],
     },
 
     board: {
-      eyebrow: "§ 04 — Nuestro Equipo",
+      eyebrow: "§ 06 — Nuestro Equipo",
       headingLine1: "Expertos certificados.",
       headingLine2: "Resultados reales.",
       body: "Nuestro equipo está formado por profesionales con experiencia en empresas Fortune 500, certificados en metodologías de alto rendimiento y comprometidos con generar valor tangible para cada socio.",
@@ -285,6 +340,9 @@ export const translations = {
       details: {
         Madrid: { hours: "GMT+1 · 09:00–20:00", focus: ["Consultoría Estratégica", "Operaciones Europeas", "Desarrollo Tecnológico"], coords: "40.4168° N · 3.7038° O" },
         London: { hours: "GMT+0 · 08:00–18:00", focus: ["Asesoría Financiera", "Comercio Internacional", "Relaciones con Inversores"], coords: "51.5074° N · 0.1276° O" },
+        Paris: { hours: "GMT+1 · 09:00–18:00", focus: ["Estrategia Europea", "Infraestructura", "Estructuración de Inversiones"], coords: "48.8566° N · 2.3522° E" },
+        Miami: { hours: "EST · 09:00–18:00", focus: ["Expansión en América", "Comercio LatAm", "Gestión de Capital"], coords: "25.7617° N · 80.1918° O" },
+        Cairo: { hours: "GMT+2 · 09:00–18:00", focus: ["Logística Africana", "Conectividad MENA", "Infraestructura Energética"], coords: "30.0444° N · 31.2357° E" },
         Dubai: { hours: "GMT+4 · 08:00–20:00", focus: ["Expansión MENA", "Mercados Emergentes", "Hub Logístico"], coords: "25.2048° N · 55.2708° E" },
         Singapore: { hours: "GMT+8 · 09:00–21:00", focus: ["Tecnología APAC", "División de Innovación", "IA y Automatización"], coords: "1.3521° N · 103.8198° E" },
       },

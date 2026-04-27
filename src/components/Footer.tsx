@@ -50,11 +50,11 @@ export function Footer() {
         </div>
 
         <div className="mt-20 flex flex-col items-start justify-between gap-4 border-t border-hairline pt-8 text-mono-label text-smoke md:flex-row md:items-center">
-          <p>© 2025 Evolvix Global. All rights reserved.</p>
+          <p>© 2026 Evolvix Global Group. Access Restricted to Partners.</p>
           <div className="flex items-center gap-6">
             <span>ISO/IEC 27001</span>
             <span className="hidden h-3 w-px bg-hairline md:block" />
-            <span>v3.2 — RE-ENGINEERING</span>
+            <span>EVX Group · MMXXVI</span>
           </div>
         </div>
       </div>

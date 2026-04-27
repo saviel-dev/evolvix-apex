@@ -60,6 +60,7 @@ function FootprintPage() {
           <div className="grid grid-cols-1 gap-px overflow-hidden border border-hairline bg-hairline md:grid-cols-2">
             {FOOTPRINT_CITIES.map((c, i) => {
               const d = p.details[c.name as keyof typeof p.details];
+              if (!d) return null; // Safe fallback
               return (
                 <Reveal
                   key={c.name}
