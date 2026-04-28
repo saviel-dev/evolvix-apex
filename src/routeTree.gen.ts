@@ -9,11 +9,14 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TalentRouteImport } from './routes/talent'
+import { Route as PoliticaPrivacidadRouteImport } from './routes/politica-privacidad'
 import { Route as FootprintRouteImport } from './routes/footprint'
 import { Route as DesarrolloTecnologicoRouteImport } from './routes/desarrollo-tecnologico'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ConsultoriaEstrategicaRouteImport } from './routes/consultoria-estrategica'
 import { Route as BoardRouteImport } from './routes/board'
+import { Route as AvisoLegalRouteImport } from './routes/aviso-legal'
 import { Route as AutomatizacionProcesosRouteImport } from './routes/automatizacion-procesos'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicesEngineeringRouteImport } from './routes/services.engineering'
@@ -21,6 +24,16 @@ import { Route as ServicesEnergyRouteImport } from './routes/services.energy'
 import { Route as ServicesBpoRouteImport } from './routes/services.bpo'
 import { Route as ServicesAssetManagementRouteImport } from './routes/services.asset-management'
 
+const TalentRoute = TalentRouteImport.update({
+  id: '/talent',
+  path: '/talent',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaPrivacidadRoute = PoliticaPrivacidadRouteImport.update({
+  id: '/politica-privacidad',
+  path: '/politica-privacidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FootprintRoute = FootprintRouteImport.update({
   id: '/footprint',
   path: '/footprint',
@@ -44,6 +57,11 @@ const ConsultoriaEstrategicaRoute = ConsultoriaEstrategicaRouteImport.update({
 const BoardRoute = BoardRouteImport.update({
   id: '/board',
   path: '/board',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AvisoLegalRoute = AvisoLegalRouteImport.update({
+  id: '/aviso-legal',
+  path: '/aviso-legal',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AutomatizacionProcesosRoute = AutomatizacionProcesosRouteImport.update({
@@ -80,11 +98,14 @@ const ServicesAssetManagementRoute = ServicesAssetManagementRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/automatizacion-procesos': typeof AutomatizacionProcesosRoute
+  '/aviso-legal': typeof AvisoLegalRoute
   '/board': typeof BoardRoute
   '/consultoria-estrategica': typeof ConsultoriaEstrategicaRoute
   '/contact': typeof ContactRoute
   '/desarrollo-tecnologico': typeof DesarrolloTecnologicoRoute
   '/footprint': typeof FootprintRoute
+  '/politica-privacidad': typeof PoliticaPrivacidadRoute
+  '/talent': typeof TalentRoute
   '/services/asset-management': typeof ServicesAssetManagementRoute
   '/services/bpo': typeof ServicesBpoRoute
   '/services/energy': typeof ServicesEnergyRoute
@@ -93,11 +114,14 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/automatizacion-procesos': typeof AutomatizacionProcesosRoute
+  '/aviso-legal': typeof AvisoLegalRoute
   '/board': typeof BoardRoute
   '/consultoria-estrategica': typeof ConsultoriaEstrategicaRoute
   '/contact': typeof ContactRoute
   '/desarrollo-tecnologico': typeof DesarrolloTecnologicoRoute
   '/footprint': typeof FootprintRoute
+  '/politica-privacidad': typeof PoliticaPrivacidadRoute
+  '/talent': typeof TalentRoute
   '/services/asset-management': typeof ServicesAssetManagementRoute
   '/services/bpo': typeof ServicesBpoRoute
   '/services/energy': typeof ServicesEnergyRoute
@@ -107,11 +131,14 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/automatizacion-procesos': typeof AutomatizacionProcesosRoute
+  '/aviso-legal': typeof AvisoLegalRoute
   '/board': typeof BoardRoute
   '/consultoria-estrategica': typeof ConsultoriaEstrategicaRoute
   '/contact': typeof ContactRoute
   '/desarrollo-tecnologico': typeof DesarrolloTecnologicoRoute
   '/footprint': typeof FootprintRoute
+  '/politica-privacidad': typeof PoliticaPrivacidadRoute
+  '/talent': typeof TalentRoute
   '/services/asset-management': typeof ServicesAssetManagementRoute
   '/services/bpo': typeof ServicesBpoRoute
   '/services/energy': typeof ServicesEnergyRoute
@@ -122,11 +149,14 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/automatizacion-procesos'
+    | '/aviso-legal'
     | '/board'
     | '/consultoria-estrategica'
     | '/contact'
     | '/desarrollo-tecnologico'
     | '/footprint'
+    | '/politica-privacidad'
+    | '/talent'
     | '/services/asset-management'
     | '/services/bpo'
     | '/services/energy'
@@ -135,11 +165,14 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/automatizacion-procesos'
+    | '/aviso-legal'
     | '/board'
     | '/consultoria-estrategica'
     | '/contact'
     | '/desarrollo-tecnologico'
     | '/footprint'
+    | '/politica-privacidad'
+    | '/talent'
     | '/services/asset-management'
     | '/services/bpo'
     | '/services/energy'
@@ -148,11 +181,14 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/automatizacion-procesos'
+    | '/aviso-legal'
     | '/board'
     | '/consultoria-estrategica'
     | '/contact'
     | '/desarrollo-tecnologico'
     | '/footprint'
+    | '/politica-privacidad'
+    | '/talent'
     | '/services/asset-management'
     | '/services/bpo'
     | '/services/energy'
@@ -162,11 +198,14 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AutomatizacionProcesosRoute: typeof AutomatizacionProcesosRoute
+  AvisoLegalRoute: typeof AvisoLegalRoute
   BoardRoute: typeof BoardRoute
   ConsultoriaEstrategicaRoute: typeof ConsultoriaEstrategicaRoute
   ContactRoute: typeof ContactRoute
   DesarrolloTecnologicoRoute: typeof DesarrolloTecnologicoRoute
   FootprintRoute: typeof FootprintRoute
+  PoliticaPrivacidadRoute: typeof PoliticaPrivacidadRoute
+  TalentRoute: typeof TalentRoute
   ServicesAssetManagementRoute: typeof ServicesAssetManagementRoute
   ServicesBpoRoute: typeof ServicesBpoRoute
   ServicesEnergyRoute: typeof ServicesEnergyRoute
@@ -175,6 +214,20 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/talent': {
+      id: '/talent'
+      path: '/talent'
+      fullPath: '/talent'
+      preLoaderRoute: typeof TalentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-privacidad': {
+      id: '/politica-privacidad'
+      path: '/politica-privacidad'
+      fullPath: '/politica-privacidad'
+      preLoaderRoute: typeof PoliticaPrivacidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/footprint': {
       id: '/footprint'
       path: '/footprint'
@@ -208,6 +261,13 @@ declare module '@tanstack/react-router' {
       path: '/board'
       fullPath: '/board'
       preLoaderRoute: typeof BoardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aviso-legal': {
+      id: '/aviso-legal'
+      path: '/aviso-legal'
+      fullPath: '/aviso-legal'
+      preLoaderRoute: typeof AvisoLegalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/automatizacion-procesos': {
@@ -258,11 +318,14 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AutomatizacionProcesosRoute: AutomatizacionProcesosRoute,
+  AvisoLegalRoute: AvisoLegalRoute,
   BoardRoute: BoardRoute,
   ConsultoriaEstrategicaRoute: ConsultoriaEstrategicaRoute,
   ContactRoute: ContactRoute,
   DesarrolloTecnologicoRoute: DesarrolloTecnologicoRoute,
   FootprintRoute: FootprintRoute,
+  PoliticaPrivacidadRoute: PoliticaPrivacidadRoute,
+  TalentRoute: TalentRoute,
   ServicesAssetManagementRoute: ServicesAssetManagementRoute,
   ServicesBpoRoute: ServicesBpoRoute,
   ServicesEnergyRoute: ServicesEnergyRoute,

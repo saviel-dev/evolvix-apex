@@ -6,6 +6,7 @@ import { useLang } from "@/lib/LanguageContext";
 const NAV_KEYS = [
   { to: "/footprint", key: "footprint" },
   { to: "/board",     key: "board" },
+  { to: "/talent",    key: "talent" },
 ] as const;
 
 const SOCIAL_LINKS = [

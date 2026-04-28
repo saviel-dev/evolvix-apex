@@ -8,6 +8,7 @@ export const translations = {
       services: "Divisions",
       footprint: "Footprint",
       board: "Our Team",
+      talent: "Talent",
       contact: "Contact",
     },
     partnerAccess: "Contact Us",
@@ -32,7 +33,7 @@ export const translations = {
     },
 
     problem: {
-      eyebrow: "§ 01 — Warning Signs for Your Business",
+      eyebrow: "01 — Warning Signs for Your Business",
       heading: "Is your company leaving money on the table through inefficiency?",
       body: "87% of companies lose up to 40% of their annual revenue to inefficient processes, gut-based decisions and outdated systems. These problems don't just cost money — they stall your growth and hand the advantage to your competition.",
       painPoints: [
@@ -47,7 +48,7 @@ export const translations = {
     },
 
     solution: {
-      eyebrow: "§ 02 — Our Proven Solution",
+      eyebrow: "02 — Our Proven Solution",
       heading: "We transform operations into measurable growth",
       body: "A methodology validated with 200+ companies that guarantees results in 90 days. We optimise processes, automate repetitive tasks and implement dashboards for data-driven decisions — without disrupting your current operation.",
       benefits: [
@@ -62,7 +63,7 @@ export const translations = {
     },
 
     howItWorks: {
-      eyebrow: "§ 03 — Our Methodology",
+      eyebrow: "03 — Our Methodology",
       heading: "Transformation process in 4 weeks",
       body: "A proven system delivering visible results from week one. No disruption, no risk — only measurable growth.",
       steps: [
@@ -92,7 +93,7 @@ export const translations = {
     },
 
     socialProof: {
-      eyebrow: "§ 04 — Verified Results",
+      eyebrow: "04 — Verified Results",
       heading: "200+ companies already transforming their business with us",
       body: "Third-party audited results. Success stories in technology, manufacturing, services and retail. Average ROI 3.2× in the first year.",
       stats: [
@@ -111,7 +112,7 @@ export const translations = {
     },
 
     strongCTA: {
-      eyebrow: "§ 05 — Limited Offer",
+      eyebrow: "05 — Limited Offer",
       heading: "Transform your business in 30 days or it's free",
       body: "Full strategic audit + personalised action plan + initial implementation. Real value: €4,990. Today: Free for the first 10 companies this month.",
       offer: {
@@ -127,7 +128,7 @@ export const translations = {
     },
 
     servicePackages: {
-      eyebrow: "§ 02 — Service Packages",
+      eyebrow: "02 — Service Packages",
       heading: "Concrete solutions for measurable results",
       subheading: "Choose the package that best fits your stage of growth",
       packages: [
@@ -431,22 +432,22 @@ export const translations = {
     },
 
     footprint: {
-      eyebrow: "§ 03 — Where We Operate",
+      eyebrow: "03 — Where We Operate",
       heading: "Close to your business, wherever it is.",
-      body: "We operate across five key markets — Madrid, Paris, Miami, Dubai and Cairo — so whether you're expanding into Europe, MENA or the Americas, there's always an Evolvix team nearby.",
+      body: "We operate across five key markets — Madrid, Paris, Miami, Dubai and Cairo — so whether you're expanding into Europe, MENA or America, there's always an Evolvix team nearby.",
     },
 
     board: {
-      eyebrow: "§ 04 — Why Companies Choose Us",
+      eyebrow: "04 — Why Companies Choose Us",
       headingLine1: "We've already solved",
       headingLine2: "what you're facing.",
-      body: "Our team has fixed operational bottlenecks, delivered international trade cycles and shipped projects across Europe, the Middle East and the Americas. You get senior people who've done the exact work before — not juniors learning on your dime.",
+      body: "Our team has fixed operational bottlenecks, delivered international trade cycles and shipped projects across Europe, the Middle East and America. You get senior people who've done the exact work before — not juniors learning on your dime.",
       cta: "Talk to the Team →",
     },
 
     // Investment Thesis
     thesis: {
-      eyebrow: "§ 04 — Competitive Advantage",
+      eyebrow: "04 — Competitive Advantage",
       headingLine1: "A geographically shielded",
       headingLine2: "multi-asset ecosystem.",
       body: "Evolvix is structured as a diversified group — not a single business, but an integrated portfolio of strategic assets designed to grow in parallel, hedge each other, and compound value across cycles.",
@@ -458,7 +459,7 @@ export const translations = {
     },
 
     holdings: {
-      eyebrow: "§ 05 — The Services in Detail",
+      eyebrow: "05 — The Services in Detail",
       heading: "Real outcomes, not just services.",
       seeAll: "Full portfolio →",
       items: [
@@ -472,7 +473,7 @@ export const translations = {
 
 
     exponential: {
-      eyebrow: "§ 02 — The Exponential Factor",
+      eyebrow: "02 — The Exponential Factor",
       heading: "EVOLVIX is not just a name. It's a methodology of growth.",
       body: "Every letter is a pillar of profitability designed to scale businesses into global leaders.",
       pillars: [
@@ -494,7 +495,7 @@ export const translations = {
         Madrid: { hours: "GMT+1 · 09:00–20:00", focus: ["Strategic Consulting", "European Operations", "Tech Development"], coords: "40.4168° N · 3.7038° W" },
         London: { hours: "GMT+0 · 08:00–18:00", focus: ["Financial Advisory", "International Trade", "Investor Relations"], coords: "51.5074° N · 0.1276° W" },
         Paris: { hours: "GMT+1 · 09:00–18:00", focus: ["European Strategy", "Infrastructure", "Investment Structuring"], coords: "48.8566° N · 2.3522° E" },
-        Miami: { hours: "EST · 09:00–18:00", focus: ["Americas Expansion", "LatAm Trade", "Capital Management"], coords: "25.7617° N · 80.1918° W" },
+        Miami: { hours: "EST · 09:00–18:00", focus: ["America Expansion", "LatAm Trade", "Capital Management"], coords: "25.7617° N · 80.1918° W" },
         Cairo: { hours: "GMT+2 · 09:00–18:00", focus: ["African Logistics", "MENA Connectivity", "Energy Infrastructure"], coords: "30.0444° N · 31.2357° E" },
         Dubai: { hours: "GMT+4 · 08:00–20:00", focus: ["MENA Expansion", "Emerging Markets", "Logistics Hub"], coords: "25.2048° N · 55.2708° E" },
         Singapore: { hours: "GMT+8 · 09:00–21:00", focus: ["APAC Tech", "Innovation Division", "AI & Automation"], coords: "1.3521° N · 103.8198° E" },
@@ -505,11 +506,11 @@ export const translations = {
       sectionEyebrow: "Section · Leadership",
       headingLine1: "Visionary minds.",
       headingLine2: "Relentless execution.",
-      body: "The Evolvix Global board brings together a senior team of strategists, engineers and capital allocators with proven track records across Europe, the Middle East and the Americas. Each member operates at the intersection of institutional experience and entrepreneurial drive.",
+      body: "The Evolvix Global board brings together a senior team of strategists, engineers and capital allocators with proven track records across Europe, the Middle East and America. Each member operates at the intersection of institutional experience and entrepreneurial drive.",
       members: [
         { name: "Evolvix Global — Executive Board", role: "Group Leadership", bio: "Evolvix Global is a diversified Spanish business group whose pillars are Excellence, Boldness, Legacy and Execution. The board directs capital, operations and expansion across all four divisions." },
         { name: "Division Principals", role: "Operational Leadership", bio: "Each Evolvix division is led by a dedicated principal with deep sector expertise: energy concessions & grid infrastructure, high-complexity engineering, institutional BPO operations, and real-estate asset management." },
-        { name: "Strategic Advisors", role: "International Advisory Council", bio: "An international advisory council supports the group across key jurisdictions — Spain/EU for legal & funding access, Dubai/MENA for capital formation, and Miami for Americas market connectivity." },
+        { name: "Strategic Advisors", role: "International Advisory Council", bio: "An international advisory council supports the group across key jurisdictions — Spain/EU for legal & funding access, Dubai/MENA for capital formation, and Miami for American market connectivity." },
         { name: "Investor Relations", role: "Capital & Partnerships", bio: "Dedicated investor relations management for institutional capital, sovereign mandates and co-investment structures. The group targets 24-month expansion into new markets with tangible asset backing." },
       ],
     },
@@ -539,6 +540,37 @@ export const translations = {
       whatsappCTA: "O escríbenos por WhatsApp",
     },
 
+    talentPage: {
+      sectionEyebrow: "Section · Talent Management",
+      heading: "Join a high-performance global team.",
+      body: "We select professionals with elite standards in execution, strategic mindset, and international ambition. If you want to build category-defining projects with world-class teams, this is your place.",
+      accessLabel: "Professional Application",
+      accessHeading: "Tell us about your profile.",
+      accessBody: "Complete your details and attach your CV in PDF. Our Talent team reviews every application with rigorous standards and clear response timelines.",
+      cvHint: "Accepted format: PDF only · Maximum size: 8MB",
+      microcopy: "Confidential process • Professional evaluation • Response within 7 business days",
+      success: "Application received successfully. Our Talent team will contact you if your profile matches current opportunities.",
+      error: "We couldn't submit your application. Please try again.",
+      fields: {
+        name: "First name",
+        namePlaceholder: "e.g. Maria",
+        lastName: "Last name",
+        lastNamePlaceholder: "e.g. Gonzalez",
+        email: "Email address",
+        emailPlaceholder: "maria@email.com",
+        phone: "Phone number",
+        phonePlaceholder: "e.g. +34 600 000 000",
+        position: "Area or role of interest",
+        positionPlaceholder: "e.g. AI Engineer · Project Manager",
+        linkedin: "LinkedIn profile (optional)",
+        linkedinPlaceholder: "https://linkedin.com/in/yourprofile",
+        message: "Professional summary",
+        messagePlaceholder: "Share your background, achievements and why you want to join Evolvix.",
+        cv: "CV (PDF)",
+        submit: "Submit application",
+      },
+    },
+
     services: {
       keyCapabilities: "Key Capabilities",
       backToHoldings: "← Back to Holdings",
@@ -561,7 +593,7 @@ export const translations = {
         capabilitiesHeading: "Technical excellence at any scale.",
         pillars: [
           { label: "High-Complexity Technical Projects", detail: "We design and execute projects of the highest technical complexity — from industrial architecture to the management of large-scale construction works." },
-          { label: "Governmental & Private Mandates", detail: "Trusted technical arm for governmental infrastructure programs and flagship private sector developments in Spain, MENA and the Americas." },
+          { label: "Governmental & Private Mandates", detail: "Trusted technical arm for governmental infrastructure programs and flagship private sector developments in Spain, MENA and America." },
           { label: "Integral Engineering Solutions", detail: "End-to-end engineering services merging technical vanguard with operational efficiency — from concept to commissioning." },
           { label: "Industrial Asset Management", detail: "Technical direction of mission-critical industrial assets: logistics parks, data centers, transport corridors and heavy infrastructure." },
         ]
@@ -587,7 +619,7 @@ export const translations = {
           { label: "Corporate Real Estate", detail: "Identification and development of premium corporate real estate in the key financial nodes: Madrid, Dubai, Miami and Cairo." },
           { label: "Brand & Group Expansion", detail: "Strategic management and expansion of Evolvix Global's own brands — driving solid, sustained growth of group assets across new markets in under 24 months." },
           { label: "Private Equity & Infra Debt", detail: "Multi-class portfolio management: private equity stakes, infrastructure debt instruments, and sovereign mandates for institutional capital." },
-          { label: "Alternative Investment Vehicles", detail: "Structured alternative vehicles for co-investment alongside institutional partners — aligned with the group's geographic triangle: Europe, MENA, and Americas." },
+          { label: "Alternative Investment Vehicles", detail: "Structured alternative vehicles for co-investment alongside institutional partners — aligned with the group's geographic triangle: Europe, MENA, and America." },
         ]
       }
     },
@@ -598,6 +630,7 @@ export const translations = {
       services: "Divisiones",
       footprint: "Presencia",
       board: "Nuestro Equipo",
+      talent: "Talento",
       contact: "Contacto",
     },
     partnerAccess: "Contáctanos",
@@ -622,7 +655,7 @@ export const translations = {
     },
 
     problem: {
-      eyebrow: "§ 01 — Señales de Alerta en tu Negocio",
+      eyebrow: "01 — Señales de Alerta en tu Negocio",
       heading: "¿Tu empresa está dejando dinero en la mesa por ineficiencias?",
       body: "El 87% de las empresas pierden hasta 40% de sus ingresos anuales por procesos ineficientes, decisiones basadas en intuición y sistemas obsoletos. Estos problemas no solo costan dinero, sino que frenan tu crecimiento y te hacen perder frente a la competencia.",
       painPoints: [
@@ -637,7 +670,7 @@ export const translations = {
     },
 
     solution: {
-      eyebrow: "§ 02 — Nuestra Solución Probada",
+      eyebrow: "02 — Nuestra Solución Probada",
       heading: "Transformamos operaciones en crecimiento medible",
       body: "Metodología validada con 200+ empresas que garantiza resultados en 90 días. Optimizamos procesos, automatizamos tareas repetitivas e implementamos dashboards para decisiones basadas en datos — sin interrumpir tu operación actual.",
       benefits: [
@@ -652,7 +685,7 @@ export const translations = {
     },
 
     howItWorks: {
-      eyebrow: "§ 03 — Nuestra Metodología",
+      eyebrow: "03 — Nuestra Metodología",
       heading: "Proceso de transformación en 4 semanas",
       body: "Sistema probado que entrega resultados visibles desde la primera semana. Sin interrupciones, sin riesgos, solo crecimiento medible.",
       steps: [
@@ -682,7 +715,7 @@ export const translations = {
     },
 
     socialProof: {
-      eyebrow: "§ 04 — Resultados Verificados",
+      eyebrow: "04 — Resultados Verificados",
       heading: "200+ empresas ya transforman su negocio con nosotros",
       body: "Resultados auditados por terceros. Casos de éxito en tecnología, manufactura, servicios y retail. Promedio de ROI 3.2x en el primer año.",
       stats: [
@@ -701,7 +734,7 @@ export const translations = {
     },
 
     strongCTA: {
-      eyebrow: "§ 05 — Oferta Limitada",
+      eyebrow: "05 — Oferta Limitada",
       heading: "Transforma tu negocio en 30 días o es gratis",
       body: "Auditoría estratégica completa + plan de acción personalizado + implementación inicial. Valor real: €4,990. Hoy: Gratis para las primeras 10 empresas este mes.",
       offer: {
@@ -717,7 +750,7 @@ export const translations = {
     },
 
     servicePackages: {
-      eyebrow: "§ 02 — Paquetes de Servicios",
+      eyebrow: "02 — Paquetes de Servicios",
       heading: "Soluciones concretas para resultados medibles",
       subheading: "Elige el paquete que mejor se adapte a tu etapa de crecimiento",
       packages: [
@@ -1021,7 +1054,7 @@ export const translations = {
     },
 
     units: {
-      eyebrow: "§ 02 — Nuestros Servicios",
+      eyebrow: "02 — Nuestros Servicios",
       heading: "Ocho divisiones. Una visión.",
       seeAll: "Ver todos los servicios →",
       divisionBrief: "Saber más",
@@ -1034,13 +1067,13 @@ export const translations = {
     },
 
     footprint: {
-      eyebrow: "§ 03 — Huella Global",
+      eyebrow: "03 — Huella Global",
       heading: "Siete nodos. Un sistema.",
       body: "Una red geográficamente diversificada en cuatro continentes — Madrid, Londres, París, Miami, El Cairo, Dubái y Singapur — diseñada para sincronizar capital, logística e inteligencia en cualquier huso horario.",
     },
 
     thesis: {
-      eyebrow: "§ 04 — Ventaja Competitiva",
+      eyebrow: "04 — Ventaja Competitiva",
       headingLine1: "Un ecosistema multi-activo",
       headingLine2: "geográficamente protegido.",
       body: "Evolvix se estructura como un grupo diversificado — no es un negocio único, sino un portfolio integrado de activos estratégicos diseñados para crecer en paralelo, protegerse entre sí y capitalizar valor a través de los ciclos.",
@@ -1052,7 +1085,7 @@ export const translations = {
     },
 
     holdings: {
-      eyebrow: "§ 05 — Los Servicios en Detalle",
+      eyebrow: "05 — Los Servicios en Detalle",
       heading: "Resultados reales, no solo servicios.",
       seeAll: "Ver todos →",
       items: [
@@ -1065,15 +1098,15 @@ export const translations = {
 
 
     board: {
-      eyebrow: "§ 06 — Por Qué Trabajar con Nosotros",
+      eyebrow: "06 — Por Qué Trabajar con Nosotros",
       headingLine1: "Expertos senior.",
       headingLine2: "Ejecución probada.",
-      body: "Nuestro equipo ha entregado proyectos en Europa, Oriente Medio y las Américas. Aportamos experiencia institucional sin burocracia — tienes acceso directo a especialistas senior comprometidos con tus resultados.",
+      body: "Nuestro equipo ha entregado proyectos en Europa, Oriente Medio y América. Aportamos experiencia institucional sin burocracia — tienes acceso directo a especialistas senior comprometidos con tus resultados.",
       cta: "Conoce al Equipo →",
     },
 
     exponential: {
-      eyebrow: "§ 02 — El Factor Exponencial",
+      eyebrow: "02 — El Factor Exponencial",
       heading: "EVOLVIX no es un nombre. Es una metodología de crecimiento.",
       body: "Cada letra es un pilar de rentabilidad diseñado para escalar negocios a líderes globales.",
       pillars: [
@@ -1106,11 +1139,11 @@ export const translations = {
       sectionEyebrow: "Sección · Liderazgo",
       headingLine1: "Mentes visionarias.",
       headingLine2: "Ejecución implacable.",
-      body: "El consejo directivo de Evolvix Global reúne a un equipo senior de estrategas, ingenieros y gestores de capital con trayectorias probadas en Europa, Oriente Medio y las Américas. Cada miembro opera en la intersección entre la experiencia institucional y el impulso emprendedor.",
+      body: "El consejo directivo de Evolvix Global reúne a un equipo senior de estrategas, ingenieros y gestores de capital con trayectorias probadas en Europa, Oriente Medio y América. Cada miembro opera en la intersección entre la experiencia institucional y el impulso emprendedor.",
       members: [
         { name: "Evolvix Global — Consejo Ejecutivo", role: "Liderazgo del Grupo", bio: "Evolvix Global es un grupo empresarial español diversificado cuyos pilares son Excelencia, Audacia, Legado y Ejecución. El consejo dirige el capital, las operaciones y la expansión de las cuatro divisiones." },
         { name: "Directores de División", role: "Liderazgo Operacional", bio: "Cada división de Evolvix está liderada por un director con profunda especialización sectorial: concesiones energéticas e infraestructura de red, ingeniería de alta complejidad, operaciones BPO institucionales y gestión de activos inmobiliarios." },
-        { name: "Consejeros Estratégicos", role: "Consejo Asesor Internacional", bio: "Un consejo asesor internacional apoya al grupo en jurisdicciones clave — España/UE para acceso jurídico y fondos, Dubái/MENA para captación de capital, y Miami para conectividad con los mercados de las Américas." },
+        { name: "Consejeros Estratégicos", role: "Consejo Asesor Internacional", bio: "Un consejo asesor internacional apoya al grupo en jurisdicciones clave — España/UE para acceso jurídico y fondos, Dubái/MENA para captación de capital, y Miami para conectividad con el mercado americano." },
         { name: "Relaciones con Inversores", role: "Capital y Alianzas", bio: "Gestión dedicada de relaciones con inversores para capital institucional, mandatos soberanos y estructuras de co-inversión. El grupo proyecta expansión a nuevos mercados en 24 meses con respaldo de activos tangibles." },
       ],
     },
@@ -1140,6 +1173,37 @@ export const translations = {
       whatsappCTA: "O escríbenos por WhatsApp",
     },
 
+    talentPage: {
+      sectionEyebrow: "Sección · Gestión de Talento",
+      heading: "Únete a un equipo global de alto rendimiento.",
+      body: "Seleccionamos profesionales con estándares de excelencia en ejecución, visión estratégica y ambición internacional. Si buscas construir proyectos que marcan mercado junto a equipos de clase mundial, este es tu lugar.",
+      accessLabel: "Postulación Profesional",
+      accessHeading: "Cuéntanos tu perfil.",
+      accessBody: "Completa tus datos y adjunta tu CV en PDF. Nuestro equipo de Talento evalúa cada postulación con criterio riguroso y tiempos de respuesta claros.",
+      cvHint: "Formato admitido: solo PDF · Tamaño máximo: 8MB",
+      microcopy: "Proceso confidencial • Evaluación profesional • Respuesta en un máximo de 7 días hábiles",
+      success: "Postulación recibida con éxito. Nuestro equipo de Talento te contactará si tu perfil encaja con las oportunidades activas.",
+      error: "No pudimos enviar tu postulación. Inténtalo nuevamente.",
+      fields: {
+        name: "Nombre",
+        namePlaceholder: "Ej. María",
+        lastName: "Apellido",
+        lastNamePlaceholder: "Ej. González",
+        email: "Correo electrónico",
+        emailPlaceholder: "maria@email.com",
+        phone: "Teléfono",
+        phonePlaceholder: "Ej. +34 600 000 000",
+        position: "Área o cargo de interés",
+        positionPlaceholder: "Ej. Ingeniero/a IA · Project Manager",
+        linkedin: "Perfil de LinkedIn (opcional)",
+        linkedinPlaceholder: "https://linkedin.com/in/tuperfil",
+        message: "Resumen profesional",
+        messagePlaceholder: "Comparte tu experiencia, logros y por qué quieres unirte a Evolvix.",
+        cv: "CV (PDF)",
+        submit: "Enviar postulación",
+      },
+    },
+
     services: {
       keyCapabilities: "Capacidades Clave",
       backToHoldings: "← Volver al Portfolio",
@@ -1162,7 +1226,7 @@ export const translations = {
         capabilitiesHeading: "Excelencia técnica a cualquier escala.",
         pillars: [
           { label: "Proyectos Técnicos de Alta Complejidad", detail: "Diseñamos y ejecutamos proyectos de la máxima complejidad técnica — desde arquitectura industrial hasta la gestión de grandes obras de construcción." },
-          { label: "Mandatos Gubernamentales y Privados", detail: "Brazo técnico de confianza para programas de infraestructura gubernamentales y desarrollos emblemáticos del sector privado en España, MENA y las Américas." },
+          { label: "Mandatos Gubernamentales y Privados", detail: "Brazo técnico de confianza para programas de infraestructura gubernamentales y desarrollos emblemáticos del sector privado en España, MENA y América." },
           { label: "Soluciones de Ingeniería Integrales", detail: "Servicios integrales de ingeniería que fusionan la vanguardia técnica con la eficiencia operativa — desde el concepto hasta la puesta en marcha." },
           { label: "Dirección de Activos Industriales", detail: "Dirección técnica de activos industriales de misión crítica: parques logísticos, centros de datos, corredores de transporte e infraestructuras pesadas." },
         ]
@@ -1188,7 +1252,7 @@ export const translations = {
           { label: "Inmuebles Corporativos", detail: "Identificación y desarrollo de inmuebles corporativos premium en los nodos financieros clave: Madrid, Dubái, Miami y El Cairo." },
           { label: "Expansión de Marca y Grupo", detail: "Gestión estratégica y expansión de las marcas propias de Evolvix Global — impulsando un crecimiento sólido y sostenido de los activos del grupo en nuevos mercados en menos de 24 meses." },
           { label: "Capital Privado y Deuda de Infraestructuras", detail: "Gestión de carteras multi-clase: participaciones de capital privado, instrumentos de deuda de infraestructuras y mandatos soberanos para capital institucional." },
-          { label: "Vehículos de Inversión Alternativos", detail: "Vehículos alternativos estructurados para co-inversión junto a socios institucionales — alineados con el triángulo geográfico del grupo: Europa, MENA y Américas." },
+          { label: "Vehículos de Inversión Alternativos", detail: "Vehículos alternativos estructurados para co-inversión junto a socios institucionales — alineados con el triángulo geográfico del grupo: Europa, MENA y América." },
         ]
       }
     },

@@ -140,13 +140,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "B2B operations partner — international trade, business intelligence, digital security and project delivery across Europe, MENA and the Americas.",
+          "B2B operations partner — international trade, business intelligence, digital security and project delivery across Europe, MENA and America.",
       },
       { property: "og:title", content: "Evolvix Global — The Architecture of Success" },
       {
         property: "og:description",
         content:
-          "Partner operacional B2B — comercio internacional, inteligencia de negocio, seguridad digital y entrega de proyectos en Europa, MENA y las Américas.",
+          "Partner operacional B2B — comercio internacional, inteligencia de negocio, seguridad digital y entrega de proyectos en Europa, MENA y América.",
       },
     ],
   }),
@@ -322,7 +322,7 @@ function HeroSection() {
               [
                 "Madrid · Central Operations",
                 "París · Innovation Hub",
-                "Miami · Americas Gateway",
+                "Miami · America Gateway",
                 "Dubái · Capital & Emerging Markets",
                 "El Cairo · Infrastructure & MENA",
                 "EVOLVIX GLOBAL · B2B Operations Partner",
@@ -414,14 +414,25 @@ function SolutionSection() {
       </div>
       <div className="container-edge py-20 md:py-32 relative z-10">
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-          <Reveal variant="up">
-            <p className="text-eyebrow">{s.eyebrow}</p>
-            <h2 className="mt-6 text-display-md text-titanium leading-[1.1] text-balance">
-              {s.heading}
-            </h2>
-            <p className="mt-8 max-w-xl text-lg font-light leading-relaxed text-platinum mx-auto">
-              {s.body}
-            </p>
+          <Reveal variant="up" className="w-full">
+            <div className="relative overflow-hidden border border-hairline bg-background/45 px-4 py-8 sm:px-6 sm:py-10 md:px-10 md:py-12">
+              <img
+                src={growthImg}
+                alt=""
+                aria-hidden
+                className="absolute inset-0 h-full w-full object-cover opacity-[0.12]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/55 to-background/70" />
+              <div className="relative z-10">
+                <p className="text-eyebrow">{s.eyebrow}</p>
+                <h2 className="mt-5 text-3xl font-bold leading-[1.1] tracking-tight text-titanium text-balance sm:text-4xl md:text-display-md">
+                  {s.heading}
+                </h2>
+                <p className="mt-5 max-w-xl text-sm font-light leading-relaxed text-platinum mx-auto sm:text-base md:text-lg">
+                  {s.body}
+                </p>
+              </div>
+            </div>
           </Reveal>
 
           <div className="mt-12 w-full max-w-3xl">
@@ -640,7 +651,7 @@ function EvolvixPillarsSection() {
       <div className="container-edge relative z-10 py-24 md:py-32">
         <Reveal variant="up">
           <p className="text-eyebrow text-gold">
-            {isEs ? "§ — Evolvix Global · El Valor de Nuestras Siglas" : "§ — Evolvix Global · The Value of Our Acronym"}
+            {isEs ? "Evolvix Global · El Valor de Nuestras Siglas" : "Evolvix Global · The Value of Our Acronym"}
           </p>
           <h2 className="mt-6 font-display text-3xl font-extrabold tracking-tight text-titanium md:text-4xl max-w-[22ch]">
             {isEs
@@ -684,7 +695,7 @@ function UnitsPreview() {
         <Reveal variant="up" className="flex items-end justify-between py-6">
           <div>
             <p className="text-eyebrow">{t.holdings.eyebrow}</p>
-            <h2 className="mt-2 text-display-sm text-titanium max-w-[16ch]">
+            <h2 className="mt-2 text-display-md text-titanium max-w-[16ch]">
               {t.holdings.heading}
             </h2>
           </div>
@@ -700,6 +711,88 @@ function UnitsPreview() {
           divisionBriefLabel={t.holdings.seeAll}
         />
       ))}
+
+      <AIIntelligenceSection />
+    </section>
+  );
+}
+
+function AIIntelligenceSection() {
+  const { lang } = useLang();
+  const isEs = lang === "es";
+
+  const heading = isEs
+    ? "Servicios de Inteligencia Artificial para liderar tu mercado."
+    : "Enterprise-grade Artificial Intelligence services.";
+
+  const body = isEs
+    ? "No ofrecemos IA generica: construimos ventaja competitiva real. Disenamos e implementamos automatizacion avanzada, analitica predictiva y asistentes inteligentes con desarrollos propios para administracion publica y sector privado. Nuestro equipo de mas de 40 expertos de primer nivel mundial, junto a liderazgo senior con mas de 20+ anos de experiencia, ejecuta proyectos de alto impacto que convierten tecnologia en crecimiento, eficiencia y posicionamiento de liderazgo."
+    : "We implement AI solutions focused on business impact: advanced automation, predictive analytics, and intelligent assistants. We provide proprietary developments for public administration and the private sector, supported by a team of more than 40 of the world's top AI experts. Our senior leadership combines 20+ years of accumulated experience in strategy, technology, and execution to deliver measurable results in mission-critical operations.";
+
+  const bullets = isEs
+    ? [
+      "Arquitecturas de IA propias y a medida para operaciones complejas",
+      "Soluciones para administracion publica y empresas con estandares de grado institucional",
+      "Implementacion de elite con foco en ROI, velocidad y liderazgo competitivo",
+    ]
+    : [
+      "Tailored AI architectures aligned with your operation",
+      "Scalable model workflows with governance and security by design",
+      "Premium execution with senior guidance end-to-end",
+    ];
+
+  const photosTitle = isEs
+    ? "Espacio para agendar fotos del area de IA"
+    : "Reserved space for AI service photos";
+
+  const photoLabels = isEs
+    ? ["Foto de equipo IA", "Foto de implementacion", "Foto de resultados"]
+    : ["AI team photo", "Implementation photo", "Results photo"];
+
+  return (
+    <section className="border-t border-hairline bg-background">
+      <div className="container-edge py-16 md:py-24">
+        <Reveal variant="up" className="max-w-4xl">
+          <p className="text-eyebrow text-gold">
+            {isEs ? "Nueva Unidad · Inteligencia Artificial" : "New Unit · Artificial Intelligence"}
+          </p>
+          <h3 className="mt-5 text-3xl font-bold leading-[1.1] tracking-tight text-titanium text-balance sm:text-4xl md:text-display-md">
+            {heading}
+          </h3>
+          <p className="mt-5 max-w-3xl text-sm sm:text-base md:text-lg font-light leading-relaxed text-platinum">
+            {body}
+          </p>
+        </Reveal>
+
+        <div className="mt-8 grid grid-cols-1 gap-px overflow-hidden border border-hairline bg-hairline md:grid-cols-3">
+          {bullets.map((item, index) => (
+            <Reveal key={item} variant="up" delay={120 + index * 80}>
+              <div className="bg-background p-4 sm:p-6 md:p-8 h-full">
+                <p className="text-mono-label text-gold/80">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <p className="mt-2 text-xs sm:text-sm md:text-base text-titanium font-medium leading-relaxed">
+                  {item}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal variant="up" delay={260} className="mt-10">
+          <p className="text-mono-label text-smoke mb-4">{photosTitle}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+            {photoLabels.map((label) => (
+              <div
+                key={label}
+                className="h-36 sm:h-40 md:h-52 border border-dashed border-gold/40 bg-surface/20 flex items-center justify-center text-center px-3 sm:px-4"
+              >
+                <span className="text-xs md:text-sm text-smoke">{label}</span>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+      </div>
     </section>
   );
 }

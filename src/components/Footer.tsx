@@ -58,8 +58,8 @@ export function Footer() {
       id="partners"
       className="relative border-t border-hairline bg-background"
     >
-      <div className="container-edge py-12 md:py-16">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-start">
+      <div className="container-edge py-10 md:py-16">
+        <div className="grid grid-cols-1 gap-8 md:gap-10 md:grid-cols-12 md:items-start">
           {/* Brand & Socials */}
           <div className="md:col-span-5 flex flex-col gap-6">
             <div className="flex items-center gap-3 text-titanium">
@@ -87,7 +87,7 @@ export function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="md:col-span-4 grid grid-cols-2 gap-8">
+          <div className="md:col-span-4 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
             <div>
               <p className="text-xs uppercase tracking-widest text-gold/60 mb-4">Divisiones</p>
               <ul className="space-y-2 text-sm text-titanium/80">
@@ -103,6 +103,8 @@ export function Footer() {
                 <li><Link to="/footprint" className="hover:text-gold transition-colors">Presencia</Link></li>
                 <li><Link to="/board" className="hover:text-gold transition-colors">Equipo</Link></li>
                 <li><Link to="/contact" className="hover:text-gold transition-colors">Contacto</Link></li>
+                <li><Link to="/politica-privacidad" className="hover:text-gold transition-colors">Política de Privacidad</Link></li>
+                <li><Link to="/aviso-legal" className="hover:text-gold transition-colors">Aviso Legal</Link></li>
               </ul>
             </div>
           </div>
@@ -119,8 +121,8 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 p-4 pb-6 pt-6 border-t border-hairline flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-smoke/50 uppercase tracking-widest">
-          <p>© 2026 Evolvix Global · Acceso Restringido</p>
+        <div className="mt-10 p-4 pb-6 pt-6 border-t border-hairline flex flex-col md:flex-row justify-between items-start md:items-center gap-3 md:gap-4 text-[10px] sm:text-xs font-mono text-smoke/50 uppercase tracking-[0.18em]">
+          <p className="leading-relaxed">© 2026 Evolvix Global · Acceso Restringido</p>
           <div className="flex items-center gap-4">
             <span>EVX Group · MMXXVI</span>
           </div>
