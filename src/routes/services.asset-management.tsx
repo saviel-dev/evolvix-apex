@@ -26,7 +26,7 @@ const ASSET_PILLARS = [
   {
     label: "Brand & Group Expansion",
     detail:
-      "Strategic management and expansion of Grupo EBLE's own brands — driving solid, sustained growth of group assets across new markets in under 24 months.",
+      "Strategic management and expansion of Evolvix Global's own brands — driving solid, sustained growth of group assets across new markets in under 24 months.",
   },
   {
     label: "Private Equity & Infra Debt",

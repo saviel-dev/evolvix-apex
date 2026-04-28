@@ -133,7 +133,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-20 flex flex-col items-start justify-between gap-4 border-t border-hairline pt-8 text-mono-label text-smoke md:flex-row md:items-center">
-          <p>© 2026 Evolvix Global Holding. Restricted Access.</p>
+          <p>© 2026 Evolvix Global. Restricted Access.</p>
           <div className="flex items-center gap-6">
             <span>EVX Group · MMXXVI</span>
           </div>

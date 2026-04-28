@@ -52,7 +52,8 @@ function TypingText({
     };
   }, [text, delay]);
 
-  return <span ref={containerRef} className={className} />;
+  // Outer span must be 'inline' so it flows naturally inside block-level h1
+  return <span ref={containerRef} className={className} style={{ display: "inline" }} />;
 }
 
 export const Route = createFileRoute("/")({
@@ -62,13 +63,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "International holding leading the evolution of strategic assets and services across logistics, capital, intelligence and digital infrastructure.",
+          "B2B operations partner — international trade, business intelligence, digital security and project delivery across Europe, MENA and the Americas.",
       },
       { property: "og:title", content: "Evolvix Global — The Architecture of Success" },
       {
         property: "og:description",
         content:
-          "Holding internacional. Operaciones, capital, tecnología y expansión a escala global.",
+          "Partner operacional B2B — comercio internacional, inteligencia de negocio, seguridad digital y entrega de proyectos en Europa, MENA y las Américas.",
       },
     ],
   }),
@@ -131,7 +132,7 @@ function HeroSection() {
         </Reveal>
 
         <Reveal variant="up" delay={120}>
-          <h1 className="mt-8 text-display-lg text-titanium max-w-[18ch]">
+          <h1 className="mt-8 text-display-lg text-titanium w-full">
             <TypingText text={t.hero.headingLine1} delay={300} />
             <br />
             {t.hero.headingOf && <span className="text-platinum"><TypingText text={t.hero.headingOf} delay={300 + (t.hero.headingLine1.length * 40)} /> </span>}
@@ -175,7 +176,7 @@ function HeroSection() {
                 "Miami · Americas Gateway",
                 "Dubái · Capital & Emerging Markets",
                 "El Cairo · Infrastructure & MENA",
-                "GRUPO EBLE · Global Holding",
+                "EVOLVIX GLOBAL · B2B Operations Partner",
               ].map((text, j) => (
                 <span key={`${i}-${j}`} className="flex items-center gap-16">
                   {text}
@@ -194,17 +195,17 @@ function ManifestoSection() {
   const { t } = useLang();
   return (
     <section className="relative bg-background">
-      <div className="container-edge grid grid-cols-1 gap-16 py-32 md:grid-cols-12 md:py-44">
+      <div className="container-edge grid grid-cols-1 gap-10 py-20 md:grid-cols-12 md:py-44">
         <Reveal variant="up" className="md:col-span-4">
           <p className="text-eyebrow">{t.manifesto.eyebrow}</p>
         </Reveal>
         <Reveal variant="up" delay={120} className="md:col-span-8">
-          <p className="font-display text-3xl font-medium leading-[1.1] tracking-tight text-titanium md:text-5xl">
+          <p className="font-display text-2xl font-medium leading-[1.1] tracking-tight text-titanium md:text-5xl">
             {t.manifesto.headingLine1}
             <br />
             <span className="text-gold">{t.manifesto.headingLine2}</span>
           </p>
-          <p className="mt-10 max-w-2xl text-base font-light leading-relaxed text-platinum">
+          <p className="mt-8 max-w-2xl text-base font-light leading-relaxed text-platinum">
             {t.manifesto.body}
           </p>
         </Reveal>
@@ -213,7 +214,7 @@ function ManifestoSection() {
   );
 }
 
-const EBLE_PILLARS = [
+const EVOLVIX_PILLARS = [
   {
     letter: "E",
     title: "Excellence",
@@ -244,7 +245,7 @@ const EBLE_PILLARS = [
   },
 ];
 
-function EBLESection() {
+function EvolvixPillarsSection() {
   const { lang } = useLang();
   const isEs = lang === "es";
   return (
@@ -253,31 +254,31 @@ function EBLESection() {
       <div className="container-edge relative z-10 py-24 md:py-32">
         <Reveal variant="up">
           <p className="text-eyebrow text-gold">
-            {isEs ? "§ — Grupo EBLE · El Valor de Nuestras Siglas" : "§ — Grupo EBLE · The Value of Our Acronym"}
+            {isEs ? "§ — Evolvix Global · El Valor de Nuestras Siglas" : "§ — Evolvix Global · The Value of Our Acronym"}
           </p>
           <h2 className="mt-6 font-display text-3xl font-extrabold tracking-tight text-titanium md:text-4xl max-w-[22ch]">
             {isEs
-              ? "Los pilares del holding global español."
-              : "The pillars of the Spanish global holding."}
+              ? "Los pilares que definen Evolvix Global."
+              : "The pillars that define Evolvix Global."}
           </h2>
           <p className="mt-6 max-w-2xl text-base font-light leading-relaxed text-smoke">
             {isEs
-              ? "EBLE no es un acrónimo vacío. Es el pilar conceptual sobre el que Grupo EBLE construye su identidad como holding multisectorial de origen español."
-              : "EBLE is not an empty acronym. It is the foundational pillar upon which Grupo EBLE builds its identity as a Spanish-origin multi-sector holding."}
+              ? "EVOLVIX no es un acrónimo vacío. Es el pilar conceptual sobre el que Evolvix Global construye su identidad como empresa multisectorial de origen español."
+              : "EVOLVIX is not just a name. It is the foundational pillar upon which Evolvix Global builds its identity as a Spanish-origin multi-sector company."}
           </p>
         </Reveal>
 
         <div className="mt-16 grid grid-cols-2 gap-px overflow-hidden border border-hairline bg-hairline md:grid-cols-4">
-          {EBLE_PILLARS.map((p, i) => (
+          {EVOLVIX_PILLARS.map((p, i) => (
             <Reveal key={`${p.letter}-${i}`} variant="up" delay={i * 80}>
-              <div className="group bg-background p-8 md:p-10 h-full flex flex-col gap-4 transition-colors duration-500 hover:bg-surface/40">
-                <span className="font-mono text-5xl font-bold text-gold/70 mb-2 transition-transform duration-500 group-hover:scale-110 origin-left">
+              <div className="group bg-background p-5 md:p-10 h-full flex flex-col gap-3 transition-colors duration-500 hover:bg-surface/40">
+                <span className="font-mono text-4xl md:text-5xl font-bold text-gold/70 mb-2 transition-transform duration-500 group-hover:scale-110 origin-left">
                   {p.letter}
                 </span>
-                <p className="font-display text-base font-bold tracking-tight text-titanium leading-tight">
+                <p className="font-display text-sm md:text-base font-bold tracking-tight text-titanium leading-tight">
                   {isEs ? p.titleEs : p.title}
                 </p>
-                <p className="text-sm font-light leading-relaxed text-smoke mt-auto">
+                <p className="text-xs md:text-sm font-light leading-relaxed text-smoke mt-auto">
                   {isEs ? p.descEs : p.desc}
                 </p>
               </div>
@@ -359,13 +360,14 @@ function UnitFullScreen({
   return (
     <article className="relative border-t border-hairline">
       <div
-        className={`grid min-h-[90svh] grid-cols-1 ${
+        className={`grid grid-cols-1 ${
           reverse ? "md:[grid-template-columns:1fr_1.2fr]" : "md:[grid-template-columns:1.2fr_1fr]"
         }`}
       >
         <div
           ref={imgWrapRef}
           className={`relative overflow-hidden bg-background ${reverse ? "md:order-2" : ""}`}
+          style={{ minHeight: "clamp(240px, 50svh, 90svh)" }}
         >
           <img
             ref={innerRef}
@@ -377,30 +379,30 @@ function UnitFullScreen({
             className="absolute inset-0 h-full w-full object-cover opacity-80 will-change-transform"
           />
           <div className="absolute inset-0 bg-[var(--gradient-vignette)]" />
-          <div className="absolute left-6 top-6 text-mono-label text-titanium md:left-10 md:top-10">
+          <div className="absolute left-4 top-4 text-mono-label text-titanium md:left-10 md:top-10">
             {unit.code} / {String(totalUnits).padStart(2, "0")}
           </div>
         </div>
 
         <div className="flex items-center border-hairline md:border-l">
-          <div className="container-edge w-full py-20 md:py-0">
+          <div className="container-edge w-full py-12 md:py-0">
             <Reveal variant="up">
               <p className="text-eyebrow text-gold">{unit.tagline}</p>
             </Reveal>
             <Reveal variant="up" delay={100}>
-              <h3 className="mt-6 text-display-md text-titanium max-w-[18ch]">
+              <h3 className="mt-4 text-display-md text-titanium">
                 {unit.name}
               </h3>
             </Reveal>
             <Reveal variant="up" delay={200}>
-              <p className="mt-8 max-w-md text-base font-light leading-relaxed text-platinum">
+              <p className="mt-6 max-w-md text-base font-light leading-relaxed text-platinum">
                 {unit.body}
               </p>
             </Reveal>
             <Reveal variant="up" delay={300}>
               <Link
                 to={getRouteForCode(unit.code)}
-                className="mt-10 inline-flex items-center gap-3 text-mono-label text-titanium link-line"
+                className="mt-8 inline-flex items-center gap-3 text-mono-label text-titanium link-line"
               >
                 {divisionBriefLabel}
                 <svg width="18" height="8" viewBox="0 0 18 8" fill="none" aria-hidden>
@@ -440,11 +442,11 @@ function FootprintPreview() {
 
         <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden border border-hairline bg-hairline md:grid-cols-4">
           {FOOTPRINT_CITIES.map((c) => (
-            <div key={c.name} className="bg-background p-6 md:p-8">
+            <div key={c.name} className="bg-background p-4 md:p-8">
               <p className="text-mono-label text-gold">
                 {c.name}, {c.country}
               </p>
-              <p className="mt-4 font-display text-2xl font-extrabold tracking-tight text-titanium">
+              <p className="mt-3 font-display text-lg font-extrabold tracking-tight text-titanium md:text-2xl">
                 {c.role}
               </p>
             </div>
@@ -544,15 +546,15 @@ function ExponentialSection() {
           <p className="mt-8 text-base font-light leading-relaxed text-platinum">{p.body}</p>
         </Reveal>
 
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="mt-16 grid grid-cols-2 gap-3 sm:grid-cols-2 md:grid-cols-4">
           {p.pillars.map((pillar: any, i: number) => (
             <Reveal key={pillar.letter} variant="up" delay={i * 50}>
-              <div className="group border border-hairline bg-surface/30 backdrop-blur-sm p-8 h-full flex flex-col transition-colors duration-500 hover:border-gold/30 hover:bg-surface">
-                <span className="font-mono text-5xl font-bold text-gold/80 mb-6 transition-transform duration-500 group-hover:scale-110 origin-left">
+              <div className="group border border-hairline bg-surface/30 backdrop-blur-sm p-5 md:p-8 h-full flex flex-col transition-colors duration-500 hover:border-gold/30 hover:bg-surface">
+                <span className="font-mono text-4xl md:text-5xl font-bold text-gold/80 mb-4 transition-transform duration-500 group-hover:scale-110 origin-left">
                   {pillar.letter}
                 </span>
-                <h3 className="font-display text-xl font-semibold text-titanium mb-3">{pillar.title}</h3>
-                <p className="text-sm font-light leading-relaxed text-smoke">{pillar.desc}</p>
+                <h3 className="font-display text-base md:text-xl font-semibold text-titanium mb-2">{pillar.title}</h3>
+                <p className="text-xs md:text-sm font-light leading-relaxed text-smoke">{pillar.desc}</p>
               </div>
             </Reveal>
           ))}
@@ -573,14 +575,14 @@ function TrustStrip() {
   ];
   return (
     <section className="border-t border-b border-hairline bg-surface/20">
-      <div className="container-edge py-10 grid grid-cols-2 gap-8 md:grid-cols-4">
+      <div className="container-edge py-8 grid grid-cols-2 gap-6 md:grid-cols-4">
         {stats.map((s) => (
           <Reveal key={s.value + s.label} variant="up">
             <div className="flex flex-col items-center text-center gap-1">
-              <span className="font-display text-3xl font-extrabold text-gold md:text-4xl">
+              <span className="font-display text-2xl font-extrabold text-gold md:text-4xl">
                 {s.value}
               </span>
-              <span className="text-xs font-light leading-snug text-smoke max-w-[14ch]">
+              <span className="text-[0.65rem] md:text-xs font-light leading-snug text-smoke max-w-[12ch] md:max-w-[14ch]">
                 {s.label}
               </span>
             </div>
@@ -597,7 +599,7 @@ function Index() {
       <HeroSection />
       <TrustStrip />
       <ManifestoSection />
-      <EBLESection />
+      <EvolvixPillarsSection />
       <ExponentialSection />
       <InvestmentThesis />
       <UnitsPreview />

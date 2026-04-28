@@ -62,7 +62,7 @@ export const translations = {
       eyebrow: "§ 04 — Competitive Advantage",
       headingLine1: "A geographically shielded",
       headingLine2: "multi-asset ecosystem.",
-      body: "Evolvix is structured as a diversified holding — not a single business, but an integrated group of strategic assets designed to grow in parallel, hedge each other, and compound value across cycles.",
+      body: "Evolvix is structured as a diversified group — not a single business, but an integrated portfolio of strategic assets designed to grow in parallel, hedge each other, and compound value across cycles.",
       pillars: [
         { label: "Sector Diversification", detail: "Energy, Engineering, BPO and Real Estate. If one sector fluctuates, others compensate." },
         { label: "Geographic Arbitrage", detail: "Leveraging Egypt's operational costs, EU technology, Dubai capital and Miami's commercial access." },
@@ -95,7 +95,7 @@ export const translations = {
         { letter: "L", title: "Legacy", desc: "Building long-term structures." },
         { letter: "V", title: "Velocity", desc: "Agility in decision making and execution." },
         { letter: "I", title: "Innovation", desc: "Technology applied to traditional sectors." },
-        { letter: "X", title: "Exponential Factor", desc: "The value multiplier applied to every holding company." },
+        { letter: "X", title: "Exponential Factor", desc: "The value multiplier applied to every Evolvix company." },
       ],
     },
 
@@ -120,7 +120,7 @@ export const translations = {
       headingLine2: "Relentless execution.",
       body: "The Evolvix Global board brings together a senior team of strategists, engineers and capital allocators with proven track records across Europe, the Middle East and the Americas. Each member operates at the intersection of institutional experience and entrepreneurial drive.",
       members: [
-        { name: "Grupo EBLE — Executive Board", role: "Holding Leadership", bio: "Evolvix Global operates under the strategic umbrella of Grupo EBLE — a diversified Spanish holding whose pillars are Excellence, Boldness, Legacy and Execution. The board directs capital, operations and expansion across all four divisions." },
+        { name: "Evolvix Global — Executive Board", role: "Group Leadership", bio: "Evolvix Global is a diversified Spanish business group whose pillars are Excellence, Boldness, Legacy and Execution. The board directs capital, operations and expansion across all four divisions." },
         { name: "Division Principals", role: "Operational Leadership", bio: "Each Evolvix division is led by a dedicated principal with deep sector expertise: energy concessions & grid infrastructure, high-complexity engineering, institutional BPO operations, and real-estate asset management." },
         { name: "Strategic Advisors", role: "International Advisory Council", bio: "An international advisory council supports the group across key jurisdictions — Spain/EU for legal & funding access, Dubai/MENA for capital formation, and Miami for Americas market connectivity." },
         { name: "Investor Relations", role: "Capital & Partnerships", bio: "Dedicated investor relations management for institutional capital, sovereign mandates and co-investment structures. The group targets 24-month expansion into new markets with tangible asset backing." },
@@ -201,7 +201,7 @@ export const translations = {
       eyebrow: "§ 04 — Ventaja Competitiva",
       headingLine1: "Un ecosistema multi-activo",
       headingLine2: "geográficamente protegido.",
-      body: "Evolvix se estructura como un holding diversificado — no es un negocio único, sino un grupo integrado de activos estratégicos diseñados para crecer en paralelo, protegerse entre sí y capitalizar valor a través de los ciclos.",
+      body: "Evolvix se estructura como un grupo diversificado — no es un negocio único, sino un portfolio integrado de activos estratégicos diseñados para crecer en paralelo, protegerse entre sí y capitalizar valor a través de los ciclos.",
       pillars: [
         { label: "Diversificación Sectorial", detail: "Energía, Ingeniería, BPO y Real Estate. Si un sector fluctúa, los otros compensan." },
         { label: "Arbitraje Geográfico", detail: "Aprovechamos costes de Egipto, tecnología de España/Francia, capital de Dubái y apertura de Miami." },
@@ -241,7 +241,7 @@ export const translations = {
         { letter: "L", title: "Legacy", desc: "Construcción de estructuras a largo plazo." },
         { letter: "V", title: "Velocity", desc: "Agilidad en la toma de decisiones y ejecución." },
         { letter: "I", title: "Innovation", desc: "Tecnología aplicada a sectores tradicionales." },
-        { letter: "X", title: "Exponential Factor", desc: "El multiplicador de valor que aplicamos a cada empresa del holding." },
+        { letter: "X", title: "Exponential Factor", desc: "El multiplicador de valor que aplicamos a cada empresa de Evolvix." },
       ],
     },
 
@@ -266,7 +266,7 @@ export const translations = {
       headingLine2: "Ejecución implacable.",
       body: "El consejo directivo de Evolvix Global reúne a un equipo senior de estrategas, ingenieros y gestores de capital con trayectorias probadas en Europa, Oriente Medio y las Américas. Cada miembro opera en la intersección entre la experiencia institucional y el impulso emprendedor.",
       members: [
-        { name: "Grupo EBLE — Consejo Ejecutivo", role: "Liderazgo del Holding", bio: "Evolvix Global opera bajo el paraguas estratégico de Grupo EBLE — un holding español diversificado cuyos pilares son Excelencia, Audacia, Legado y Ejecución. El consejo dirige el capital, las operaciones y la expansión de las cuatro divisiones." },
+        { name: "Evolvix Global — Consejo Ejecutivo", role: "Liderazgo del Grupo", bio: "Evolvix Global es un grupo empresarial español diversificado cuyos pilares son Excelencia, Audacia, Legado y Ejecución. El consejo dirige el capital, las operaciones y la expansión de las cuatro divisiones." },
         { name: "Directores de División", role: "Liderazgo Operacional", bio: "Cada división de Evolvix está liderada por un director con profunda especialización sectorial: concesiones energéticas e infraestructura de red, ingeniería de alta complejidad, operaciones BPO institucionales y gestión de activos inmobiliarios." },
         { name: "Consejeros Estratégicos", role: "Consejo Asesor Internacional", bio: "Un consejo asesor internacional apoya al grupo en jurisdicciones clave — España/UE para acceso jurídico y fondos, Dubái/MENA para captación de capital, y Miami para conectividad con los mercados de las Américas." },
         { name: "Relaciones con Inversores", role: "Capital y Alianzas", bio: "Gestión dedicada de relaciones con inversores para capital institucional, mandatos soberanos y estructuras de co-inversión. El grupo proyecta expansión a nuevos mercados en 24 meses con respaldo de activos tangibles." },

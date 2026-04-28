@@ -152,6 +152,9 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     line-height: 1.1;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    max-width: 100%;
   }
 
   /* Hide native cursor on devices with fine pointers — replaced by magnetic cursor */
@@ -178,19 +181,23 @@
   .text-display-xl {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: clamp(2.5rem, 7vw, 7rem);
+    font-size: clamp(1.8rem, 7vw, 7rem);
     line-height: 1.1;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   .text-display-lg {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(1.6rem, 5vw, 4rem);
     line-height: 1.15;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   .text-display-md {
