@@ -18,7 +18,8 @@ export const Route = createFileRoute("/desarrollo-tecnologico")({
 
 function TechnologyDevelopmentPage() {
   const { t } = useLang();
-  
+  const p = (t as any).techPage;
+
   return (
     <>
       {/* Hero Section */}
@@ -26,7 +27,7 @@ function TechnologyDevelopmentPage() {
         <div className="absolute inset-0 -z-10">
           <img
             src={techImg}
-            alt="Desarrollo Tecnológico"
+            alt={p.heading}
             width={1920}
             height={1080}
             className="h-full w-full object-cover opacity-20"
@@ -36,19 +37,19 @@ function TechnologyDevelopmentPage() {
 
         <div className="container-edge">
           <Reveal variant="up">
-            <p className="text-eyebrow text-gold">Servicio · Desarrollo Tecnológico</p>
+            <p className="text-eyebrow text-gold">{p.eyebrow}</p>
             <h1 className="mt-8 text-display-xl md:text-display-lg text-titanium leading-[1.0]">
-              Desarrollo Tecnológico que Resuelve Problemas Reales, no Crea Complicaciones
+              {p.heading}
             </h1>
             <p className="mt-8 max-w-2xl text-lg font-light leading-relaxed text-platinum">
-              Software construido para tu negocio, no al revés. Soluciones que funcionan desde el día uno.
+              {p.body}
             </p>
             <div className="mt-12 flex flex-col sm:flex-row gap-4">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-3 bg-gold text-background px-7 py-4 text-mono-label font-semibold hover:bg-gold/90 transition-colors duration-300"
               >
-                Solicita propuesta de desarrollo
+                {p.ctaPrimary}
                 <svg width="16" height="6" viewBox="0 0 16 6" fill="none" aria-hidden>
                   <path d="M0 3H14M11 1L15 3L11 5" stroke="currentColor" strokeWidth="1.2" />
                 </svg>
@@ -59,11 +60,11 @@ function TechnologyDevelopmentPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 border border-titanium px-7 py-4 text-mono-label font-semibold text-titanium hover:bg-titanium hover:text-background transition-colors duration-300"
               >
-                Habla con un desarrollador
+                {p.ctaSecondary}
               </a>
             </div>
             <div className="mt-4 text-xs font-light text-smoke">
-              Respuesta garantizada en 24h • Sin compromiso • Análisis gratuito
+              {p.microcopy}
             </div>
           </Reveal>
         </div>
@@ -74,58 +75,39 @@ function TechnologyDevelopmentPage() {
         <div className="container-edge py-20 md:py-32">
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
             <Reveal variant="up">
-              <p className="text-eyebrow">¿La tecnología te frena en lugar de ayudarte?</p>
+              <p className="text-eyebrow">{p.problem.eyebrow}</p>
               <h2 className="mt-6 text-display-lg md:text-display-lg text-titanium leading-[1.1]">
-                El Costo de Usar Software que no se Adapta a Ti
+                {p.problem.heading}
               </h2>
               <p className="mt-8 max-w-2xl text-lg font-light leading-relaxed text-platinum">
-                Software genérico que no se adapta a tus procesos, sistemas desintegrados que hablan idiomas diferentes, y desarrollo que nunca termina o no funciona como esperabas.
+                {p.problem.body}
               </p>
             </Reveal>
             
             <Reveal variant="up" delay={200} className="mt-12 w-full max-w-3xl">
               <div className="bg-surface/30 backdrop-blur-sm border border-hairline rounded-lg p-8">
-                <h3 className="text-lg font-semibold text-titanium mb-6">Señales de que necesitas desarrollo a medida:</h3>
+                <h3 className="text-lg font-semibold text-titanium mb-6">{p.problem.boxTitle}</h3>
                 <ul className="space-y-4 text-left">
-                  <li className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center mt-0.5">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="text-red-400">
-                        <path d="M12 9v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                      </svg>
-                    </div>
-                    <span className="text-platinum font-light">Tu equipo pierde horas en procesos manuales repetitivos</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center mt-0.5">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="text-red-400">
-                        <path d="M12 9v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                      </svg>
-                    </div>
-                    <span className="text-platinum font-light">Sistemas que no se comunican entre sí</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center mt-0.5">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="text-red-400">
-                        <path d="M12 9v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                      </svg>
-                    </div>
-                    <span className="text-platinum font-light">Errores constantes por intervención humana</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center mt-0.5">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="text-red-400">
-                        <path d="M12 9v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                      </svg>
-                    </div>
-                    <span className="text-platinum font-light">No puedes escalar porque los procesos dependen de personas</span>
-                  </li>
+                  {p.problem.points.map((point: string, i: number) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center mt-0.5">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="text-red-400">
+                          <path d="M12 9v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                        </svg>
+                      </div>
+                      <span className="text-platinum font-light">{point}</span>
+                    </li>
+                  ))}
                 </ul>
-                <div className="mt-8 text-center">
+                <div className="mt-8 flex justify-center">
                   <Link
                     to="#solution"
-                    className="inline-flex items-center gap-3 bg-gold text-background px-6 py-3 text-mono-label font-semibold hover:bg-gold/90 transition-colors duration-300"
+                    className="group inline-flex items-center gap-4 bg-titanium text-background px-7 py-4 text-mono-label font-semibold transition-colors duration-500 hover:bg-platinum"
                   >
-                    Descubre nuestra solución
+                    <span>{p.problem.cta}</span>
+                    <svg width="22" height="10" viewBox="0 0 22 10" fill="none" aria-hidden className="transition-transform duration-500 group-hover:translate-x-1">
+                      <path d="M0 5 H20 M16 1 L20 5 L16 9" stroke="currentColor" strokeWidth="1.5" />
+                    </svg>
                   </Link>
                 </div>
               </div>
@@ -139,55 +121,27 @@ function TechnologyDevelopmentPage() {
         <div className="container-edge py-20 md:py-32">
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
             <Reveal variant="up">
-              <p className="text-eyebrow">Desarrollo Ágil y Centrado en Resultados</p>
+              <p className="text-eyebrow">{p.solution.eyebrow}</p>
               <h2 className="mt-6 text-display-lg md:text-display-lg text-titanium leading-[1.1]">
-                Software que se Integra Perfectamente con tu Negocio
+                {p.solution.heading}
               </h2>
               <p className="mt-8 max-w-2xl text-lg font-light leading-relaxed text-platinum">
-                Desarrollo ágil de soluciones tecnológicas a medida que se integran perfectamente con tu operación actual. Desde análisis hasta implementación y soporte continuo.
+                {p.solution.body}
               </p>
             </Reveal>
             
             <Reveal variant="up" delay={200} className="mt-12 w-full max-w-3xl">
               <div className="bg-surface/20 border border-hairline rounded-lg p-8">
-                <h3 className="text-lg font-semibold text-titanium mb-6">¿Qué incluye nuestro desarrollo?</h3>
+                <h3 className="text-lg font-semibold text-titanium mb-6">{p.solution.boxTitle}</h3>
                 <ul className="space-y-4 text-left">
-                  <li className="flex items-start gap-3">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-gold mt-0.5 flex-shrink-0">
-                      <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                    <span className="text-platinum font-light">Análisis de requisitos y diseño de arquitectura</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-gold mt-0.5 flex-shrink-0">
-                      <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                    <span className="text-platinum font-light">Desarrollo de software personalizado (web, móvil, desktop)</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-gold mt-0.5 flex-shrink-0">
-                      <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                    <span className="text-platinum font-light">Integración con sistemas existentes</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-gold mt-0.5 flex-shrink-0">
-                      <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                    <span className="text-platinum font-light">Testing exhaustivo y control de calidad</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-gold mt-0.5 flex-shrink-0">
-                      <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                    <span className="text-platinum font-light">Capacitación de tu equipo y documentación completa</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-gold mt-0.5 flex-shrink-0">
-                      <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                    <span className="text-platinum font-light">Soporte técnico 24/7 durante primeros 3 meses</span>
-                  </li>
+                  {p.solution.items.map((item: string, i: number) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-gold mt-0.5 flex-shrink-0">
+                        <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                      <span className="text-platinum font-light">{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </Reveal>
@@ -200,49 +154,23 @@ function TechnologyDevelopmentPage() {
         <div className="container-edge py-20 md:py-32">
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
             <Reveal variant="up">
-              <p className="text-eyebrow">Proceso de Desarrollo Transparente</p>
+              <p className="text-eyebrow">{p.process.eyebrow}</p>
               <h2 className="mt-6 text-display-lg md:text-display-lg text-titanium leading-[1.1]">
-                De la Idea a la Producción en 5 Semanas
+                {p.process.heading}
               </h2>
             </Reveal>
             
             <Reveal variant="up" delay={200} className="mt-12 w-full max-w-4xl">
               <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-gold">1</span>
+                {p.process.steps.map((step: { title: string; desc: string }, i: number) => (
+                  <div key={i} className="text-center">
+                    <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-2xl font-bold text-gold">{i + 1}</span>
+                    </div>
+                    <h3 className="text-lg font-semibold text-titanium mb-2">{step.title}</h3>
+                    <p className="text-sm text-platinum">{step.desc}</p>
                   </div>
-                  <h3 className="text-lg font-semibold text-titanium mb-2">Descubrimiento</h3>
-                  <p className="text-sm text-platinum">Entendemos tu problema y definimos solución</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-gold">2</span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-titanium mb-2">Diseño</h3>
-                  <p className="text-sm text-platinum">Arquitectura y prototipado de interfaces</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-gold">3</span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-titanium mb-2">Desarrollo</h3>
-                  <p className="text-sm text-platinum">Construcción con entregas semanales</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-gold">4</span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-titanium mb-2">Implementación</h3>
-                  <p className="text-sm text-platinum">Despliegue y capacitación</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-gold">5</span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-titanium mb-2">Soporte</h3>
-                  <p className="text-sm text-platinum">Mantenimiento y evolución del sistema</p>
-                </div>
+                ))}
               </div>
             </Reveal>
           </div>
@@ -254,44 +182,32 @@ function TechnologyDevelopmentPage() {
         <div className="container-edge py-20 md:py-32">
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
             <Reveal variant="up">
-              <p className="text-eyebrow">Resultados Tangibles</p>
+              <p className="text-eyebrow">{p.results.eyebrow}</p>
               <h2 className="mt-6 text-display-lg md:text-display-lg text-titanium leading-[1.1]">
-                Eficiencia y Crecimiento desde el Día Uno
+                {p.results.heading}
               </h2>
             </Reveal>
             
             <Reveal variant="up" delay={200} className="mt-12 w-full max-w-3xl">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-gold mb-2">+60%</div>
-                  <p className="text-sm text-platinum">Eficiencia operativa</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-gold mb-2">-95%</div>
-                  <p className="text-sm text-platinum">Errores manuales eliminados</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-gold mb-2">4x</div>
-                  <p className="text-sm text-platinum">ROI promedio en clientes</p>
-                </div>
+                {p.results.stats.map((stat: { value: string; label: string }, i: number) => (
+                  <div key={i} className="text-center">
+                    <div className="text-4xl font-bold text-gold mb-2">{stat.value}</div>
+                    <p className="text-sm text-platinum">{stat.label}</p>
+                  </div>
+                ))}
               </div>
               
               <div className="mt-12 bg-surface/20 border border-hairline rounded-lg p-8">
-                <h3 className="text-lg font-semibold text-titanium mb-4">Prueba Social</h3>
-                <p className="text-platinum mb-6">150+ aplicaciones desarrolladas con 98% de satisfacción</p>
+                <h3 className="text-lg font-semibold text-titanium mb-4">{p.results.socialProofTitle}</h3>
+                <p className="text-platinum mb-6">{p.results.socialProofBody}</p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-                  <div>
-                    <p className="text-sm font-semibold text-titanium">LogisticsCorp</p>
-                    <p className="text-xs text-platinum">"Automatizamos 80% de nuestros procesos, el ROI fue visible en 2 meses"</p>
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-titanium">RetailTech</p>
-                    <p className="text-xs text-platinum">"Nuestro nuevo e-commerce incrementó ventas 45% en el primer trimestre"</p>
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-titanium">FinancePro</p>
-                    <p className="text-xs text-platinum">"El sistema de reporting nos ahorra 20 horas semanales de trabajo manual"</p>
-                  </div>
+                  {p.results.testimonials.map((t: { company: string; quote: string }) => (
+                    <div key={t.company}>
+                      <p className="text-sm font-semibold text-titanium">{t.company}</p>
+                      <p className="text-xs text-platinum">{t.quote}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </Reveal>
@@ -304,29 +220,29 @@ function TechnologyDevelopmentPage() {
         <div className="container-edge py-20 md:py-32">
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
             <Reveal variant="up">
-              <p className="text-eyebrow">Comienza tu Transformación Digital</p>
+              <p className="text-eyebrow">{p.cta.eyebrow}</p>
               <h2 className="mt-6 text-display-lg md:text-display-lg text-titanium leading-[1.1]">
-                ¿Listo para Construir la Solución que tu Negocio Necesita?
+                {p.cta.heading}
               </h2>
               <p className="mt-8 max-w-2xl text-lg font-light leading-relaxed text-platinum">
-                Solicita tu propuesta de desarrollo personalizada. Analizamos tus requisitos y te entregamos una solución concreta sin compromiso.
+                {p.cta.body}
               </p>
             </Reveal>
             
             <Reveal variant="up" delay={200} className="mt-12">
               <div className="bg-gold/10 border border-gold/30 rounded-lg p-8 max-w-md mx-auto">
                 <div className="text-center mb-6">
-                  <div className="text-3xl font-bold text-gold mb-2">PROPUESTA EN 24H</div>
-                  <p className="text-sm text-platinum">Análisis gratuito + arquitectura inicial + presupuesto detallado</p>
+                  <div className="text-3xl font-bold text-gold mb-2">{p.cta.badge}</div>
+                  <p className="text-sm text-platinum">{p.cta.badgeBody}</p>
                 </div>
                 <Link
                   to="/contact"
                   className="w-full py-3 px-6 bg-gold text-background font-semibold rounded-lg hover:bg-gold/90 transition-colors duration-300 text-center block"
                 >
-                  Solicita tu propuesta ahora
+                  {p.cta.ctaBtn}
                 </Link>
                 <div className="mt-4 text-xs text-platinum text-center">
-                  Sin costo • Sin compromiso • Expertos asignados inmediatamente
+                  {p.cta.microcopy}
                 </div>
               </div>
             </Reveal>

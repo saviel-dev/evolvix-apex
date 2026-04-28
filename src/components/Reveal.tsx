@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
-type Variant = "up" | "fade";
+type Variant = "up" | "fade" | "pop";
 
 /**
  * Lightweight scroll-reveal using IntersectionObserver — no extra deps,
@@ -40,7 +40,7 @@ export function Reveal({
     return () => obs.disconnect();
   }, []);
 
-  const base = variant === "up" ? "reveal-up" : "reveal-fade";
+  const base = variant === "up" ? "reveal-up" : variant === "fade" ? "reveal-fade" : "reveal-pop";
 
   return (
     <As

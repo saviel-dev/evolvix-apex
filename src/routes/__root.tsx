@@ -9,6 +9,7 @@ import { Footer } from "../components/Footer";
 import { Loader } from "../components/Loader";
 import { MagneticCursor } from "../components/MagneticCursor";
 import { LanguageProvider } from "../lib/LanguageContext";
+import { FloatingWhatsApp } from "../components/FloatingWhatsApp";
 
 function NotFoundComponent() {
   return (
@@ -42,6 +43,7 @@ function RootComponent() {
     <LanguageProvider>
       <Loader />
       <MagneticCursor />
+      <FloatingWhatsApp />
       <div className="min-h-screen">
         <Header />
         <main>

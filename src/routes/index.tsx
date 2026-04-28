@@ -5,6 +5,7 @@ import tradeImg from "@/assets/images/comercio internacional.png";
 import biImg from "@/assets/images/inteligenci de negocia.png";
 import securityImg from "@/assets/images/seguridad digital.png";
 import projectsImg from "@/assets/images/entrega de proyecto.png";
+import growthImg from "@/assets/images/hero-growth.png";
 import { Reveal } from "@/components/Reveal";
 import { GlobalMap, FOOTPRINT_CITIES } from "@/components/GlobalMap";
 import { useEffect, useRef, useState } from "react";
@@ -257,7 +258,7 @@ function HeroSection() {
 
         {/* Title — full width, dominant */}
         <Reveal variant="up" delay={120}>
-          <h1 className="mt-8 text-display-lg md:text-display-md text-titanium leading-[1.0]">
+          <h1 className="mt-8 text-4xl sm:text-6xl md:text-6xl lg:text-6xl font-bold uppercase text-titanium leading-[1.1]">
             <TypingText text={t.hero.headingLine1} delay={300} />
             <br />
             {t.hero.headingOf && <span className="text-platinum"><TypingText text={t.hero.headingOf} delay={300 + (t.hero.headingLine1.length * 40)} /> </span>}
@@ -268,25 +269,19 @@ function HeroSection() {
         {/* Subtitle — reinforces value */}
         <Reveal variant="up" delay={240}>
           <h2 className="mt-8 text-xl md:text-2xl font-semibold text-titanium max-w-2xl">
-            Transformamos operaciones en crecimiento medible
+            {t.hero.subtitle}
           </h2>
         </Reveal>
 
         {/* Service bullets — clear benefits */}
         <Reveal variant="up" delay={320}>
-          <ul className="mt-6 max-w-lg space-y-4 text-base font-light leading-relaxed text-platinum">
-            <li className="flex items-start gap-3">
-              <span className="text-gold mt-1">•</span>
-              <span>Consultoría estratégica para optimizar tu modelo de negocio</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-gold mt-1">•</span>
-              <span>Desarrollo tecnológico a medida de tus procesos</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-gold mt-1">•</span>
-              <span>Automatización que reduce costos y aumenta eficiencia</span>
-            </li>
+          <ul className="mt-6 max-w-lg space-y-2 text-base font-light leading-relaxed text-platinum">
+            {t.hero.bullets.map((bullet, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <span className="text-gold mt-1">•</span>
+                <span>{bullet}</span>
+              </li>
+            ))}
           </ul>
         </Reveal>
 
@@ -310,25 +305,10 @@ function HeroSection() {
               {t.hero.ctaSecondary}
             </Link>
           </div>
-          
+
           {/* Microcopy - reduce friction */}
-          <div className="mt-4 text-xs font-light text-smoke">
+          <div className="mt-4 text-xs font-light text-white">
             {t.hero.ctaMicrocopy}
-          </div>
-          
-          {/* WhatsApp CTA */}
-          <div className="mt-6">
-            <a
-              href="https://wa.me/34XXXXXXXXX"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-mono-label text-gold hover:text-gold/80 transition-colors duration-200"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 2.398 3.922c3.023 2.098 3.023 1.397 3.57 1.311.547-.086 1.758-.718 2.006-1.414.248-.696.248-1.291.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/>
-              </svg>
-              {t.hero.ctaWhatsApp}
-            </a>
           </div>
         </Reveal>
 
@@ -366,40 +346,40 @@ function ProblemSection() {
   return (
     <section className="relative bg-background border-t border-hairline">
       <div className="container-edge py-20 md:py-32">
-        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           <Reveal variant="up">
             <p className="text-eyebrow">{p.eyebrow}</p>
-            <h2 className="mt-6 text-display-lg md:text-display-lg text-titanium leading-[1.1]">
+            <h2 className="mt-6 text-display-lg md:text-display-lg text-titanium leading-[1.1] text-balance">
               {p.heading}
             </h2>
-            <p className="mt-8 max-w-2xl text-lg font-light leading-relaxed text-platinum">
+            <p className="mt-8 max-w-xl text-lg font-light leading-relaxed text-platinum mx-auto">
               {p.body}
             </p>
           </Reveal>
-          
+
           <Reveal variant="up" delay={200} className="mt-12 w-full max-w-3xl">
             <div className="bg-surface/30 backdrop-blur-sm border border-hairline rounded-lg p-8">
-              <h3 className="text-lg font-semibold text-titanium mb-6">Señales de que necesitas ayuda:</h3>
+              <h3 className="text-lg font-semibold text-titanium mb-6">{t.ui.painBoxTitle}</h3>
               <ul className="space-y-4 text-left">
                 {p.painPoints.map((point: string, index: number) => (
                   <li key={index} className="flex items-start gap-3">
                     <div className="flex-shrink-0 w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center mt-0.5">
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="text-red-400">
-                        <path d="M12 9v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                        <path d="M12 9v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                       </svg>
                     </div>
                     <span className="text-platinum font-light">{point}</span>
                   </li>
                 ))}
               </ul>
-              <div className="mt-8 text-center">
+              <div className="mt-8 flex justify-center w-full">
                 <Link
                   to="#solution"
-                  className="inline-flex items-center gap-3 bg-gold text-background px-6 py-3 text-mono-label font-semibold hover:bg-gold/90 transition-colors duration-300"
+                  className="group relative inline-flex items-center gap-4 bg-titanium text-background px-7 py-4 text-mono-label font-semibold transition-colors duration-500 hover:bg-platinum"
                 >
-                  {p.cta}
-                  <svg width="16" height="6" viewBox="0 0 16 6" fill="none" aria-hidden>
-                    <path d="M0 3H14M11 1L15 3L11 5" stroke="currentColor" strokeWidth="1.2"/>
+                  <span>{p.cta}</span>
+                  <svg width="22" height="10" viewBox="0 0 22 10" fill="none" aria-hidden className="transition-transform duration-500 group-hover:translate-x-1">
+                    <path d="M0 5 H20 M16 1 L20 5 L16 9" stroke="currentColor" strokeWidth="1.5" />
                   </svg>
                 </Link>
               </div>
@@ -415,88 +395,93 @@ function SolutionSection() {
   const { t } = useLang();
   const s = t.solution;
   const [expandedBenefit, setExpandedBenefit] = useState<number | null>(null);
-  
-  const benefitDetails = [
-    "Automatizamos procesos manuales, implementamos sistemas de gestión y optimizamos flujos de trabajo para reducir gastos operativos en un 30-40%.",
-    "Implementamos herramientas colaborativas, eliminamos tareas redundantes y capacitamos a tu equipo para aumentar la productividad entre 50-70%.",
-    "Creamos dashboards en tiempo real, implementamos KPIs clave y establecemos sistemas de reporting para decisiones basadas 100% en datos.",
-    "Desarrollamos estrategias de crecimiento, optimizamos canales de venta y mejoramos la retención de clientes para un crecimiento sostenible de 20-35%.",
-    "Asignamos un equipo senior con experiencia en tu industria, disponible 24/7 para resolver desafíos específicos de tu sector."
-  ];
+
+  const benefitDetails = t.ui.solutionBenefitDetails;
 
   const toggleBenefit = (index: number) => {
     setExpandedBenefit(expandedBenefit === index ? null : index);
   };
 
   return (
-    <section id="solution" className="relative bg-background border-t border-hairline">
-      <div className="container-edge py-20 md:py-32">
-        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+    <section id="solution" className="relative bg-background border-t border-hairline overflow-hidden">
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <img
+          src={growthImg}
+          alt="Solution Background"
+          className="h-full w-full object-cover opacity-[0.20]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/40 to-background/90" />
+      </div>
+      <div className="container-edge py-20 md:py-32 relative z-10">
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           <Reveal variant="up">
             <p className="text-eyebrow">{s.eyebrow}</p>
-            <h2 className="mt-6 text-display-md text-titanium leading-[1.1]">
+            <h2 className="mt-6 text-display-md text-titanium leading-[1.1] text-balance">
               {s.heading}
             </h2>
-            <p className="mt-8 max-w-2xl text-lg font-light leading-relaxed text-platinum">
+            <p className="mt-8 max-w-xl text-lg font-light leading-relaxed text-platinum mx-auto">
               {s.body}
             </p>
           </Reveal>
-          
-          <Reveal variant="up" delay={200} className="mt-12 w-full max-w-3xl">
+
+          <div className="mt-12 w-full max-w-3xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {s.benefits.map((benefit: string, index: number) => (
-                <div key={index} className="bg-surface/20 border border-hairline rounded-lg overflow-hidden">
-                  <div className="p-6 flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-gold">
-                        <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-titanium mb-2">{benefit}</h4>
-                      <button
-                        onClick={() => toggleBenefit(index)}
-                        className="inline-flex items-center gap-2 px-3 py-1.5 text-xs font-medium text-titanium bg-gold/10 hover:bg-gold/20 border border-gold/30 hover:border-gold/50 rounded-full transition-all duration-300"
-                      >
-                        {expandedBenefit === index ? 'Ver menos' : 'Ver más detalles'}
-                        <svg 
-                          width="14" 
-                          height="8" 
-                          viewBox="0 0 14 8" 
-                          fill="none"
-                          className={`transition-transform duration-300 ${expandedBenefit === index ? 'rotate-180' : ''}`}
-                        >
-                          <path d="M1 1L7 7L13 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                <Reveal key={index} variant="pop" delay={150 + index * 100}>
+                  <div className="bg-surface/20 border border-hairline rounded-lg overflow-hidden h-full">
+                    <div className="p-6 flex items-start gap-4">
+                      <div className="flex-shrink-0 w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-gold">
+                          <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
-                      </button>
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-titanium mb-2">{benefit}</h4>
+                        <button
+                          onClick={() => toggleBenefit(index)}
+                          className="inline-flex items-center gap-2 px-3 py-1.5 text-xs font-medium text-titanium bg-gold/10 hover:bg-gold/20 border border-gold/30 hover:border-gold/50 rounded-full transition-all duration-300"
+                        >
+                          {expandedBenefit === index ? t.ui.seeLess : t.ui.seeMore}
+                          <svg
+                            width="14"
+                            height="8"
+                            viewBox="0 0 14 8"
+                            fill="none"
+                            className={`transition-transform duration-300 ${expandedBenefit === index ? 'rotate-180' : ''}`}
+                          >
+                            <path d="M1 1L7 7L13 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${expandedBenefit === index ? 'max-h-40' : 'max-h-0'
+                        }`}
+                    >
+                      <div className="px-6 pb-6 pt-2">
+                        <p className="text-sm font-light leading-relaxed text-platinum">
+                          {benefitDetails[index]}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <div 
-                    className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                      expandedBenefit === index ? 'max-h-40' : 'max-h-0'
-                    }`}
-                  >
-                    <div className="px-6 pb-6 pt-2">
-                      <p className="text-sm font-light leading-relaxed text-platinum">
-                        {benefitDetails[index]}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                </Reveal>
               ))}
             </div>
-            <div className="mt-8">
-              <Link
-                to="#how-it-works"
-                className="inline-flex items-center gap-3 border border-gold/60 bg-gold/5 px-6 py-3 text-mono-label text-sm font-semibold text-gold hover:bg-gold/10 transition-colors duration-300"
-              >
-                {s.cta}
-                <svg width="16" height="6" viewBox="0 0 16 6" fill="none" aria-hidden>
-                  <path d="M0 3H14M11 1L15 3L11 5" stroke="currentColor" strokeWidth="1.2"/>
-                </svg>
-              </Link>
-            </div>
-          </Reveal>
+            <Reveal variant="up" delay={600}>
+              <div className="mt-12 flex justify-center w-full">
+                <Link
+                  to="#how-it-works"
+                  className="group relative inline-flex items-center gap-4 bg-titanium text-background px-7 py-4 text-mono-label font-semibold transition-colors duration-500 hover:bg-platinum"
+                >
+                  <span>{s.cta}</span>
+                  <svg width="22" height="10" viewBox="0 0 22 10" fill="none" aria-hidden className="transition-transform duration-500 group-hover:translate-x-1">
+                    <path d="M0 5 H20 M16 1 L20 5 L16 9" stroke="currentColor" strokeWidth="1.5" />
+                  </svg>
+                </Link>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </div>
     </section>
@@ -506,87 +491,86 @@ function SolutionSection() {
 function ServicePackagesSection() {
   const { t } = useLang();
   const packages = t.servicePackages.packages;
-  
+
   return (
     <section className="relative bg-background border-t border-hairline">
       <div className="container-edge py-20 md:py-32">
-        <div className="flex flex-col items-center text-center max-w-6xl mx-auto">
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           <Reveal variant="up">
             <p className="text-eyebrow">{t.servicePackages.eyebrow}</p>
-            <h2 className="mt-6 text-display-md text-titanium leading-[1.1]">
+            <h2 className="mt-6 text-display-md text-titanium leading-[1.1] text-balance">
               {t.servicePackages.heading}
             </h2>
-            <p className="mt-8 max-w-2xl text-lg font-light leading-relaxed text-platinum">
+            <p className="mt-8 max-w-2xl text-lg font-light leading-relaxed text-platinum mx-auto">
               {t.servicePackages.subheading}
             </p>
           </Reveal>
-          
+
           <Reveal variant="up" delay={200} className="mt-12 w-full">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {packages.map((pkg: any, index: number) => (
-                <div key={pkg.id} className={`relative ${
-                  index === 1 
-                    ? 'bg-gold/5 border-2 border-gold/30 scale-105' 
-                    : 'bg-surface/20 border border-hairline'
-                } rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:border-gold/30`}>
-                  
+                <div key={pkg.id} className={`relative ${index === 1
+                  ? 'bg-gold/5 border-2 border-gold/30 scale-105'
+                  : 'bg-surface/20 border border-hairline'
+                  } rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:border-gold/30`}>
+
                   {index === 1 && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gold text-background px-4 py-1 text-xs font-semibold rounded-full">
-                        MÁS POPULAR
+                        {t.ui.mostPopular}
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-bold text-titanium mb-2">{pkg.name}</h3>
                     <p className="text-sm text-gold font-medium">{pkg.tagline}</p>
                   </div>
-                  
+
                   <div className="space-y-4 mb-6">
                     <div className="flex items-center gap-2 text-sm text-platinum">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-gold">
-                        <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke="currentColor" strokeWidth="2"/>
+                        <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke="currentColor" strokeWidth="2" />
                       </svg>
                       <span>{pkg.forWho}</span>
                     </div>
-                    
+
                     <div className="bg-background/50 rounded-lg p-4">
-                      <p className="text-sm font-medium text-titanium mb-2">Problema que resuelve:</p>
+                      <p className="text-sm font-medium text-titanium mb-2">{t.ui.problemSolvedLabel}</p>
                       <p className="text-xs text-platinum">{pkg.problem}</p>
                     </div>
                   </div>
-                  
+
                   <div className="space-y-3 mb-6">
-                    <p className="text-sm font-semibold text-titanium">Incluye:</p>
+                    <p className="text-sm font-semibold text-titanium">{t.ui.includesLabel}</p>
                     {pkg.includes.map((item: string, itemIndex: number) => (
                       <div key={itemIndex} className="flex items-start gap-2">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-gold mt-0.5 flex-shrink-0">
-                          <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                          <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                         </svg>
                         <span className="text-xs text-platinum">{item}</span>
                       </div>
                     ))}
                   </div>
-                  
+
                   <div className="space-y-4 mb-6">
                     <div className="bg-gold/10 rounded-lg p-3">
-                      <p className="text-xs font-medium text-titanium mb-1">Resultado esperado:</p>
+                      <p className="text-xs font-medium text-titanium mb-1">{t.ui.expectedResultLabel}</p>
                       <p className="text-xs text-platinum">{pkg.result}</p>
                     </div>
-                    
+
                     <div className="flex justify-between items-center">
-                      <span className="text-sm text-platinum">Duración:</span>
+                      <span className="text-sm text-platinum">{t.ui.durationLabel}</span>
                       <span className="text-sm font-semibold text-titanium">{pkg.duration}</span>
                     </div>
                   </div>
-                  
+
                   <div className="text-center">
                     <div className="mb-4">
                       {pkg.specialOffer ? (
                         <div>
                           <span className="text-2xl font-bold text-gold">{pkg.specialOffer}</span>
-                          <p className="text-xs text-platinum line-through">Normal: {pkg.price}</p>
+                          <p className="text-xs text-platinum line-through">{t.ui.normalPriceLabel} {pkg.price}</p>
                         </div>
                       ) : (
                         <div>
@@ -596,7 +580,7 @@ function ServicePackagesSection() {
                         </div>
                       )}
                     </div>
-                    
+
                     <button className="w-full py-3 px-4 bg-titanium text-background font-semibold rounded-lg hover:bg-titanium/90 transition-colors duration-300">
                       {pkg.cta}
                     </button>
@@ -604,7 +588,7 @@ function ServicePackagesSection() {
                 </div>
               ))}
             </div>
-            
+
             <div className="mt-12 text-center">
               <p className="text-sm font-medium text-gold mb-2">{t.servicePackages.guarantee}</p>
               <p className="text-xs text-platinum">{t.servicePackages.urgency}</p>
@@ -713,7 +697,7 @@ function UnitsPreview() {
           unit={{ ...unit, img: UNIT_IMGS[i] }}
           reverse={i % 2 === 1}
           totalUnits={t.holdings.items.length}
-          divisionBriefLabel="Details"
+          divisionBriefLabel={t.holdings.seeAll}
         />
       ))}
     </section>
@@ -949,7 +933,7 @@ function ExponentialSection() {
 
         <div className="mt-16 grid grid-cols-2 gap-3 sm:grid-cols-2 md:grid-cols-4">
           {p.pillars.map((pillar: any, i: number) => (
-            <Reveal key={pillar.letter} variant="up" delay={i * 50}>
+            <Reveal key={`${pillar.letter}-${i}`} variant="up" delay={i * 50}>
               <div className="group border border-hairline bg-surface/30 backdrop-blur-sm p-5 md:p-8 h-full flex flex-col transition-colors duration-500 hover:border-gold/30 hover:bg-surface">
                 <span className="font-mono text-4xl md:text-5xl font-bold text-gold/80 mb-4 transition-transform duration-500 group-hover:scale-110 origin-left">
                   {pillar.letter}
