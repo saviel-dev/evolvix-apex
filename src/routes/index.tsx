@@ -258,7 +258,7 @@ function HeroSection() {
 
         {/* Title — full width, dominant */}
         <Reveal variant="up" delay={120}>
-          <h1 className="mt-8 text-4xl sm:text-6xl md:text-6xl lg:text-6xl font-bold uppercase text-titanium leading-[1.1]">
+          <h1 className="mt-8 text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase text-titanium leading-[1.1] tracking-tight text-balance">
             <TypingText text={t.hero.headingLine1} delay={300} />
             <br />
             {t.hero.headingOf && <span className="text-platinum"><TypingText text={t.hero.headingOf} delay={300 + (t.hero.headingLine1.length * 40)} /> </span>}
