@@ -1204,7 +1204,7 @@ interface LangContextType {
 const LangContext = createContext<LangContextType | null>(null);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLang] = useState<Lang>("en");
+  const [lang, setLang] = useState<Lang>("es");
   const toggle = () => setLang((l) => (l === "en" ? "es" : "en"));
 
   return (
