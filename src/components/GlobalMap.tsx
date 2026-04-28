@@ -31,10 +31,24 @@ const CITIES: City[] = [
   { name: "Singapore",country: "SG",  coordinates: [103.82,  1.35], role: "Innovation Division" },
 ];
 
-// All city pairs for arcs
-const ARCS: [City, City][] = CITIES.flatMap((a, i) =>
-  CITIES.slice(i + 1).map<[City, City]>((b) => [a, b]),
-);
+// Specific business route connections (only connections that stay within the visible projection)
+const ARCS: [City, City][] = [
+  // European hub connections
+  [CITIES[0], CITIES[1]], // Madrid - London
+  [CITIES[0], CITIES[2]], // Madrid - Paris
+  [CITIES[1], CITIES[2]], // London - Paris
+
+  // Transatlantic
+  [CITIES[2], CITIES[3]], // Paris - Miami
+
+  // MENA connections
+  [CITIES[4], CITIES[5]], // Cairo - Dubai
+  [CITIES[5], CITIES[6]], // Dubai - Singapore
+
+  // Strategic cross-connections
+  [CITIES[0], CITIES[4]], // Madrid - Cairo
+  [CITIES[1], CITIES[4]], // London - Cairo
+];
 
 // Gold/Copper palette
 const ELECTRIC = "#C5A059";

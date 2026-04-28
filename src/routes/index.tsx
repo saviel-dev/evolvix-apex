@@ -1,12 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImg from "@/assets/images/hero-architecture.jpg";
-import energyImg from "@/assets/images/subestacion electrica.png";
-import consultingImg from "@/assets/images/unit-consulting.jpg";
-import assetsImg from "@/assets/images/unit-assets.jpg";
-import innovationImg from "@/assets/images/unit-innovation.jpg";
+import heroImg from "@/assets/images/hero.jpg";
+import heroArchImg from "@/assets/images/hero-architecture.jpg";
+import tradeImg from "@/assets/images/comercio internacional.png";
+import biImg from "@/assets/images/inteligenci de negocia.png";
+import securityImg from "@/assets/images/seguridad digital.png";
+import projectsImg from "@/assets/images/entrega de proyecto.png";
 import { Reveal } from "@/components/Reveal";
 import { GlobalMap, FOOTPRINT_CITIES } from "@/components/GlobalMap";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLang } from "@/lib/LanguageContext";
 import gsap from "gsap";
 
@@ -56,6 +57,81 @@ function TypingText({
   return <span ref={containerRef} className={className} style={{ display: "inline" }} />;
 }
 
+function TypingNumber({
+  value,
+  delay = 0,
+  duration = 2000,
+  className = "",
+}: {
+  value: string;
+  delay?: number;
+  duration?: number;
+  className?: string;
+}) {
+  const containerRef = useRef<HTMLSpanElement>(null);
+  const [displayValue, setDisplayValue] = useState("0");
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const numericValue = parseFloat(value.replace(/[^0-9.]/g, ""));
+    const hasPercentage = value.includes("%");
+    const isInteger = Number.isInteger(numericValue);
+
+    const runAnimation = () => {
+      if (hasAnimated.current) return;
+      hasAnimated.current = true;
+
+      const startTimer = setTimeout(() => {
+        const startTime = Date.now();
+
+        const animate = () => {
+          const now = Date.now();
+          const progress = Math.min((now - startTime) / duration, 1);
+          const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+          const currentValue = numericValue * easeOutQuart;
+
+          let formattedValue: string;
+          if (isInteger) {
+            formattedValue = Math.round(currentValue).toString();
+          } else {
+            formattedValue = currentValue.toFixed(1);
+          }
+
+          setDisplayValue(formattedValue + (hasPercentage ? "%" : ""));
+
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          } else {
+            setDisplayValue(value);
+          }
+        };
+
+        animate();
+      }, delay);
+
+      return () => clearTimeout(startTimer);
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          runAnimation();
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [value, delay, duration]);
+
+  return <span ref={containerRef} className={className}>{displayValue}</span>;
+}
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -76,19 +152,37 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const UNIT_IMGS = [energyImg, consultingImg, assetsImg, innovationImg];
+const UNIT_IMGS = [tradeImg, biImg, securityImg, projectsImg];
+
+const HERO_SLIDES = [
+  { src: heroImg, alt: "Brutalist architectural facade — Evolvix Global headquarters" },
+  { src: heroArchImg, alt: "Modern architecture — Evolvix Global infrastructure" },
+];
+
+const SLIDE_DURATION = 6000; // ms
 
 function HeroSection() {
   const heroRef = useRef<HTMLDivElement>(null);
-  const imgRef = useRef<HTMLImageElement>(null);
+  const imgRefs = useRef<(HTMLImageElement | null)[]>([]);
+  const [activeSlide, setActiveSlide] = useState(0);
   const { t } = useLang();
 
-  // Subtle parallax on hero image
+  // Auto-advance carousel
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+    }, SLIDE_DURATION);
+    return () => clearInterval(timer);
+  }, []);
+
+  // Subtle parallax on all hero images
   useEffect(() => {
     const onScroll = () => {
-      if (!imgRef.current) return;
       const y = window.scrollY;
-      imgRef.current.style.transform = `translate3d(0, ${y * 0.18}px, 0) scale(1.05)`;
+      imgRefs.current.forEach((img) => {
+        if (!img) return;
+        img.style.transform = `translate3d(0, ${y * 0.18}px, 0) scale(1.05)`;
+      });
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -100,21 +194,46 @@ function HeroSection() {
       ref={heroRef}
       className="relative isolate min-h-[100svh] overflow-hidden bg-background"
     >
-      {/* Background image */}
+      {/* Background carousel */}
       <div className="absolute inset-0 -z-10">
-        <img
-          ref={imgRef}
-          src={heroImg}
-          alt="Brutalist architectural facade — Evolvix Global headquarters"
-          width={1920}
-          height={1080}
-          className="h-[120%] w-full object-cover opacity-55 will-change-transform"
-          fetchPriority="high"
-        />
+        {HERO_SLIDES.map((slide, i) => (
+          <img
+            key={slide.src}
+            ref={(el) => { imgRefs.current[i] = el; }}
+            src={slide.src}
+            alt={slide.alt}
+            width={1920}
+            height={1080}
+            fetchPriority={i === 0 ? "high" : undefined}
+            loading={i === 0 ? undefined : "lazy"}
+            className="absolute inset-0 h-[120%] w-full object-cover will-change-transform"
+            style={{
+              opacity: activeSlide === i ? 0.55 : 0,
+              transition: "opacity 1.4s ease-in-out",
+            }}
+          />
+        ))}
         <div className="absolute inset-0 bg-[var(--gradient-vignette)]" />
         <div className="absolute inset-0 bg-[var(--gradient-fade-top)]" />
         <div className="absolute inset-0 bg-[var(--gradient-fade-bottom)]" />
         <div className="absolute inset-0 bg-grid opacity-40" />
+
+        {/* Slide indicators */}
+        <div className="absolute bottom-8 right-8 flex items-center gap-2 z-10">
+          {HERO_SLIDES.map((_, i) => (
+            <button
+              key={i}
+              id={`hero-slide-btn-${i}`}
+              aria-label={`Slide ${i + 1}`}
+              onClick={() => setActiveSlide(i)}
+              className="h-[2px] transition-all duration-500 cursor-pointer"
+              style={{
+                width: activeSlide === i ? "32px" : "12px",
+                background: activeSlide === i ? "var(--color-titanium)" : "rgba(255,255,255,0.3)",
+              }}
+            />
+          ))}
+        </div>
       </div>
 
       {/* Top eyebrow row */}
@@ -126,13 +245,13 @@ function HeroSection() {
         <span className="hidden md:inline">N 40°25′ · W 03°41′</span>
       </div>
 
-      <div className="container-edge relative flex min-h-[100svh] flex-col justify-end pb-20 pt-44 md:pt-56">
+      <div className="container-edge relative flex min-h-[100svh] flex-col justify-start md:justify-end pb-20 pt-44 md:pt-56">
         <Reveal variant="up">
           <p className="text-eyebrow !text-titanium drop-shadow-md">{t.hero.eyebrow}</p>
         </Reveal>
 
         <Reveal variant="up" delay={120}>
-          <h1 className="mt-8 text-display-lg text-titanium w-full">
+          <h1 className="mt-8 text-display-lg text-titanium max-w-[18ch] leading-[1.05]">
             <TypingText text={t.hero.headingLine1} delay={300} />
             <br />
             {t.hero.headingOf && <span className="text-platinum"><TypingText text={t.hero.headingOf} delay={300 + (t.hero.headingLine1.length * 40)} /> </span>}
@@ -360,9 +479,8 @@ function UnitFullScreen({
   return (
     <article className="relative border-t border-hairline">
       <div
-        className={`grid grid-cols-1 ${
-          reverse ? "md:[grid-template-columns:1fr_1.2fr]" : "md:[grid-template-columns:1.2fr_1fr]"
-        }`}
+        className={`grid grid-cols-1 ${reverse ? "md:[grid-template-columns:1fr_1.2fr]" : "md:[grid-template-columns:1.2fr_1fr]"
+          }`}
       >
         <div
           ref={imgWrapRef}
@@ -568,19 +686,19 @@ function TrustStrip() {
   const { lang } = useLang();
   const isEs = lang === "es";
   const stats = [
-    { value: "40%", label: isEs ? "Reducción de retrasos en comercio internacional" : "Reduction in international trade delays" },
-    { value: "60%", label: isEs ? "Menos tiempo en reporting con BI" : "Less time spent on reporting with BI" },
-    { value: "5", label: isEs ? "Ciudades: Madrid, París, Miami, Dubái y El Cairo" : "Cities: Madrid, Paris, Miami, Dubai & Cairo" },
-    { value: "95%", label: isEs ? "Proyectos entregados en plazo y presupuesto" : "Projects delivered on time and on budget" },
+    { value: "40%", label: isEs ? "Reducción de retrasos en comercio internacional" : "Reduction in international trade delays", delay: 0 },
+    { value: "60%", label: isEs ? "Menos tiempo en reporting con BI" : "Less time spent on reporting with BI", delay: 200 },
+    { value: "5", label: isEs ? "Ciudades: Madrid, París, Miami, Dubái y El Cairo" : "Cities: Madrid, Paris, Miami, Dubai & Cairo", delay: 400 },
+    { value: "95%", label: isEs ? "Proyectos entregados en plazo y presupuesto" : "Projects delivered on time and on budget", delay: 600 },
   ];
   return (
     <section className="border-t border-b border-hairline bg-surface/20">
       <div className="container-edge py-8 grid grid-cols-2 gap-6 md:grid-cols-4">
-        {stats.map((s) => (
-          <Reveal key={s.value + s.label} variant="up">
+        {stats.map((s, index) => (
+          <Reveal key={s.value + s.label} variant="up" delay={index * 100}>
             <div className="flex flex-col items-center text-center gap-1">
               <span className="font-display text-2xl font-extrabold text-gold md:text-4xl">
-                {s.value}
+                <TypingNumber value={s.value} delay={s.delay} duration={1500} />
               </span>
               <span className="text-[0.65rem] md:text-xs font-light leading-snug text-smoke max-w-[12ch] md:max-w-[14ch]">
                 {s.label}

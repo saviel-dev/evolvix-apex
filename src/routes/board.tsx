@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
-import b1 from "@/assets/images/sala de reuniones.png";
+import b1 from "@/assets/images/board-1.jpg";
 import b2 from "@/assets/images/board-2.jpg";
 import b3 from "@/assets/images/board-3.jpg";
 import b4 from "@/assets/images/board-4.jpg";

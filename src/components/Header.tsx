@@ -6,7 +6,6 @@ import { useLang } from "@/lib/LanguageContext";
 const NAV_KEYS = [
   { to: "/footprint", key: "footprint" },
   { to: "/board",     key: "board" },
-  { to: "/contact",  key: "contact" },
 ] as const;
 
 const SOCIAL_LINKS = [
@@ -129,7 +128,9 @@ export function Header() {
               onMouseLeave={() => setDropdownOpen(false)}
             >
               <button
-                className="text-mono-label text-platinum transition-colors duration-300 hover:text-titanium flex items-center gap-1.5"
+                className={`text-mono-label transition-all duration-300 hover:text-titanium flex items-center gap-1.5 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-titanium after:transition-all after:duration-300 hover:after:w-full ${
+                  dropdownOpen ? "text-titanium after:w-full after:bg-titanium" : "text-platinum"
+                }`}
                 aria-expanded={dropdownOpen}
                 aria-haspopup="true"
               >
@@ -187,8 +188,8 @@ export function Header() {
               <Link
                 key={item.to}
                 to={item.to}
-                className="text-mono-label text-platinum transition-colors duration-300 hover:text-titanium"
-                activeProps={{ className: "text-titanium" }}
+                className="text-mono-label text-platinum transition-all duration-300 hover:text-titanium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-titanium after:transition-all after:duration-300 hover:after:w-full"
+                activeProps={{ className: "text-titanium after:w-full after:bg-titanium" }}
               >
                 {t.nav[item.key]}
               </Link>
