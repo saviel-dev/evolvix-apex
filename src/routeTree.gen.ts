@@ -10,8 +10,11 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as FootprintRouteImport } from './routes/footprint'
+import { Route as DesarrolloTecnologicoRouteImport } from './routes/desarrollo-tecnologico'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ConsultoriaEstrategicaRouteImport } from './routes/consultoria-estrategica'
 import { Route as BoardRouteImport } from './routes/board'
+import { Route as AutomatizacionProcesosRouteImport } from './routes/automatizacion-procesos'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicesEngineeringRouteImport } from './routes/services.engineering'
 import { Route as ServicesEnergyRouteImport } from './routes/services.energy'
@@ -23,14 +26,29 @@ const FootprintRoute = FootprintRouteImport.update({
   path: '/footprint',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DesarrolloTecnologicoRoute = DesarrolloTecnologicoRouteImport.update({
+  id: '/desarrollo-tecnologico',
+  path: '/desarrollo-tecnologico',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ConsultoriaEstrategicaRoute = ConsultoriaEstrategicaRouteImport.update({
+  id: '/consultoria-estrategica',
+  path: '/consultoria-estrategica',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BoardRoute = BoardRouteImport.update({
   id: '/board',
   path: '/board',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AutomatizacionProcesosRoute = AutomatizacionProcesosRouteImport.update({
+  id: '/automatizacion-procesos',
+  path: '/automatizacion-procesos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -61,8 +79,11 @@ const ServicesAssetManagementRoute = ServicesAssetManagementRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/automatizacion-procesos': typeof AutomatizacionProcesosRoute
   '/board': typeof BoardRoute
+  '/consultoria-estrategica': typeof ConsultoriaEstrategicaRoute
   '/contact': typeof ContactRoute
+  '/desarrollo-tecnologico': typeof DesarrolloTecnologicoRoute
   '/footprint': typeof FootprintRoute
   '/services/asset-management': typeof ServicesAssetManagementRoute
   '/services/bpo': typeof ServicesBpoRoute
@@ -71,8 +92,11 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/automatizacion-procesos': typeof AutomatizacionProcesosRoute
   '/board': typeof BoardRoute
+  '/consultoria-estrategica': typeof ConsultoriaEstrategicaRoute
   '/contact': typeof ContactRoute
+  '/desarrollo-tecnologico': typeof DesarrolloTecnologicoRoute
   '/footprint': typeof FootprintRoute
   '/services/asset-management': typeof ServicesAssetManagementRoute
   '/services/bpo': typeof ServicesBpoRoute
@@ -82,8 +106,11 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/automatizacion-procesos': typeof AutomatizacionProcesosRoute
   '/board': typeof BoardRoute
+  '/consultoria-estrategica': typeof ConsultoriaEstrategicaRoute
   '/contact': typeof ContactRoute
+  '/desarrollo-tecnologico': typeof DesarrolloTecnologicoRoute
   '/footprint': typeof FootprintRoute
   '/services/asset-management': typeof ServicesAssetManagementRoute
   '/services/bpo': typeof ServicesBpoRoute
@@ -94,8 +121,11 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/automatizacion-procesos'
     | '/board'
+    | '/consultoria-estrategica'
     | '/contact'
+    | '/desarrollo-tecnologico'
     | '/footprint'
     | '/services/asset-management'
     | '/services/bpo'
@@ -104,8 +134,11 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/automatizacion-procesos'
     | '/board'
+    | '/consultoria-estrategica'
     | '/contact'
+    | '/desarrollo-tecnologico'
     | '/footprint'
     | '/services/asset-management'
     | '/services/bpo'
@@ -114,8 +147,11 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/automatizacion-procesos'
     | '/board'
+    | '/consultoria-estrategica'
     | '/contact'
+    | '/desarrollo-tecnologico'
     | '/footprint'
     | '/services/asset-management'
     | '/services/bpo'
@@ -125,8 +161,11 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AutomatizacionProcesosRoute: typeof AutomatizacionProcesosRoute
   BoardRoute: typeof BoardRoute
+  ConsultoriaEstrategicaRoute: typeof ConsultoriaEstrategicaRoute
   ContactRoute: typeof ContactRoute
+  DesarrolloTecnologicoRoute: typeof DesarrolloTecnologicoRoute
   FootprintRoute: typeof FootprintRoute
   ServicesAssetManagementRoute: typeof ServicesAssetManagementRoute
   ServicesBpoRoute: typeof ServicesBpoRoute
@@ -143,6 +182,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FootprintRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/desarrollo-tecnologico': {
+      id: '/desarrollo-tecnologico'
+      path: '/desarrollo-tecnologico'
+      fullPath: '/desarrollo-tecnologico'
+      preLoaderRoute: typeof DesarrolloTecnologicoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -150,11 +196,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/consultoria-estrategica': {
+      id: '/consultoria-estrategica'
+      path: '/consultoria-estrategica'
+      fullPath: '/consultoria-estrategica'
+      preLoaderRoute: typeof ConsultoriaEstrategicaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/board': {
       id: '/board'
       path: '/board'
       fullPath: '/board'
       preLoaderRoute: typeof BoardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/automatizacion-procesos': {
+      id: '/automatizacion-procesos'
+      path: '/automatizacion-procesos'
+      fullPath: '/automatizacion-procesos'
+      preLoaderRoute: typeof AutomatizacionProcesosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -197,8 +257,11 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AutomatizacionProcesosRoute: AutomatizacionProcesosRoute,
   BoardRoute: BoardRoute,
+  ConsultoriaEstrategicaRoute: ConsultoriaEstrategicaRoute,
   ContactRoute: ContactRoute,
+  DesarrolloTecnologicoRoute: DesarrolloTecnologicoRoute,
   FootprintRoute: FootprintRoute,
   ServicesAssetManagementRoute: ServicesAssetManagementRoute,
   ServicesBpoRoute: ServicesBpoRoute,

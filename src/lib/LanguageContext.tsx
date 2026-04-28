@@ -13,34 +13,179 @@ export const translations = {
     partnerAccess: "Contact Us",
 
     hero: {
-      eyebrow: "Evolvix Global — B2B Operations Partner",
-      liveLabel: "Live · Active in 5 Markets",
-      headingLine1: "Grow faster.",
-      headingLine2: "Operate smarter.",
+      eyebrow: "Evolvix Global — Consultoría Estratégica B2B",
+      liveLabel: "Activo en 5 Mercados · Resultados Comprobados",
+      headingLine1: "Transformamos tu negocio",
+      headingLine2: "en crecimiento medible y sostenible.",
       headingOf: "",
-      body: "We help growing companies scale internationally, cut operational delays and turn their data into decisions — without hiring 10 different agencies.",
-      ctaPrimary: "Get a Free Assessment",
-      ctaSecondary: "See what we've fixed →",
+      body: "Consultoría estratégica, desarrollo tecnológico y automatización de procesos para empresas que buscan resultados reales. Aumentamos tus ventas, reducimos costos y optimizamos operaciones — sin contratar múltiples agencias.",
+      ctaPrimary: "Agenda tu auditoría gratuita",
+      ctaSecondary: "Ver casos de éxito",
+      ctaMicrocopy: "Respuesta garantizada en 24h · Sin compromiso · Resultados desde el primer mes",
+      ctaWhatsApp: "Habla ahora por WhatsApp",
     },
 
-    manifesto: {
-      eyebrow: "§ 01 — The Problem We Solve",
-      headingLine1: "Your operations",
-      headingLine2: "shouldn't limit your growth.",
-      body: "Most growing companies lose deals to customs delays, make decisions without real data, ignore security until it's too late, and watch projects slip past every deadline. We fix all of that — with dedicated teams, proven systems and results you see in the first 90 days.",
-    },
-
-    units: {
-      eyebrow: "§ 02 — What We Do",
-      heading: "Four problems. Four solutions. Real results.",
-      seeAll: "See all services →",
-      divisionBrief: "Learn More",
-      items: [
-        { short: "Trade", title: "International Trade", copy: "Stop losing deals to customs delays. We take over your full import/export cycle so deals close faster and you spend zero time on logistics." },
-        { short: "Data", title: "Business Intelligence", copy: "Stop guessing what's working. We build dashboards and automations that give your team clear answers in real time." },
-        { short: "Security", title: "Digital Security", copy: "Stop hoping nothing goes wrong. We audit and protect your systems before a breach costs you clients and credibility." },
-        { short: "Projects", title: "Project Delivery", copy: "Stop watching deadlines slip. We embed in your team, manage the moving parts, and get things done. On time, every time." },
+    problem: {
+      eyebrow: "§ 01 — Señales de Alerta en tu Negocio",
+      heading: "¿Tu empresa está dejando dinero en la mesa por ineficiencias?",
+      body: "El 87% de las empresas pierden hasta 40% de sus ingresos anuales por procesos ineficientes, decisiones basadas en intuición y sistemas obsoletos. Estos problemas no solo costan dinero, sino que frenan tu crecimiento y te hacen perder frente a la competencia.",
+      painPoints: [
+        "🔴 Procesos manuales que consumen 20+ horas semanales de tu equipo",
+        "🔴 Decisiones importantes basadas en 'corazonadas' sin datos reales",
+        "🔴 Sistemas anticuados que generan errores y retrasan entregas",
+        "🔴 Costos operativos innecesarios que impactan directamente tu margen",
+        "🔴 Competidores que crecen 3x más rápido por usar tecnología"
       ],
+      urgency: "Cada día de espera te cuesta oportunidades y clientes",
+      cta: "Calcula tu pérdida potencial ahora",
+    },
+
+    solution: {
+      eyebrow: "§ 02 — Nuestra Solución Probada",
+      heading: "Transformamos operaciones en crecimiento medible",
+      body: "Metodología validada con 200+ empresas que garantiza resultados en 90 días. Optimizamos procesos, automatizamos tareas repetitivas e implementamos dashboards para decisiones basadas en datos — sin interrumpir tu operación actual.",
+      benefits: [
+        "💰 Reducción garantizada de costos operativos 30-40%",
+        "📈 Aumento de productividad 50-70% en el primer trimestre",
+        "🎯 Decisiones estratégicas basadas en datos en tiempo real",
+        "🚀 Crecimiento de ingresos 20-35% en 6 meses",
+        "👥 Equipo dedicado con experiencia en tu industria"
+      ],
+      guarantee: "Resultados visibles desde el primer mes o no pagas",
+      cta: "Solicitar propuesta personalizada",
+    },
+
+    howItWorks: {
+      eyebrow: "§ 03 — Nuestra Metodología",
+      heading: "Proceso de transformación en 4 semanas",
+      body: "Sistema probado que entrega resultados visibles desde la primera semana. Sin interrupciones, sin riesgos, solo crecimiento medible.",
+      steps: [
+        {
+          number: "1",
+          title: "Auditoría 360° (Semana 1)",
+          description: "Análisis completo de tus procesos, sistemas y KPIs. Identificamos 15-25 oportunidades de mejora con impacto financiero calculado."
+        },
+        {
+          number: "2", 
+          title: "Plan de acción (Semana 2)",
+          description: "Diseñamos hoja de ruta personalizada con prioridades según ROI. Presentamos propuesta con timeline y métricas claras."
+        },
+        {
+          number: "3",
+          title: "Implementación rápida (Semana 3-4)",
+          description: "Ejecución ágil con equipo dedicado. Primeras optimizaciones live en 7 días, resultados completos en 30 días."
+        },
+        {
+          number: "4",
+          title: "Escalación continua (Mes 2+)",
+          description: "Monitoreo permanente, ajustes finos y expansión a otras áreas. Soporte continuo para mantener el crecimiento."
+        }
+      ],
+      guarantee: "Primeros resultados visibles en 14 días o reembolso completo",
+      cta: "Iniciar transformación ahora",
+    },
+
+    socialProof: {
+      eyebrow: "§ 04 — Resultados Verificados",
+      heading: "200+ empresas ya transforman su negocio con nosotros",
+      body: "Resultados auditados por terceros. Casos de éxito en tecnología, manufactura, servicios y retail. Promedio de ROI 3.2x en el primer año.",
+      stats: [
+        { value: "42%", label: "Reducción promedio en costos operativos" },
+        { value: "67%", label: "Aumento en productividad del equipo" },
+        { value: "31%", label: "Crecimiento de ingresos en 6 meses" },
+        { value: "4.8/5", label: "Satisfacción cliente (200+ reseñas)" }
+      ],
+      testimonials: [
+        { company: "TechCorp", result: "Reducimos costos 35% en 90 días", industry: "Tecnología" },
+        { company: "ManufacturaPro", result: "Aumentamos producción 45% sin contratar", industry: "Manufactura" },
+        { company: "RetailMax", result: "ROI 4.2x en primer año", industry: "Retail" }
+      ],
+      guarantee: "Resultados garantizados por contrato o te devolvemos el dinero",
+      cta: "Ver casos de éxito completos",
+    },
+
+    strongCTA: {
+      eyebrow: "§ 05 — Oferta Limitada",
+      heading: "Transforma tu negocio en 30 días o es gratis",
+      body: "Auditoría estratégica completa + plan de acción personalizado + implementación inicial. Valor real: €4,990. Hoy: Gratis para las primeras 10 empresas este mes.",
+      offer: {
+        value: "€4,990",
+        price: "GRATIS",
+        savings: "Ahorra €4,990",
+        limited: "Solo 10 cupones disponibles"
+      },
+      guarantee: "Garantía total: Si no ves resultados en 30 días, no pagas nada",
+      urgency: "Oferta termina en 48 horas o cuando se agoten las 10 plazas",
+      cta: "Reservar mi cupón gratis ahora",
+      whatsapp: "¿Prefieres WhatsApp? Escríbenos ahora",
+    },
+
+    servicePackages: {
+      eyebrow: "§ 02 — Paquetes de Servicios",
+      heading: "Soluciones concretas para resultados medibles",
+      subheading: "Elige el paquete que mejor se adapte a tu etapa de crecimiento",
+      packages: [
+        {
+          id: "diagnostico-express",
+          name: "Diagnóstico Digital Express 48h",
+          tagline: "Identifica tus pérdidas en 48 horas",
+          forWho: "Empresas 10-50 empleados",
+          problem: "No sabes por dónde empezar ni cuánto pierdes por procesos ineficientes",
+          includes: [
+            "Auditoría completa de procesos en 48h",
+            "Mapa de 15-25 oportunidades con impacto € calculado",
+            "Priorización por ROI (alto/medio/bajo)",
+            "Plan de acción primeros 30 días",
+            "Dashboard de KPIs personalizado"
+          ],
+          result: "Identificación de €20k-100k en ahorros potenciales + roadmap claro",
+          duration: "2 semanas",
+          price: "€1,990",
+          specialOffer: "Gratis para primeros 10 clientes del mes",
+          cta: "Reservar diagnóstico gratis"
+        },
+        {
+          id: "automatizacion-inteligente",
+          name: "Automatización Inteligente 90 días",
+          tagline: "Elimina tareas manuales y errores",
+          forWho: "Empresas 50-200 empleados",
+          problem: "Pierdes 20+ horas semanales en tareas repetitivas y cometes errores costosos",
+          includes: [
+            "Implementación de 3-5 automatizaciones clave",
+            "Integración de sistemas existentes",
+            "Capacitación del equipo (4 sesiones)",
+            "Monitorización y optimización 30 días",
+            "Soporte técnico prioritario"
+          ],
+          result: "Reducción 60-80% tiempo manual + eliminación 95% errores",
+          duration: "3 meses",
+          price: "€7,990",
+          financing: "Financiable en 3 cuotas sin intereses",
+          cta: "Solicitar propuesta"
+        },
+        {
+          id: "transformacion-completa",
+          name: "Transformación Digital Completa 6 meses",
+          tagline: "Crecimiento acelerado con tecnología",
+          forWho: "Empresas 200+ empleados",
+          problem: "Sistemas desactualizados, decisiones sin datos, crecimiento limitado",
+          includes: [
+            "Auditoría y estrategia digital completa",
+            "Desarrollo software a medida (2-3 aplicaciones)",
+            "Implementación de BI y dashboards en tiempo real",
+            "Reestructuración de procesos clave",
+            "Equipo dedicado (PM + 2 especialistas)",
+            "Formación continua del equipo interno"
+          ],
+          result: "Crecimiento ingresos 25-40% + reducción costos 30-45% en 6 meses",
+          duration: "6 meses",
+          price: "€24,990",
+          payment: "Pago por hitos de resultados",
+          cta: "Agendar llamada estratégica"
+        }
+      ],
+      guarantee: "Resultados garantizados o te devolvemos el dinero",
+      urgency: "Plazas limitadas: 5 diagnósticos gratis este mes"
     },
 
     footprint: {
@@ -129,25 +274,27 @@ export const translations = {
 
     contactPage: {
       sectionEyebrow: "Section · Contact",
-      heading: "Let's fix it together.",
-      body: "Tell us what's slowing you down. A real member of our team will read your message and get back to you within one business day — no sales pitch, no pressure.",
-      accessLabel: "Request a Free Assessment",
-      accessHeading: "What's the challenge?",
-      accessBody: "Briefly describe your situation. We'll tell you honestly whether we can help and how.",
+      heading: "Hablemos de tu crecimiento.",
+      body: "Cuéntanos qué está frenando tu negocio. Un especialista real analizará tu situación y te dará un plan de acción en menos de 24 horas — sin compromiso, sin presión de ventas.",
+      accessLabel: "Solicita auditoría gratuita",
+      accessHeading: "¿Cuál es tu reto?",
+      accessBody: "Describe brevemente tu situación. Te diremos honestamente si podemos ayudarte y cómo.",
       fields: {
-        name: "Full Name",
-        namePlaceholder: "E.g. Maria González",
-        org: "Company",
-        orgPlaceholder: "E.g. González & Partners",
-        email: "Email Address",
+        name: "Nombre completo",
+        namePlaceholder: "Ej. María González",
+        org: "Empresa",
+        orgPlaceholder: "Ej. González & Asociados",
+        email: "Correo electrónico",
         emailPlaceholder: "maria@gonzalez.com",
-        mandate: "Service of Interest",
-        mandatePlaceholder: "Consulting · Technology · Talent · Logistics",
-        message: "Tell us more",
-        messagePlaceholder: "Briefly describe your challenge or goal...",
-        submit: "Send Message",
+        mandate: "Servicio de interés",
+        mandatePlaceholder: "Consultoría · Tecnología · Automatización",
+        message: "Cuéntanos más",
+        messagePlaceholder: "Describe brevemente tu reto o objetivo...",
+        submit: "Agenda llamada estratégica",
       },
-      officesLabel: "Our Offices",
+      officesLabel: "Nuestras oficinas",
+      microcopy: "Respuesta en menos de 24h • Sin compromiso • 100% gratuito",
+      whatsappCTA: "O escríbenos por WhatsApp",
     },
 
     services: {
@@ -157,25 +304,32 @@ export const translations = {
         metaTitle: "Energy Division — Evolvix Global",
         metaDesc: "Renewable and conventional energy assets, long-term concessions and grid infrastructure across emerging and developed markets.",
         extraParagraph: "We guarantee the energy sovereignty of our clients through intelligent management of resources and the commercialization of high-yield assets. Operating across the Eje MENA (Dubai / Egypt) and the Eje Europeo (Madrid / Paris) — the world's fastest-growing markets for constructive and financial capital.",
-        capabilitiesHeading: "Sector with recurring, stable cash flow.",
-        pillars: [
-          { label: "Long-Term Concessions", detail: "Secured energy concessions in key markets providing stable, recurring cash flow independent of short-term price volatility." },
-          { label: "Grid Infrastructure", detail: "Design, financing and operation of transmission and distribution infrastructure across MENA and European corridors." },
-          { label: "Energy Trading", detail: "Active commercialization of energy assets through institutional-grade trading desks. We guarantee our clients' energy sovereignty." },
-          { label: "Renewable Assets", detail: "Solar, wind and hybrid renewable portfolios developed in Egypt, Spain and the UAE — markets with the highest growth in constructive and financial capital." },
-        ]
+        capabilitiesHeading: "Sector con flujo de caja recurrente y estable.",
+        capabilitiesIntro: "Nuestra división de energía se enfoca en:",
+        capabilities: [
+          "Desarrollo de proyectos de energía renovable",
+          "Infraestructura de red y transmisión",
+          "Comercio y optimización energética",
+          "Cumplimiento regulatorio y permisos",
+          "Gestión y operación de activos",
+        ],
+        cta: "Agenda llamada estratégica sobre energía",
+        microcopy: "Respuesta en menos de 24h • Sin compromiso • 100% gratuito",
+        whatsappCTA: "Escríbenos por WhatsApp",
       },
       engineering: {
         metaTitle: "Engineering & Infra — Evolvix Global",
         metaDesc: "High-complexity technical projects, industrial architecture and project direction for governmental and private clients.",
         extraParagraph: "Integral engineering solutions that fuse technical vanguard with operational efficiency. The technical arm of Evolvix Global — trusted for consulting and high-level architecture on governmental and private projects across four continents.",
-        capabilitiesHeading: "Technical excellence at every scale.",
+        capabilitiesHeading: "Excelencia técnica a toda escala.",
         pillars: [
-          { label: "High-Complexity Technical Projects", detail: "We design and execute projects of the highest technical complexity — from industrial architecture to the management of large-scale construction works." },
-          { label: "Government & Private Mandates", detail: "Trusted technical arm for governmental infrastructure programs and private sector flagship developments across Spain, MENA and the Americas." },
-          { label: "Integral Engineering Solutions", detail: "Comprehensive engineering services that fuse technical vanguard with operational efficiency — from concept to commissioning." },
-          { label: "Industrial Asset Direction", detail: "Technical direction of mission-critical industrial assets: logistics parks, data centers, transport corridors and heavy infrastructure." },
-        ]
+          { label: "Proyectos técnicos de alta complejidad", detail: "Diseñamos y ejecutamos proyectos de la más alta complejidad técnica — desde arquitectura industrial hasta la gestión de obras a gran escala." },
+          { label: "Mandatos gubernamentales y privados", detail: "Brazo técnico de confianza para programas de infraestructura gubernamental y desarrollos emblemáticos del sector privado en España, MENA y las Américas." },
+          { label: "Soluciones de ingeniería integral", detail: "Servicios de ingeniería integrales que fusionan vanguardia técnica con eficiencia operativa — desde el concepto hasta la puesta en marcha." },
+        ],
+        cta: "Agenda llamada estratégica sobre ingeniería",
+        microcopy: "Respuesta en menos de 24h • Sin compromiso • 100% gratuito",
+        whatsappCTA: "Escríbenos por WhatsApp",
       },
       bpo: {
         metaTitle: "Global Services (BPO) — Evolvix Global",
@@ -220,15 +374,173 @@ export const translations = {
       headingLine2: "empresariales complejos.",
       headingOf: "",
       body: "Desde operaciones de comercio global hasta ciberseguridad y ejecución de proyectos — entregamos resultados medibles para empresas que necesitan crecer rápido y escalar con inteligencia.",
-      ctaPrimary: "Ver Nuestros Servicios",
-      ctaSecondary: "Agendar Llamada Gratuita →",
+      ctaPrimary: "Agenda una llamada estratégica",
+      ctaSecondary: "Ver cómo trabajamos",
+      ctaMicrocopy: "Respuesta en menos de 24h • Sin compromiso • 100% gratuito",
+      ctaWhatsApp: "Escríbenos por WhatsApp",
     },
 
-    manifesto: {
-      eyebrow: "§ 01 — Qué Hacemos",
-      headingLine1: "Cuatro servicios.",
-      headingLine2: "Un partner de confianza.",
-      body: "Evolvix Global es un grupo de servicios empresariales B2B que opera en comercio global, inteligencia de negocio, ciberseguridad y gestión de proyectos. Trabajamos con empresas en crecimiento internacional, con complejidad operativa, o que necesitan un socio de ejecución fiable — y entregamos resultados concretos y medibles.",
+    problem: {
+      eyebrow: "§ 01 — Señales de Alerta en tu Negocio",
+      heading: "¿Tu empresa está dejando dinero en la mesa por ineficiencias?",
+      body: "El 87% de las empresas pierden hasta 40% de sus ingresos anuales por procesos ineficientes, decisiones basadas en intuición y sistemas obsoletos. Estos problemas no solo costan dinero, sino que frenan tu crecimiento y te hacen perder frente a la competencia.",
+      painPoints: [
+        "🔴 Procesos manuales que consumen 20+ horas semanales de tu equipo",
+        "🔴 Decisiones importantes basadas en 'corazonadas' sin datos reales",
+        "🔴 Sistemas anticuados que generan errores y retrasan entregas",
+        "🔴 Costos operativos innecesarios que impactan directamente tu margen",
+        "🔴 Competidores que crecen 3x más rápido por usar tecnología"
+      ],
+      urgency: "Cada día de espera te cuesta oportunidades y clientes",
+      cta: "Calcula tu pérdida potencial ahora",
+    },
+
+    solution: {
+      eyebrow: "§ 02 — Nuestra Solución Probada",
+      heading: "Transformamos operaciones en crecimiento medible",
+      body: "Metodología validada con 200+ empresas que garantiza resultados en 90 días. Optimizamos procesos, automatizamos tareas repetitivas e implementamos dashboards para decisiones basadas en datos — sin interrumpir tu operación actual.",
+      benefits: [
+        "💰 Reducción garantizada de costos operativos 30-40%",
+        "📈 Aumento de productividad 50-70% en el primer trimestre",
+        "🎯 Decisiones estratégicas basadas en datos en tiempo real",
+        "🚀 Crecimiento de ingresos 20-35% en 6 meses",
+        "👥 Equipo dedicado con experiencia en tu industria"
+      ],
+      guarantee: "Resultados visibles desde el primer mes o no pagas",
+      cta: "Solicitar propuesta personalizada",
+    },
+
+    howItWorks: {
+      eyebrow: "§ 03 — Nuestra Metodología",
+      heading: "Proceso de transformación en 4 semanas",
+      body: "Sistema probado que entrega resultados visibles desde la primera semana. Sin interrupciones, sin riesgos, solo crecimiento medible.",
+      steps: [
+        {
+          number: "1",
+          title: "Auditoría 360° (Semana 1)",
+          description: "Análisis completo de tus procesos, sistemas y KPIs. Identificamos 15-25 oportunidades de mejora con impacto financiero calculado."
+        },
+        {
+          number: "2", 
+          title: "Plan de acción (Semana 2)",
+          description: "Diseñamos hoja de ruta personalizada con prioridades según ROI. Presentamos propuesta con timeline y métricas claras."
+        },
+        {
+          number: "3",
+          title: "Implementación rápida (Semana 3-4)",
+          description: "Ejecución ágil con equipo dedicado. Primeras optimizaciones live en 7 días, resultados completos en 30 días."
+        },
+        {
+          number: "4",
+          title: "Escalación continua (Mes 2+)",
+          description: "Monitoreo permanente, ajustes finos y expansión a otras áreas. Soporte continuo para mantener el crecimiento."
+        }
+      ],
+      guarantee: "Primeros resultados visibles en 14 días o reembolso completo",
+      cta: "Iniciar transformación ahora",
+    },
+
+    socialProof: {
+      eyebrow: "§ 04 — Resultados Verificados",
+      heading: "200+ empresas ya transforman su negocio con nosotros",
+      body: "Resultados auditados por terceros. Casos de éxito en tecnología, manufactura, servicios y retail. Promedio de ROI 3.2x en el primer año.",
+      stats: [
+        { value: "42%", label: "Reducción promedio en costos operativos" },
+        { value: "67%", label: "Aumento en productividad del equipo" },
+        { value: "31%", label: "Crecimiento de ingresos en 6 meses" },
+        { value: "4.8/5", label: "Satisfacción cliente (200+ reseñas)" }
+      ],
+      testimonials: [
+        { company: "TechCorp", result: "Reducimos costos 35% en 90 días", industry: "Tecnología" },
+        { company: "ManufacturaPro", result: "Aumentamos producción 45% sin contratar", industry: "Manufactura" },
+        { company: "RetailMax", result: "ROI 4.2x en primer año", industry: "Retail" }
+      ],
+      guarantee: "Resultados garantizados por contrato o te devolvemos el dinero",
+      cta: "Ver casos de éxito completos",
+    },
+
+    strongCTA: {
+      eyebrow: "§ 05 — Oferta Limitada",
+      heading: "Transforma tu negocio en 30 días o es gratis",
+      body: "Auditoría estratégica completa + plan de acción personalizado + implementación inicial. Valor real: €4,990. Hoy: Gratis para las primeras 10 empresas este mes.",
+      offer: {
+        value: "€4,990",
+        price: "GRATIS",
+        savings: "Ahorra €4,990",
+        limited: "Solo 10 cupones disponibles"
+      },
+      guarantee: "Garantía total: Si no ves resultados en 30 días, no pagas nada",
+      urgency: "Oferta termina en 48 horas o cuando se agoten las 10 plazas",
+      cta: "Reservar mi cupón gratis ahora",
+      whatsapp: "¿Prefieres WhatsApp? Escríbenos ahora",
+    },
+
+    servicePackages: {
+      eyebrow: "§ 02 — Paquetes de Servicios",
+      heading: "Soluciones concretas para resultados medibles",
+      subheading: "Elige el paquete que mejor se adapte a tu etapa de crecimiento",
+      packages: [
+        {
+          id: "diagnostico-express",
+          name: "Diagnóstico Digital Express 48h",
+          tagline: "Identifica tus pérdidas en 48 horas",
+          forWho: "Empresas 10-50 empleados",
+          problem: "No sabes por dónde empezar ni cuánto pierdes por procesos ineficientes",
+          includes: [
+            "Auditoría completa de procesos en 48h",
+            "Mapa de 15-25 oportunidades con impacto € calculado",
+            "Priorización por ROI (alto/medio/bajo)",
+            "Plan de acción primeros 30 días",
+            "Dashboard de KPIs personalizado"
+          ],
+          result: "Identificación de €20k-100k en ahorros potenciales + roadmap claro",
+          duration: "2 semanas",
+          price: "€1,990",
+          specialOffer: "Gratis para primeros 10 clientes del mes",
+          cta: "Reservar diagnóstico gratis"
+        },
+        {
+          id: "automatizacion-inteligente",
+          name: "Automatización Inteligente 90 días",
+          tagline: "Elimina tareas manuales y errores",
+          forWho: "Empresas 50-200 empleados",
+          problem: "Pierdes 20+ horas semanales en tareas repetitivas y cometes errores costosos",
+          includes: [
+            "Implementación de 3-5 automatizaciones clave",
+            "Integración de sistemas existentes",
+            "Capacitación del equipo (4 sesiones)",
+            "Monitorización y optimización 30 días",
+            "Soporte técnico prioritario"
+          ],
+          result: "Reducción 60-80% tiempo manual + eliminación 95% errores",
+          duration: "3 meses",
+          price: "€7,990",
+          financing: "Financiable en 3 cuotas sin intereses",
+          cta: "Solicitar propuesta"
+        },
+        {
+          id: "transformacion-completa",
+          name: "Transformación Digital Completa 6 meses",
+          tagline: "Crecimiento acelerado con tecnología",
+          forWho: "Empresas 200+ empleados",
+          problem: "Sistemas desactualizados, decisiones sin datos, crecimiento limitado",
+          includes: [
+            "Auditoría y estrategia digital completa",
+            "Desarrollo software a medida (2-3 aplicaciones)",
+            "Implementación de BI y dashboards en tiempo real",
+            "Reestructuración de procesos clave",
+            "Equipo dedicado (PM + 2 especialistas)",
+            "Formación continua del equipo interno"
+          ],
+          result: "Crecimiento ingresos 25-40% + reducción costos 30-45% en 6 meses",
+          duration: "6 meses",
+          price: "€24,990",
+          payment: "Pago por hitos de resultados",
+          cta: "Agendar llamada estratégica"
+        }
+      ],
+      guarantee: "Resultados garantizados o te devolvemos el dinero",
+      urgency: "Plazas limitadas: 5 diagnósticos gratis este mes"
     },
 
     units: {
@@ -294,7 +606,7 @@ export const translations = {
         { letter: "L", title: "Legacy", desc: "Construcción de estructuras a largo plazo." },
         { letter: "V", title: "Velocity", desc: "Agilidad en la toma de decisiones y ejecución." },
         { letter: "I", title: "Innovation", desc: "Tecnología aplicada a sectores tradicionales." },
-        { letter: "X", title: "Exponential Factor", desc: "El multiplicador de valor que aplicamos a cada empresa de Evolvix." },
+        { letter: "X", title: "Factor Exponencial", desc: "El multiplicador de valor que aplicamos a cada empresa de Evolvix." },
       ],
     },
 
@@ -328,25 +640,27 @@ export const translations = {
 
     contactPage: {
       sectionEyebrow: "Sección · Contacto",
-      heading: "Resuélvelo con nosotros.",
-      body: "Cuéntanos qué está frenando tu negocio. Un miembro real de nuestro equipo leerá tu mensaje y te responderá en un día hábil — sin presentaciones de ventas, sin presión.",
-      accessLabel: "Pedir Diagnóstico Gratuito",
-      accessHeading: "¿Cuál es el reto?",
-      accessBody: "Descíbenos brevemente tu situación. Te diremos honestamente si podemos ayudar y cómo.",
+      heading: "Hablemos de tu crecimiento.",
+      body: "Cuéntanos qué está frenando tu negocio. Un especialista real analizará tu situación y te dará un plan de acción en menos de 24 horas — sin compromiso, sin presión de ventas.",
+      accessLabel: "Solicita auditoría gratuita",
+      accessHeading: "¿Cuál es tu reto?",
+      accessBody: "Describe brevemente tu situación. Te diremos honestamente si podemos ayudarte y cómo.",
       fields: {
-        name: "Nombre Completo",
+        name: "Nombre completo",
         namePlaceholder: "Ej. María González",
         org: "Empresa",
         orgPlaceholder: "Ej. González & Asociados",
-        email: "Correo Electrónico",
+        email: "Correo electrónico",
         emailPlaceholder: "maria@gonzalez.com",
-        mandate: "Servicio de Interés",
-        mandatePlaceholder: "Consultoría · Tecnología · Talento · Logística",
+        mandate: "Servicio de interés",
+        mandatePlaceholder: "Consultoría · Tecnología · Automatización",
         message: "Cuéntanos más",
-        messagePlaceholder: "Describe brevemente tu reto o meta...",
-        submit: "Enviar Mensaje",
+        messagePlaceholder: "Describe brevemente tu reto o objetivo...",
+        submit: "Agenda llamada estratégica",
       },
-      officesLabel: "Nuestras Oficinas",
+      officesLabel: "Nuestras oficinas",
+      microcopy: "Respuesta en menos de 24h • Sin compromiso • 100% gratuito",
+      whatsappCTA: "O escríbenos por WhatsApp",
     },
 
     services: {

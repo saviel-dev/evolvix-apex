@@ -62,7 +62,7 @@ export function GlobalMap() {
     <div className="relative w-full overflow-hidden" style={{ background: OCEAN }}>
       <ComposableMap
         projection="geoNaturalEarth1"
-        projectionConfig={{ scale: 160, center: [20, 10] }}
+        projectionConfig={{ scale: 280, center: [11.5, 26] }}
         style={{ width: "100%", height: "auto" }}
         width={1000}
         height={500}
@@ -120,7 +120,7 @@ export function GlobalMap() {
               y={-6}
               fill="rgba(255,255,255,0.95)"
               fontFamily="Inter, sans-serif"
-              fontSize={9}
+              fontSize={10}
               fontWeight={600}
               letterSpacing="0.18em"
               style={{ userSelect: "none" }}
@@ -129,10 +129,10 @@ export function GlobalMap() {
             </text>
             <text
               x={10}
-              y={6}
+              y={7}
               fill="rgba(255,255,255,0.4)"
               fontFamily="Inter, sans-serif"
-              fontSize={6.5}
+              fontSize={7.5}
               letterSpacing="0.18em"
               style={{ userSelect: "none" }}
             >

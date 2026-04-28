@@ -42,11 +42,13 @@ function RootComponent() {
     <LanguageProvider>
       <Loader />
       <MagneticCursor />
-      <Header />
-      <main className="min-h-screen">
-        <Outlet />
-      </main>
-      <Footer />
+      <div className="min-h-screen">
+        <Header />
+        <main>
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
     </LanguageProvider>
   );
 }

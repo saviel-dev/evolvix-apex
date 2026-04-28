@@ -1,0 +1,71 @@
+SECCIONES COMENTADAS - EVOLVIX APEX
+======================================
+
+Fecha: 28/04/2026
+Archivo: src/routes/index.tsx
+
+SECCIONES COMENTADAS ACTUALMENTE:
+
+1. ServicePackagesSection
+   - Línea: 1004
+   - Código: {/* <ServicePackagesSection /> */}
+   - Estado: Completamente implementada pero oculta
+   - Motivo: Usuario solicitó ocultarla temporalmente
+   - Contenido: Paquetes de servicios B2B (Diagnóstico Express, Automatización Inteligente, Transformación Completa)
+   - Funcionalidad: Productización de servicios con precios claros y CTAs específicos
+
+2. EvolvixPillarsSection
+   - Línea: 1005
+   - Código: {/* <EvolvixPillarsSection /> */}
+   - Estado: Completamente implementada pero oculta
+   - Motivo: Reemplazada por nuevas secciones optimizadas
+   - Contenido: Sección de pilares de la empresa (Excellence, Boldness, Legacy, Execution)
+
+DETALLES DE SECCIONES COMENTADAS:
+
+=== ServicePackagesSection ===
+- Componente: ServicePackagesSection()
+- Ubicación: Líneas 506-617
+- Funcionalidad: 
+  * 3 paquetes de servicios claros y concretos
+  * Precios: €1,990, €7,990, €24,990
+  * Target: Empresas 10-50, 50-200, 200+ empleados
+  * CTAs específicos por paquete
+  - Diseño: Cards con paquete destacado "Más Popular"
+  - Animaciones: Reveal con delay y hover effects
+
+=== EvolvixPillarsSection ===
+- Componente: EvolvixPillarsSection()
+- Ubicación: Líneas 629-754
+- Funcionalidad:
+  * 4 pilares corporativos
+  * Animación de números animados
+  * Diseño grid responsive
+- Estado: Reemplazada por secciones más orientadas a conversión
+
+SECCIONES ACTIVAS (NO COMENTADAS):
+1. HeroSection
+2. TrustStrip
+3. ProblemSection
+4. SolutionSection
+5. ExponentialSection
+6. InvestmentThesis
+7. UnitsPreview
+8. FootprintPreview
+9. BoardPreview
+
+PARA REACTIVAR SECCIONES:
+- ServicePackagesSection: Eliminar {/* */} alrededor de <ServicePackagesSection />
+- EvolvixPillarsSection: Eliminar {/* */} alrededor de <EvolvixPillarsSection />
+
+NOTAS:
+- Todas las secciones comentadas mantienen su código funcional
+- Se pueden reactivar fácilmente sin pérdida de funcionalidad
+- LanguageContext contiene todas las traducciones necesarias
+- Los estilos CSS están definidos y funcionales
+
+ÚLTIMA ACTUALIZACIÓN:
+- Título de ProblemSection aumentado a text-display-lg en desktop
+- Botones expandibles implementados en SolutionSection
+- Iconos SVG reemplazando emojis
+- Optimización SEO y CRO aplicada a todas las secciones activas
