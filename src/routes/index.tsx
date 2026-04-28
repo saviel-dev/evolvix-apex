@@ -384,25 +384,25 @@ function UnitFullScreen({
           </div>
         </div>
 
-        <div className="flex items-center border-hairline md:border-l">
-          <div className="container-edge w-full py-12 md:py-0">
+        <div className="flex items-center justify-center border-hairline md:border-l bg-background">
+          <div className="w-full max-w-xl px-8 py-16 md:px-16 lg:px-24">
             <Reveal variant="up">
               <p className="text-eyebrow text-gold">{unit.tagline}</p>
             </Reveal>
             <Reveal variant="up" delay={100}>
-              <h3 className="mt-4 text-display-md text-titanium">
+              <h3 className="mt-5 text-display-md text-titanium leading-tight">
                 {unit.name}
               </h3>
             </Reveal>
             <Reveal variant="up" delay={200}>
-              <p className="mt-6 max-w-md text-base font-light leading-relaxed text-platinum">
+              <p className="mt-6 text-base font-light leading-relaxed text-platinum md:text-lg">
                 {unit.body}
               </p>
             </Reveal>
             <Reveal variant="up" delay={300}>
               <Link
                 to={getRouteForCode(unit.code)}
-                className="mt-8 inline-flex items-center gap-3 text-mono-label text-titanium link-line"
+                className="mt-10 inline-flex items-center gap-3 text-mono-label text-titanium link-line"
               >
                 {divisionBriefLabel}
                 <svg width="18" height="8" viewBox="0 0 18 8" fill="none" aria-hidden>

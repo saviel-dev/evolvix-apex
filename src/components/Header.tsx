@@ -108,14 +108,16 @@ export function Header() {
       >
         <div className="container-edge flex h-16 items-center justify-between md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 text-titanium">
-            <img src={logo} alt="Evolvix Logo" className="h-10 w-auto md:h-12" />
-            <span className="font-display text-[1.05rem] font-extrabold tracking-[0.18em]">
-              EVOLVIX
-            </span>
-            <span className="text-mono-label text-platinum">
-              GLOBAL
-            </span>
+          <Link to="/" className="flex items-center gap-2 md:gap-3 text-titanium">
+            <img src={logo} alt="Evolvix Logo" className="h-9 w-auto md:h-12" />
+            <div className="flex flex-col md:flex-row md:items-baseline md:gap-2">
+              <span className="font-display text-[1rem] md:text-[1.05rem] font-extrabold tracking-[0.18em] leading-none">
+                EVOLVIX
+              </span>
+              <span className="text-[0.6rem] md:text-[0.8rem] md:font-medium text-platinum tracking-[0.3em] md:tracking-[0.25em] uppercase font-sans mt-1 md:mt-0 leading-none">
+                GLOBAL
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
@@ -200,9 +202,9 @@ export function Header() {
               aria-label="Toggle language"
               className="relative flex items-center gap-1 text-mono-label transition-colors duration-300 hover:text-titanium"
             >
-              <span className={lang === "en" ? "text-titanium" : "text-platinum"}>EN</span>
+              <span className={lang === "en" ? "text-gold" : "text-platinum"}>EN</span>
               <span className="text-platinum">/</span>
-              <span className={lang === "es" ? "text-titanium" : "text-platinum"}>ES</span>
+              <span className={lang === "es" ? "text-gold" : "text-platinum"}>ES</span>
             </button>
             <span className="h-3 w-px bg-hairline" />
             <a
@@ -220,9 +222,9 @@ export function Header() {
               aria-label="Toggle language"
               className="flex items-center gap-1 text-mono-label text-platinum hover:text-titanium transition-colors duration-200 px-1"
             >
-              <span className={lang === "en" ? "text-titanium font-bold" : "text-platinum"}>EN</span>
+              <span className={lang === "en" ? "text-gold font-bold" : "text-platinum"}>EN</span>
               <span className="text-platinum opacity-40">/</span>
-              <span className={lang === "es" ? "text-titanium font-bold" : "text-platinum"}>ES</span>
+              <span className={lang === "es" ? "text-gold font-bold" : "text-platinum"}>ES</span>
             </button>
             <button
               aria-label={open ? "Close menu" : "Open menu"}
@@ -275,7 +277,10 @@ export function Header() {
         <div className="flex h-16 items-center justify-between border-b border-hairline px-6 md:h-20">
           <Link to="/" onClick={() => setOpen(false)} className="flex items-center gap-2.5 text-titanium">
             <img src={logo} alt="Evolvix Logo" className="h-8 w-auto" />
-            <span className="font-display text-sm font-extrabold tracking-[0.18em]">EVOLVIX GLOBAL</span>
+            <div className="flex flex-col">
+              <span className="font-display text-[0.9rem] font-extrabold tracking-[0.18em] leading-none">EVOLVIX</span>
+              <span className="text-[0.55rem] text-platinum tracking-[0.3em] leading-none mt-1 uppercase font-sans">GLOBAL</span>
+            </div>
           </Link>
           <button
             onClick={() => setOpen(false)}
@@ -386,9 +391,9 @@ export function Header() {
               aria-label="Toggle language"
               className="flex items-center gap-1 text-mono-label transition-colors duration-300 hover:text-titanium"
             >
-              <span className={lang === "en" ? "text-titanium" : "text-platinum"}>EN</span>
+              <span className={lang === "en" ? "text-gold" : "text-platinum"}>EN</span>
               <span className="text-platinum">/</span>
-              <span className={lang === "es" ? "text-titanium" : "text-platinum"}>ES</span>
+              <span className={lang === "es" ? "text-gold" : "text-platinum"}>ES</span>
             </button>
             <span className="text-mono-label text-smoke">EST. 2018</span>
           </div>

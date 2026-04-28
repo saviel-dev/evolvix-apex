@@ -87,7 +87,7 @@ function ContactPage() {
 
       <section className="relative bg-background">
         <div className="container-edge pb-24 md:pb-32">
-          <div className="grid grid-cols-1 gap-16 border-t border-hairline pt-16 md:grid-cols-12">
+          <div className="grid grid-cols-1 gap-16 border-t border-hairline pt-24 md:pt-32 md:grid-cols-12">
             <Reveal variant="up" className="md:col-span-5">
               <p className="text-mono-label text-smoke">{p.accessLabel}</p>
               <h2 className="mt-6 text-display-md text-titanium max-w-[14ch]">

@@ -17,32 +17,12 @@ export const Route = createFileRoute("/services/asset-management")({
   component: AssetManagementPage,
 });
 
-const ASSET_PILLARS = [
-  {
-    label: "Corporate Real Estate",
-    detail:
-      "Identification and development of premium corporate real estate in the key financial nodes: Madrid, Dubai, Miami and Cairo.",
-  },
-  {
-    label: "Brand & Group Expansion",
-    detail:
-      "Strategic management and expansion of Evolvix Global's own brands — driving solid, sustained growth of group assets across new markets in under 24 months.",
-  },
-  {
-    label: "Private Equity & Infra Debt",
-    detail:
-      "Multi-class portfolio management: private equity stakes, infrastructure debt instruments, and sovereign mandates for institutional capital.",
-  },
-  {
-    label: "Alternative Investment Vehicles",
-    detail:
-      "Structured alternative vehicles for co-investment alongside institutional partners — aligned with the group's geographic triangle: Europe, MENA, and Americas.",
-  },
-];
+// Removed static ASSET_PILLARS
 
 function AssetManagementPage() {
   const { t } = useLang();
   const unit = t.holdings.items.find((item) => item.code === "EVX-04");
+  const s = t.services.assetManagement;
 
   if (!unit) return null;
 
@@ -65,7 +45,7 @@ function AssetManagementPage() {
             <p className="text-eyebrow text-gold">EVX-04 · {unit.tagline}</p>
           </Reveal>
           <Reveal variant="up" delay={100}>
-            <h1 className="mt-8 text-display-xl text-titanium max-w-[14ch]">
+            <h1 className="mt-8 text-display-xl text-titanium md:max-w-[16ch]">
               {unit.name}
             </h1>
           </Reveal>
@@ -74,11 +54,7 @@ function AssetManagementPage() {
               {unit.body}
             </p>
             <p className="mt-6 max-w-2xl text-base font-light leading-relaxed text-smoke">
-              We identify and develop investment opportunities in strategic
-              environments, ensuring solid and sustained growth of the group's
-              assets. From corporate real estate to alternative investment
-              vehicles — we connect Spanish business tradition with the audacity
-              of Arab and American markets.
+              {s.extraParagraph}
             </p>
           </Reveal>
         </div>
@@ -88,13 +64,13 @@ function AssetManagementPage() {
       <section className="relative bg-background border-t border-hairline">
         <div className="container-edge py-24 md:py-32">
           <Reveal variant="up">
-            <p className="text-eyebrow text-gold">Key Capabilities</p>
+            <p className="text-eyebrow text-gold">{t.services.keyCapabilities}</p>
             <h2 className="mt-6 font-display text-3xl font-extrabold tracking-tight text-titanium md:text-4xl max-w-[20ch]">
-              Capital with precision. Growth with legacy.
+              {s.capabilitiesHeading}
             </h2>
           </Reveal>
           <div className="mt-16 grid grid-cols-1 gap-px overflow-hidden border border-hairline bg-hairline sm:grid-cols-2">
-            {ASSET_PILLARS.map((p, i) => (
+            {s.pillars.map((p, i) => (
               <Reveal key={p.label} variant="up" delay={i * 80}>
                 <div className="bg-background p-8 md:p-10 h-full flex flex-col gap-4">
                   <span className="text-mono-label text-gold">
@@ -123,7 +99,7 @@ function AssetManagementPage() {
                 to="/"
                 className="inline-flex items-center gap-3 text-mono-label text-smoke link-line"
               >
-                ← Back to Holdings
+                {t.services.backToHoldings}
               </Link>
             </div>
           </Reveal>

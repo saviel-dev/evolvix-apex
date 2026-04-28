@@ -149,6 +149,59 @@ export const translations = {
       },
       officesLabel: "Our Offices",
     },
+
+    services: {
+      keyCapabilities: "Key Capabilities",
+      backToHoldings: "← Back to Holdings",
+      energy: {
+        metaTitle: "Energy Division — Evolvix Global",
+        metaDesc: "Renewable and conventional energy assets, long-term concessions and grid infrastructure across emerging and developed markets.",
+        extraParagraph: "We guarantee the energy sovereignty of our clients through intelligent management of resources and the commercialization of high-yield assets. Operating across the Eje MENA (Dubai / Egypt) and the Eje Europeo (Madrid / Paris) — the world's fastest-growing markets for constructive and financial capital.",
+        capabilitiesHeading: "Sector with recurring, stable cash flow.",
+        pillars: [
+          { label: "Long-Term Concessions", detail: "Secured energy concessions in key markets providing stable, recurring cash flow independent of short-term price volatility." },
+          { label: "Grid Infrastructure", detail: "Design, financing and operation of transmission and distribution infrastructure across MENA and European corridors." },
+          { label: "Energy Trading", detail: "Active commercialization of energy assets through institutional-grade trading desks. We guarantee our clients' energy sovereignty." },
+          { label: "Renewable Assets", detail: "Solar, wind and hybrid renewable portfolios developed in Egypt, Spain and the UAE — markets with the highest growth in constructive and financial capital." },
+        ]
+      },
+      engineering: {
+        metaTitle: "Engineering & Infra — Evolvix Global",
+        metaDesc: "High-complexity technical projects, industrial architecture and project direction for governmental and private clients.",
+        extraParagraph: "Integral engineering solutions that fuse technical vanguard with operational efficiency. The technical arm of Evolvix Global — trusted for consulting and high-level architecture on governmental and private projects across four continents.",
+        capabilitiesHeading: "Technical excellence at every scale.",
+        pillars: [
+          { label: "High-Complexity Technical Projects", detail: "We design and execute projects of the highest technical complexity — from industrial architecture to the management of large-scale construction works." },
+          { label: "Government & Private Mandates", detail: "Trusted technical arm for governmental infrastructure programs and private sector flagship developments across Spain, MENA and the Americas." },
+          { label: "Integral Engineering Solutions", detail: "Comprehensive engineering services that fuse technical vanguard with operational efficiency — from concept to commissioning." },
+          { label: "Industrial Asset Direction", detail: "Technical direction of mission-critical industrial assets: logistics parks, data centers, transport corridors and heavy infrastructure." },
+        ]
+      },
+      bpo: {
+        metaTitle: "Global Services (BPO) — Evolvix Global",
+        metaDesc: "High-performance contact centers and corporate support. Technology and human capital at the service of client relationships.",
+        extraParagraph: "Technology and human capital at the service of client relationships. We operate global response centers with premium quality standards — where pure scalability meets institutional service delivery. Positioned to leverage Egypt's operational efficiency with Spain and France's technological standards.",
+        capabilitiesHeading: "Scalability. Human capital. Institutional grade.",
+        pillars: [
+          { label: "Premium Contact Centers", detail: "High-level contact center operations delivering institutional-grade client relationships. Pure scalability based on human capital and technology." },
+          { label: "Finance & Compliance", detail: "Outsourced finance, audit-readiness and regulatory compliance functions delivered to the standards demanded by Fortune 500 corporations." },
+          { label: "Tech Support & Back-Office", detail: "End-to-end back-office operations: technical support, helpdesk, digital processing and corporate workflow optimization." },
+          { label: "Geographic Cost Arbitrage", detail: "Operational centers strategically positioned in Egypt — leveraging the MENA region's competitive operational costs with European management standards." },
+        ]
+      },
+      assetManagement: {
+        metaTitle: "Asset Management — Evolvix Global",
+        metaDesc: "Real estate, private equity and brand expansion. Identifying and developing investment opportunities in strategic environments.",
+        extraParagraph: "We identify and develop investment opportunities in strategic environments, ensuring solid and sustained growth of the group's assets. From corporate real estate to alternative investment vehicles — we connect Spanish business tradition with the audacity of Arab and American markets.",
+        capabilitiesHeading: "Capital with precision. Growth with legacy.",
+        pillars: [
+          { label: "Corporate Real Estate", detail: "Identification and development of premium corporate real estate in the key financial nodes: Madrid, Dubai, Miami and Cairo." },
+          { label: "Brand & Group Expansion", detail: "Strategic management and expansion of Evolvix Global's own brands — driving solid, sustained growth of group assets across new markets in under 24 months." },
+          { label: "Private Equity & Infra Debt", detail: "Multi-class portfolio management: private equity stakes, infrastructure debt instruments, and sovereign mandates for institutional capital." },
+          { label: "Alternative Investment Vehicles", detail: "Structured alternative vehicles for co-investment alongside institutional partners — aligned with the group's geographic triangle: Europe, MENA, and Americas." },
+        ]
+      }
+    },
   },
 
   es: {
@@ -294,6 +347,59 @@ export const translations = {
         submit: "Enviar Mensaje",
       },
       officesLabel: "Nuestras Oficinas",
+    },
+
+    services: {
+      keyCapabilities: "Capacidades Clave",
+      backToHoldings: "← Volver al Portfolio",
+      energy: {
+        metaTitle: "División de Energía — Evolvix Global",
+        metaDesc: "Activos de energía convencional y renovable, concesiones a largo plazo e infraestructura de red en mercados emergentes y desarrollados.",
+        extraParagraph: "Garantizamos la soberanía energética de nuestros clientes mediante la gestión inteligente de recursos y la comercialización de activos de alto rendimiento. Operamos a través del Eje MENA (Dubái / Egipto) y el Eje Europeo (Madrid / París) — los mercados de mayor crecimiento de capital constructivo y financiero del mundo.",
+        capabilitiesHeading: "Sector con flujo de caja recurrente y estable.",
+        pillars: [
+          { label: "Concesiones a Largo Plazo", detail: "Concesiones energéticas aseguradas en mercados clave que proporcionan un flujo de caja estable y recurrente independiente de la volatilidad de precios a corto plazo." },
+          { label: "Infraestructura de Red", detail: "Diseño, financiación y operación de infraestructura de transmisión y distribución a través de los corredores de MENA y Europa." },
+          { label: "Trading de Energía", detail: "Comercialización activa de activos energéticos a través de mesas de trading de grado institucional. Garantizamos la soberanía energética de nuestros clientes." },
+          { label: "Activos Renovables", detail: "Portafolios de renovables híbridos, eólicos y solares desarrollados en Egipto, España y los EAU — mercados con el mayor crecimiento de capital constructivo y financiero." },
+        ]
+      },
+      engineering: {
+        metaTitle: "Ingeniería e Infraestructura — Evolvix Global",
+        metaDesc: "Proyectos técnicos de alta complejidad, arquitectura industrial y dirección de proyectos para clientes gubernamentales y privados.",
+        extraParagraph: "Soluciones de ingeniería integrales que fusionan la vanguardia técnica con la eficiencia operativa. El brazo técnico de Evolvix Global — de confianza para consultoría y arquitectura de alto nivel en proyectos gubernamentales y privados en cuatro continentes.",
+        capabilitiesHeading: "Excelencia técnica a cualquier escala.",
+        pillars: [
+          { label: "Proyectos Técnicos de Alta Complejidad", detail: "Diseñamos y ejecutamos proyectos de la máxima complejidad técnica — desde arquitectura industrial hasta la gestión de grandes obras de construcción." },
+          { label: "Mandatos Gubernamentales y Privados", detail: "Brazo técnico de confianza para programas de infraestructura gubernamentales y desarrollos emblemáticos del sector privado en España, MENA y las Américas." },
+          { label: "Soluciones de Ingeniería Integrales", detail: "Servicios integrales de ingeniería que fusionan la vanguardia técnica con la eficiencia operativa — desde el concepto hasta la puesta en marcha." },
+          { label: "Dirección de Activos Industriales", detail: "Dirección técnica de activos industriales de misión crítica: parques logísticos, centros de datos, corredores de transporte e infraestructuras pesadas." },
+        ]
+      },
+      bpo: {
+        metaTitle: "Servicios Globales (BPO) — Evolvix Global",
+        metaDesc: "Contact centers de alto rendimiento y soporte corporativo. Tecnología y capital humano al servicio de las relaciones con clientes.",
+        extraParagraph: "Tecnología y capital humano al servicio de las relaciones con los clientes. Operamos centros de respuesta globales con estándares de calidad premium — donde la escalabilidad pura se encuentra con la prestación de servicios institucionales. Posicionados para aprovechar la eficiencia operativa de Egipto con los estándares tecnológicos de España y Francia.",
+        capabilitiesHeading: "Escalabilidad. Capital humano. Grado institucional.",
+        pillars: [
+          { label: "Contact Centers Premium", detail: "Operaciones de contact center de alto nivel que ofrecen relaciones con clientes de grado institucional. Escalabilidad pura basada en capital humano y tecnología." },
+          { label: "Finanzas y Cumplimiento", detail: "Funciones externalizadas de finanzas, preparación para auditorías y cumplimiento normativo entregadas bajo los estándares exigidos por las corporaciones Fortune 500." },
+          { label: "Soporte Técnico y Back-Office", detail: "Operaciones de back-office de extremo a extremo: soporte técnico, helpdesk, procesamiento digital y optimización de flujos de trabajo corporativos." },
+          { label: "Arbitraje Geográfico de Costos", detail: "Centros operativos posicionados estratégicamente en Egipto — aprovechando los costes operativos competitivos de la región MENA con estándares de gestión europeos." },
+        ]
+      },
+      assetManagement: {
+        metaTitle: "Gestión de Activos — Evolvix Global",
+        metaDesc: "Bienes raíces, capital privado y expansión de marca. Identificando y desarrollando oportunidades de inversión en entornos estratégicos.",
+        extraParagraph: "Identificamos y desarrollamos oportunidades de inversión en entornos estratégicos, asegurando un crecimiento sólido y sostenido de los activos del grupo. Desde inmuebles corporativos hasta vehículos de inversión alternativos — conectamos la tradición empresarial española con la audacia de los mercados árabes y americanos.",
+        capabilitiesHeading: "Capital con precisión. Crecimiento con legado.",
+        pillars: [
+          { label: "Inmuebles Corporativos", detail: "Identificación y desarrollo de inmuebles corporativos premium en los nodos financieros clave: Madrid, Dubái, Miami y El Cairo." },
+          { label: "Expansión de Marca y Grupo", detail: "Gestión estratégica y expansión de las marcas propias de Evolvix Global — impulsando un crecimiento sólido y sostenido de los activos del grupo en nuevos mercados en menos de 24 meses." },
+          { label: "Capital Privado y Deuda de Infraestructuras", detail: "Gestión de carteras multi-clase: participaciones de capital privado, instrumentos de deuda de infraestructuras y mandatos soberanos para capital institucional." },
+          { label: "Vehículos de Inversión Alternativos", detail: "Vehículos alternativos estructurados para co-inversión junto a socios institucionales — alineados con el triángulo geográfico del grupo: Europa, MENA y Américas." },
+        ]
+      }
     },
   },
 } as const;

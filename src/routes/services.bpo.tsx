@@ -17,32 +17,12 @@ export const Route = createFileRoute("/services/bpo")({
   component: BPOPage,
 });
 
-const BPO_PILLARS = [
-  {
-    label: "Premium Contact Centers",
-    detail:
-      "High-level contact center operations delivering institutional-grade client relationships. Pure scalability based on human capital and technology.",
-  },
-  {
-    label: "Finance & Compliance",
-    detail:
-      "Outsourced finance, audit-readiness and regulatory compliance functions delivered to the standards demanded by Fortune 500 corporations.",
-  },
-  {
-    label: "Tech Support & Back-Office",
-    detail:
-      "End-to-end back-office operations: technical support, helpdesk, digital processing and corporate workflow optimization.",
-  },
-  {
-    label: "Geographic Cost Arbitrage",
-    detail:
-      "Operational centers strategically positioned in Egypt — leveraging the MENA region's competitive operational costs with European management standards.",
-  },
-];
+// Removed static BPO_PILLARS
 
 function BPOPage() {
   const { t } = useLang();
   const unit = t.holdings.items.find((item) => item.code === "EVX-03");
+  const s = t.services.bpo;
 
   if (!unit) return null;
 
@@ -65,7 +45,7 @@ function BPOPage() {
             <p className="text-eyebrow text-gold">EVX-03 · {unit.tagline}</p>
           </Reveal>
           <Reveal variant="up" delay={100}>
-            <h1 className="mt-8 text-display-xl text-titanium max-w-[14ch]">
+            <h1 className="mt-8 text-display-xl text-titanium md:max-w-[16ch]">
               {unit.name}
             </h1>
           </Reveal>
@@ -74,11 +54,7 @@ function BPOPage() {
               {unit.body}
             </p>
             <p className="mt-6 max-w-2xl text-base font-light leading-relaxed text-smoke">
-              Technology and human capital at the service of client
-              relationships. We operate global response centers with premium
-              quality standards — where pure scalability meets institutional
-              service delivery. Positioned to leverage Egypt's operational
-              efficiency with Spain and France's technological standards.
+              {s.extraParagraph}
             </p>
           </Reveal>
         </div>
@@ -88,13 +64,13 @@ function BPOPage() {
       <section className="relative bg-background border-t border-hairline">
         <div className="container-edge py-24 md:py-32">
           <Reveal variant="up">
-            <p className="text-eyebrow text-gold">Key Capabilities</p>
+            <p className="text-eyebrow text-gold">{t.services.keyCapabilities}</p>
             <h2 className="mt-6 font-display text-3xl font-extrabold tracking-tight text-titanium md:text-4xl max-w-[20ch]">
-              Scalability. Human capital. Institutional grade.
+              {s.capabilitiesHeading}
             </h2>
           </Reveal>
           <div className="mt-16 grid grid-cols-1 gap-px overflow-hidden border border-hairline bg-hairline sm:grid-cols-2">
-            {BPO_PILLARS.map((p, i) => (
+            {s.pillars.map((p, i) => (
               <Reveal key={p.label} variant="up" delay={i * 80}>
                 <div className="bg-background p-8 md:p-10 h-full flex flex-col gap-4">
                   <span className="text-mono-label text-gold">
@@ -123,7 +99,7 @@ function BPOPage() {
                 to="/"
                 className="inline-flex items-center gap-3 text-mono-label text-smoke link-line"
               >
-                ← Back to Holdings
+                {t.services.backToHoldings}
               </Link>
             </div>
           </Reveal>

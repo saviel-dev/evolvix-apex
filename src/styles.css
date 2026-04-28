@@ -153,7 +153,6 @@
     text-transform: uppercase;
     line-height: 1.1;
     overflow-wrap: break-word;
-    word-break: break-word;
     max-width: 100%;
   }
 
@@ -186,7 +185,6 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     overflow-wrap: break-word;
-    word-break: break-word;
   }
 
   .text-display-lg {
@@ -197,7 +195,6 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     overflow-wrap: break-word;
-    word-break: break-word;
   }
 
   .text-display-md {

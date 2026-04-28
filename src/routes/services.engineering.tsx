@@ -17,32 +17,12 @@ export const Route = createFileRoute("/services/engineering")({
   component: EngineeringPage,
 });
 
-const ENGINEERING_PILLARS = [
-  {
-    label: "High-Complexity Technical Projects",
-    detail:
-      "We design and execute projects of the highest technical complexity — from industrial architecture to the management of large-scale construction works.",
-  },
-  {
-    label: "Government & Private Mandates",
-    detail:
-      "Trusted technical arm for governmental infrastructure programs and private sector flagship developments across Spain, MENA and the Americas.",
-  },
-  {
-    label: "Integral Engineering Solutions",
-    detail:
-      "Comprehensive engineering services that fuse technical vanguard with operational efficiency — from concept to commissioning.",
-  },
-  {
-    label: "Industrial Asset Direction",
-    detail:
-      "Technical direction of mission-critical industrial assets: logistics parks, data centers, transport corridors and heavy infrastructure.",
-  },
-];
+// Removed static ENGINEERING_PILLARS
 
 function EngineeringPage() {
   const { t } = useLang();
   const unit = t.holdings.items.find((item) => item.code === "EVX-02");
+  const s = t.services.engineering;
 
   if (!unit) return null;
 
@@ -65,7 +45,7 @@ function EngineeringPage() {
             <p className="text-eyebrow text-gold">EVX-02 · {unit.tagline}</p>
           </Reveal>
           <Reveal variant="up" delay={100}>
-            <h1 className="mt-8 text-display-xl text-titanium max-w-[14ch]">
+            <h1 className="mt-8 text-display-xl text-titanium md:max-w-[16ch]">
               {unit.name}
             </h1>
           </Reveal>
@@ -74,10 +54,7 @@ function EngineeringPage() {
               {unit.body}
             </p>
             <p className="mt-6 max-w-2xl text-base font-light leading-relaxed text-smoke">
-              Integral engineering solutions that fuse technical vanguard with
-              operational efficiency. The technical arm of Grupo EBLE — trusted
-              for consulting and high-level architecture on governmental and
-              private projects across four continents.
+              {s.extraParagraph}
             </p>
           </Reveal>
         </div>
@@ -87,13 +64,13 @@ function EngineeringPage() {
       <section className="relative bg-background border-t border-hairline">
         <div className="container-edge py-24 md:py-32">
           <Reveal variant="up">
-            <p className="text-eyebrow text-gold">Key Capabilities</p>
+            <p className="text-eyebrow text-gold">{t.services.keyCapabilities}</p>
             <h2 className="mt-6 font-display text-3xl font-extrabold tracking-tight text-titanium md:text-4xl max-w-[20ch]">
-              Technical excellence at every scale.
+              {s.capabilitiesHeading}
             </h2>
           </Reveal>
           <div className="mt-16 grid grid-cols-1 gap-px overflow-hidden border border-hairline bg-hairline sm:grid-cols-2">
-            {ENGINEERING_PILLARS.map((p, i) => (
+            {s.pillars.map((p, i) => (
               <Reveal key={p.label} variant="up" delay={i * 80}>
                 <div className="bg-background p-8 md:p-10 h-full flex flex-col gap-4">
                   <span className="text-mono-label text-gold">
@@ -122,7 +99,7 @@ function EngineeringPage() {
                 to="/"
                 className="inline-flex items-center gap-3 text-mono-label text-smoke link-line"
               >
-                ← Back to Holdings
+                {t.services.backToHoldings}
               </Link>
             </div>
           </Reveal>
