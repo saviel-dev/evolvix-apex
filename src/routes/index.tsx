@@ -6,6 +6,9 @@ import biImg from "@/assets/images/inteligenci de negocia.png";
 import securityImg from "@/assets/images/seguridad digital.png";
 import projectsImg from "@/assets/images/entrega de proyecto.png";
 import growthImg from "@/assets/images/hero-growth.png";
+import aiTeamImg from "@/assets/images/equipo-ai.png";
+import aiImplementationImg from "@/assets/images/implemetacion-ai.png";
+import aiResultsImg from "@/assets/images/resultados de trabajo.png";
 import { Reveal } from "@/components/Reveal";
 import { GlobalMap, FOOTPRINT_CITIES } from "@/components/GlobalMap";
 import { useEffect, useRef, useState } from "react";
@@ -746,8 +749,22 @@ function AIIntelligenceSection() {
     : "Reserved space for AI service photos";
 
   const photoLabels = isEs
-    ? ["Foto de equipo IA", "Foto de implementacion", "Foto de resultados"]
-    : ["AI team photo", "Implementation photo", "Results photo"];
+    ? [
+      "Equipo IA de Alto Rendimiento",
+      "Implementacion Inteligente en Accion",
+      "Resultados Reales y Medibles",
+    ]
+    : [
+      "High-Performance AI Team",
+      "Intelligent Implementation in Action",
+      "Real, Measurable Results",
+    ];
+
+  const aiPhotos = [
+    { src: aiTeamImg, label: photoLabels[0] },
+    { src: aiImplementationImg, label: photoLabels[1] },
+    { src: aiResultsImg, label: photoLabels[2] },
+  ];
 
   return (
     <section className="border-t border-hairline bg-background">
@@ -782,12 +799,21 @@ function AIIntelligenceSection() {
         <Reveal variant="up" delay={260} className="mt-10">
           <p className="text-mono-label text-smoke mb-4">{photosTitle}</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-            {photoLabels.map((label) => (
+            {aiPhotos.map((photo) => (
               <div
-                key={label}
-                className="h-36 sm:h-40 md:h-52 border border-dashed border-gold/40 bg-surface/20 flex items-center justify-center text-center px-3 sm:px-4"
+                key={photo.label}
+                className="group relative h-36 sm:h-40 md:h-52 overflow-hidden border border-hairline bg-surface/20"
               >
-                <span className="text-xs md:text-sm text-smoke">{label}</span>
+                <img
+                  src={photo.src}
+                  alt={photo.label}
+                  loading="lazy"
+                  className="h-full w-full object-cover opacity-75 transition-all duration-500 group-hover:scale-[1.03] group-hover:opacity-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
+                <span className="absolute bottom-3 left-3 right-3 text-left text-[11px] sm:text-xs md:text-sm text-platinum">
+                  {photo.label}
+                </span>
               </div>
             ))}
           </div>
