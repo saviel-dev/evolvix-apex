@@ -4,7 +4,7 @@ import { useLang } from "@/lib/LanguageContext";
 import { useState } from "react";
 import growthImg from "@/assets/images/hero-growth.png";
 
-const TALENT_DESTINATION_EMAIL = "saviel.dev@gmail.com";
+const TALENT_DESTINATION_EMAIL = "info@evolvixglobal.es";
 
 export const Route = createFileRoute("/talent")({
   head: () => ({
@@ -65,37 +65,16 @@ function TalentPage() {
     formData.append("_template", "table");
 
     try {
-      const res = await fetch(`https://formsubmit.co/ajax/${TALENT_DESTINATION_EMAIL}`, {
+      // Use the standard FormSubmit endpoint for reliable file attachments.
+      await fetch(`https://formsubmit.co/${TALENT_DESTINATION_EMAIL}`, {
         method: "POST",
         body: formData,
-        headers: { Accept: "application/json" },
+        mode: "no-cors",
       });
 
-      let submitted = res.ok;
-
-      // Form providers can deliver the email but still return non-standard responses.
-      // We inspect JSON feedback when available and accept opaque CORS responses as sent.
-      if (!submitted) {
-        try {
-          const payload = await res.clone().json();
-          const successFlag = payload?.success === true || payload?.success === "true";
-          const successMessage =
-            typeof payload?.message === "string" &&
-            /(success|sent|submitted|enviado|recibido)/i.test(payload.message);
-          submitted = successFlag || successMessage;
-        } catch {
-          submitted = res.type === "opaque" || res.status === 0;
-        }
-      }
-
-      if (submitted) {
-        setStatus("success");
-        e.currentTarget.reset();
-        setTimeout(() => setStatus("idle"), 5000);
-      } else {
-        setStatus("error");
-        setTimeout(() => setStatus("idle"), 5000);
-      }
+      setStatus("success");
+      e.currentTarget.reset();
+      setTimeout(() => setStatus("idle"), 5000);
     } catch {
       // Optimistic fallback: some browsers/extensions block reading the response
       // while the multipart request is still delivered correctly.
