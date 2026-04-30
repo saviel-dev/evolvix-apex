@@ -434,14 +434,14 @@ export const translations = {
     footprint: {
       eyebrow: "03 — Where We Operate",
       heading: "Close to your business, wherever it is.",
-      body: "We operate across five key markets — Madrid, Paris, Miami, Dubai and Cairo — so whether you're expanding into Europe, MENA or America, there's always an Evolvix team nearby.",
+      body: "We operate across four key markets — Madrid, Paris, Dubai and Cairo — so whether you're expanding into Europe or MENA, there's always an Evolvix team nearby.",
     },
 
     board: {
       eyebrow: "04 — Why Companies Choose Us",
       headingLine1: "We've already solved",
       headingLine2: "what you're facing.",
-      body: "Our team has fixed operational bottlenecks, delivered international trade cycles and shipped projects across Europe, the Middle East and America. You get senior people who've done the exact work before — not juniors learning on your dime.",
+      body: "Our team has fixed operational bottlenecks, delivered international trade cycles and shipped projects across Europe and the Middle East. You get senior people who've done the exact work before — not juniors learning on your dime.",
       cta: "Talk to the Team →",
     },
 
@@ -453,7 +453,7 @@ export const translations = {
       body: "Evolvix is structured as a diversified group — not a single business, but an integrated portfolio of strategic assets designed to grow in parallel, hedge each other, and compound value across cycles.",
       pillars: [
         { label: "Sector Diversification", detail: "Energy, Engineering, BPO and Real Estate. If one sector fluctuates, others compensate." },
-        { label: "Geographic Arbitrage", detail: "Leveraging Egypt's operational costs, EU technology, Dubai capital and Miami's commercial access." },
+        { label: "Geographic Arbitrage", detail: "Leveraging Egypt's operational costs, EU technology, and Dubai capital." },
         { label: "Scalability", detail: "Brands operate under a shared matrix that reduces structural costs and maximizes net margin." },
       ],
     },
@@ -495,7 +495,6 @@ export const translations = {
         Madrid: { hours: "GMT+1 · 09:00–20:00", focus: ["Strategic Consulting", "European Operations", "Tech Development"], coords: "40.4168° N · 3.7038° W" },
         London: { hours: "GMT+0 · 08:00–18:00", focus: ["Financial Advisory", "International Trade", "Investor Relations"], coords: "51.5074° N · 0.1276° W" },
         Paris: { hours: "GMT+1 · 09:00–18:00", focus: ["European Strategy", "Infrastructure", "Investment Structuring"], coords: "48.8566° N · 2.3522° E" },
-        Miami: { hours: "EST · 09:00–18:00", focus: ["America Expansion", "LatAm Trade", "Capital Management"], coords: "25.7617° N · 80.1918° W" },
         Cairo: { hours: "GMT+2 · 09:00–18:00", focus: ["African Logistics", "MENA Connectivity", "Energy Infrastructure"], coords: "30.0444° N · 31.2357° E" },
         Dubai: { hours: "GMT+4 · 08:00–20:00", focus: ["MENA Expansion", "Emerging Markets", "Logistics Hub"], coords: "25.2048° N · 55.2708° E" },
         Singapore: { hours: "GMT+8 · 09:00–21:00", focus: ["APAC Tech", "Innovation Division", "AI & Automation"], coords: "1.3521° N · 103.8198° E" },
@@ -506,11 +505,11 @@ export const translations = {
       sectionEyebrow: "Section · Leadership",
       headingLine1: "Visionary minds.",
       headingLine2: "Relentless execution.",
-      body: "The Evolvix Global board brings together a senior team of strategists, engineers and capital allocators with proven track records across Europe, the Middle East and America. Each member operates at the intersection of institutional experience and entrepreneurial drive.",
+      body: "The Evolvix Global board brings together a senior team of strategists, engineers and capital allocators with proven track records across Europe and the Middle East. Each member operates at the intersection of institutional experience and entrepreneurial drive.",
       members: [
         { name: "Evolvix Global — Executive Board", role: "Group Leadership", bio: "Evolvix Global is a diversified Spanish business group whose pillars are Excellence, Boldness, Legacy and Execution. The board directs capital, operations and expansion across all four divisions." },
         { name: "Division Principals", role: "Operational Leadership", bio: "Each Evolvix division is led by a dedicated principal with deep sector expertise: energy concessions & grid infrastructure, high-complexity engineering, institutional BPO operations, and real-estate asset management." },
-        { name: "Strategic Advisors", role: "International Advisory Council", bio: "An international advisory council supports the group across key jurisdictions — Spain/EU for legal & funding access, Dubai/MENA for capital formation, and Miami for American market connectivity." },
+        { name: "Strategic Advisors", role: "International Advisory Council", bio: "An international advisory council supports the group across key jurisdictions — Spain/EU for legal & funding access, and Dubai/MENA for capital formation." },
         { name: "Investor Relations", role: "Capital & Partnerships", bio: "Dedicated investor relations management for institutional capital, sovereign mandates and co-investment structures. The group targets 24-month expansion into new markets with tangible asset backing." },
       ],
     },
@@ -593,7 +592,7 @@ export const translations = {
         capabilitiesHeading: "Technical excellence at any scale.",
         pillars: [
           { label: "High-Complexity Technical Projects", detail: "We design and execute projects of the highest technical complexity — from industrial architecture to the management of large-scale construction works." },
-          { label: "Governmental & Private Mandates", detail: "Trusted technical arm for governmental infrastructure programs and flagship private sector developments in Spain, MENA and America." },
+          { label: "Governmental & Private Mandates", detail: "Trusted technical arm for governmental infrastructure programs and flagship private sector developments in Spain and MENA." },
           { label: "Integral Engineering Solutions", detail: "End-to-end engineering services merging technical vanguard with operational efficiency — from concept to commissioning." },
           { label: "Industrial Asset Management", detail: "Technical direction of mission-critical industrial assets: logistics parks, data centers, transport corridors and heavy infrastructure." },
         ]
@@ -613,13 +612,13 @@ export const translations = {
       assetManagement: {
         metaTitle: "Asset Management — Evolvix Global",
         metaDesc: "Real estate, private equity and brand expansion. Identifying and developing investment opportunities in strategic environments.",
-        extraParagraph: "We identify and develop investment opportunities in strategic environments, ensuring solid and sustained growth of the group's assets. From corporate real estate to alternative investment vehicles — we connect Spanish business tradition with the audacity of Arab and American markets.",
+        extraParagraph: "We identify and develop investment opportunities in strategic environments, ensuring solid and sustained growth of the group's assets. From corporate real estate to alternative investment vehicles — we connect Spanish business tradition with the audacity of Arab markets.",
         capabilitiesHeading: "Capital with precision. Growth with legacy.",
         pillars: [
-          { label: "Corporate Real Estate", detail: "Identification and development of premium corporate real estate in the key financial nodes: Madrid, Dubai, Miami and Cairo." },
+          { label: "Corporate Real Estate", detail: "Identification and development of premium corporate real estate in the key financial nodes: Madrid, Dubai, and Cairo." },
           { label: "Brand & Group Expansion", detail: "Strategic management and expansion of Evolvix Global's own brands — driving solid, sustained growth of group assets across new markets in under 24 months." },
           { label: "Private Equity & Infra Debt", detail: "Multi-class portfolio management: private equity stakes, infrastructure debt instruments, and sovereign mandates for institutional capital." },
-          { label: "Alternative Investment Vehicles", detail: "Structured alternative vehicles for co-investment alongside institutional partners — aligned with the group's geographic triangle: Europe, MENA, and America." },
+          { label: "Alternative Investment Vehicles", detail: "Structured alternative vehicles for co-investment alongside institutional partners — aligned with the group's geographic presence: Europe and MENA." },
         ]
       }
     },
@@ -1069,7 +1068,7 @@ export const translations = {
     footprint: {
       eyebrow: "03 — Huella Global",
       heading: "Siete nodos. Un sistema.",
-      body: "Una red geográficamente diversificada en cuatro continentes — Madrid, Londres, París, Miami, El Cairo, Dubái y Singapur — diseñada para sincronizar capital, logística e inteligencia en cualquier huso horario.",
+      body: "Una red geográficamente diversificada en tres continentes — Madrid, Londres, París, El Cairo, Dubái y Singapur — diseñada para sincronizar capital, logística e inteligencia en cualquier huso horario.",
     },
 
     thesis: {
@@ -1079,7 +1078,7 @@ export const translations = {
       body: "Evolvix se estructura como un grupo diversificado — no es un negocio único, sino un portfolio integrado de activos estratégicos diseñados para crecer en paralelo, protegerse entre sí y capitalizar valor a través de los ciclos.",
       pillars: [
         { label: "Diversificación Sectorial", detail: "Energía, Ingeniería, BPO y Real Estate. Si un sector fluctúa, los otros compensan." },
-        { label: "Arbitraje Geográfico", detail: "Aprovechamos costes de Egipto, tecnología de España/Francia, capital de Dubái y apertura de Miami." },
+        { label: "Arbitraje Geográfico", detail: "Aprovechamos costes de Egipto, tecnología de España/Francia y capital de Dubái." },
         { label: "Escalabilidad", detail: "Nuestras marcas operan bajo una matriz compartida que reduce costes estructurales y maximiza margen." },
       ],
     },
@@ -1101,7 +1100,7 @@ export const translations = {
       eyebrow: "06 — Por Qué Trabajar con Nosotros",
       headingLine1: "Expertos senior.",
       headingLine2: "Ejecución probada.",
-      body: "Nuestro equipo ha entregado proyectos en Europa, Oriente Medio y América. Aportamos experiencia institucional sin burocracia — tienes acceso directo a especialistas senior comprometidos con tus resultados.",
+      body: "Nuestro equipo ha entregado proyectos en Europa y Oriente Medio. Aportamos experiencia institucional sin burocracia — tienes acceso directo a especialistas senior comprometidos con tus resultados.",
       cta: "Conoce al Equipo →",
     },
 
@@ -1128,7 +1127,6 @@ export const translations = {
         Madrid: { hours: "GMT+1 · 09:00–20:00", focus: ["Consultoría Estratégica", "Operaciones Europeas", "Desarrollo Tecnológico"], coords: "40.4168° N · 3.7038° O" },
         London: { hours: "GMT+0 · 08:00–18:00", focus: ["Asesoría Financiera", "Comercio Internacional", "Relaciones con Inversores"], coords: "51.5074° N · 0.1276° O" },
         Paris: { hours: "GMT+1 · 09:00–18:00", focus: ["Estrategia Europea", "Infraestructura", "Estructuración de Inversiones"], coords: "48.8566° N · 2.3522° E" },
-        Miami: { hours: "EST · 09:00–18:00", focus: ["Expansión en América", "Comercio LatAm", "Gestión de Capital"], coords: "25.7617° N · 80.1918° O" },
         Cairo: { hours: "GMT+2 · 09:00–18:00", focus: ["Logística Africana", "Conectividad MENA", "Infraestructura Energética"], coords: "30.0444° N · 31.2357° E" },
         Dubai: { hours: "GMT+4 · 08:00–20:00", focus: ["Expansión MENA", "Mercados Emergentes", "Hub Logístico"], coords: "25.2048° N · 55.2708° E" },
         Singapore: { hours: "GMT+8 · 09:00–21:00", focus: ["Tecnología APAC", "División de Innovación", "IA y Automatización"], coords: "1.3521° N · 103.8198° E" },
@@ -1139,11 +1137,11 @@ export const translations = {
       sectionEyebrow: "Sección · Liderazgo",
       headingLine1: "Mentes visionarias.",
       headingLine2: "Ejecución implacable.",
-      body: "El consejo directivo de Evolvix Global reúne a un equipo senior de estrategas, ingenieros y gestores de capital con trayectorias probadas en Europa, Oriente Medio y América. Cada miembro opera en la intersección entre la experiencia institucional y el impulso emprendedor.",
+      body: "El consejo directivo de Evolvix Global reúne a un equipo senior de estrategas, ingenieros y gestores de capital con trayectorias probadas en Europa y Oriente Medio. Cada miembro opera en la intersección entre la experiencia institucional y el impulso emprendedor.",
       members: [
         { name: "Evolvix Global — Consejo Ejecutivo", role: "Liderazgo del Grupo", bio: "Evolvix Global es un grupo empresarial español diversificado cuyos pilares son Excelencia, Audacia, Legado y Ejecución. El consejo dirige el capital, las operaciones y la expansión de las cuatro divisiones." },
         { name: "Directores de División", role: "Liderazgo Operacional", bio: "Cada división de Evolvix está liderada por un director con profunda especialización sectorial: concesiones energéticas e infraestructura de red, ingeniería de alta complejidad, operaciones BPO institucionales y gestión de activos inmobiliarios." },
-        { name: "Consejeros Estratégicos", role: "Consejo Asesor Internacional", bio: "Un consejo asesor internacional apoya al grupo en jurisdicciones clave — España/UE para acceso jurídico y fondos, Dubái/MENA para captación de capital, y Miami para conectividad con el mercado americano." },
+        { name: "Consejeros Estratégicos", role: "Consejo Asesor Internacional", bio: "Un consejo asesor internacional apoya al grupo en jurisdicciones clave — España/UE para acceso jurídico y fondos, y Dubái/MENA para captación de capital." },
         { name: "Relaciones con Inversores", role: "Capital y Alianzas", bio: "Gestión dedicada de relaciones con inversores para capital institucional, mandatos soberanos y estructuras de co-inversión. El grupo proyecta expansión a nuevos mercados en 24 meses con respaldo de activos tangibles." },
       ],
     },
@@ -1226,7 +1224,7 @@ export const translations = {
         capabilitiesHeading: "Excelencia técnica a cualquier escala.",
         pillars: [
           { label: "Proyectos Técnicos de Alta Complejidad", detail: "Diseñamos y ejecutamos proyectos de la máxima complejidad técnica — desde arquitectura industrial hasta la gestión de grandes obras de construcción." },
-          { label: "Mandatos Gubernamentales y Privados", detail: "Brazo técnico de confianza para programas de infraestructura gubernamentales y desarrollos emblemáticos del sector privado en España, MENA y América." },
+          { label: "Mandatos Gubernamentales y Privados", detail: "Brazo técnico de confianza para programas de infraestructura gubernamentales y desarrollos emblemáticos del sector privado en España y MENA." },
           { label: "Soluciones de Ingeniería Integrales", detail: "Servicios integrales de ingeniería que fusionan la vanguardia técnica con la eficiencia operativa — desde el concepto hasta la puesta en marcha." },
           { label: "Dirección de Activos Industriales", detail: "Dirección técnica de activos industriales de misión crítica: parques logísticos, centros de datos, corredores de transporte e infraestructuras pesadas." },
         ]
@@ -1246,13 +1244,13 @@ export const translations = {
       assetManagement: {
         metaTitle: "Gestión de Activos — Evolvix Global",
         metaDesc: "Bienes raíces, capital privado y expansión de marca. Identificando y desarrollando oportunidades de inversión en entornos estratégicos.",
-        extraParagraph: "Identificamos y desarrollamos oportunidades de inversión en entornos estratégicos, asegurando un crecimiento sólido y sostenido de los activos del grupo. Desde inmuebles corporativos hasta vehículos de inversión alternativos — conectamos la tradición empresarial española con la audacia de los mercados árabes y americanos.",
+        extraParagraph: "Identificamos y desarrollamos oportunidades de inversión en entornos estratégicos, asegurando un crecimiento sólido y sostenido de los activos del grupo. Desde inmuebles corporativos hasta vehículos de inversión alternativos — conectamos la tradición empresarial española con la audacia de los mercados árabes.",
         capabilitiesHeading: "Capital con precisión. Crecimiento con legado.",
         pillars: [
-          { label: "Inmuebles Corporativos", detail: "Identificación y desarrollo de inmuebles corporativos premium en los nodos financieros clave: Madrid, Dubái, Miami y El Cairo." },
+          { label: "Inmuebles Corporativos", detail: "Identificación y desarrollo de inmuebles corporativos premium en los nodos financieros clave: Madrid, Dubái y El Cairo." },
           { label: "Expansión de Marca y Grupo", detail: "Gestión estratégica y expansión de las marcas propias de Evolvix Global — impulsando un crecimiento sólido y sostenido de los activos del grupo en nuevos mercados en menos de 24 meses." },
           { label: "Capital Privado y Deuda de Infraestructuras", detail: "Gestión de carteras multi-clase: participaciones de capital privado, instrumentos de deuda de infraestructuras y mandatos soberanos para capital institucional." },
-          { label: "Vehículos de Inversión Alternativos", detail: "Vehículos alternativos estructurados para co-inversión junto a socios institucionales — alineados con el triángulo geográfico del grupo: Europa, MENA y América." },
+          { label: "Vehículos de Inversión Alternativos", detail: "Vehículos alternativos estructurados para co-inversión junto a socios institucionales — alineados con el enfoque geográfico del grupo: Europa y MENA." },
         ]
       }
     },

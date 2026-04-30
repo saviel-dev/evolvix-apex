@@ -25,7 +25,6 @@ const CITIES: City[] = [
   { name: "Madrid",    country: "ES",  coordinates: [-3.70,  40.41], role: "Operations Hub" },
   { name: "London",   country: "UK",  coordinates: [-0.12,  51.50], role: "Financial Intelligence" },
   { name: "Paris",    country: "FR",  coordinates: [2.35,   48.85], role: "European Capital" },
-  { name: "Miami",    country: "US",  coordinates: [-80.19, 25.77], role: "Americas Gateway" },
   { name: "Cairo",    country: "EG",  coordinates: [31.23,  30.06], role: "Africa & MENA Bridge" },
   { name: "Dubai",    country: "UAE", coordinates: [55.27,  25.20], role: "Emerging Logistics" },
   { name: "Singapore",country: "SG",  coordinates: [103.82,  1.35], role: "Innovation Division" },
@@ -38,16 +37,13 @@ const ARCS: [City, City][] = [
   [CITIES[0], CITIES[2]], // Madrid - Paris
   [CITIES[1], CITIES[2]], // London - Paris
 
-  // Transatlantic
-  [CITIES[2], CITIES[3]], // Paris - Miami
-
   // MENA connections
-  [CITIES[4], CITIES[5]], // Cairo - Dubai
-  [CITIES[5], CITIES[6]], // Dubai - Singapore
+  [CITIES[3], CITIES[4]], // Cairo - Dubai
+  [CITIES[4], CITIES[5]], // Dubai - Singapore
 
   // Strategic cross-connections
-  [CITIES[0], CITIES[4]], // Madrid - Cairo
-  [CITIES[1], CITIES[4]], // London - Cairo
+  [CITIES[0], CITIES[3]], // Madrid - Cairo
+  [CITIES[1], CITIES[3]], // London - Cairo
 ];
 
 // Gold/Copper palette

@@ -143,13 +143,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "B2B operations partner — international trade, business intelligence, digital security and project delivery across Europe, MENA and America.",
+          "B2B operations partner — international trade, business intelligence, digital security and project delivery across Europe and MENA.",
       },
       { property: "og:title", content: "Evolvix Global — The Architecture of Success" },
       {
         property: "og:description",
         content:
-          "Partner operacional B2B — comercio internacional, inteligencia de negocio, seguridad digital y entrega de proyectos en Europa, MENA y América.",
+          "Partner operacional B2B — comercio internacional, inteligencia de negocio, seguridad digital y entrega de proyectos en Europa y MENA.",
       },
     ],
   }),
@@ -325,7 +325,6 @@ function HeroSection() {
               [
                 "Madrid · Central Operations",
                 "París · Innovation Hub",
-                "Miami · America Gateway",
                 "Dubái · Capital & Emerging Markets",
                 "El Cairo · Infrastructure & MENA",
                 "EVOLVIX GLOBAL · B2B Operations Partner",
@@ -1074,7 +1073,7 @@ function TrustStrip() {
   const stats = [
     { value: "40%", label: isEs ? "Reducción de retrasos en comercio internacional" : "Reduction in international trade delays", delay: 0 },
     { value: "60%", label: isEs ? "Menos tiempo en reporting con BI" : "Less time spent on reporting with BI", delay: 200 },
-    { value: "5", label: isEs ? "Ciudades: Madrid, París, Miami, Dubái y El Cairo" : "Cities: Madrid, Paris, Miami, Dubai & Cairo", delay: 400 },
+    { value: "4", label: isEs ? "Ciudades: Madrid, París, Dubái y El Cairo" : "Cities: Madrid, Paris, Dubai & Cairo", delay: 400 },
     { value: "95%", label: isEs ? "Proyectos entregados en plazo y presupuesto" : "Projects delivered on time and on budget", delay: 600 },
   ];
   return (
