@@ -120,9 +120,9 @@ function TalentPage() {
               <p className="mt-6 max-w-md text-sm font-light leading-relaxed text-smoke">{p.accessBody}</p>
             </Reveal>
 
-            <Reveal variant="fade" delay={120} className="md:col-span-7 mt-2 md:mt-0 md:max-w-[42rem] md:ml-auto w-full">
+            <Reveal variant="fade" delay={120} className="md:col-span-7 mt-2 md:mt-0 md:max-w-[36rem] md:ml-auto w-full">
               <form
-                className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 bg-surface/40 p-4 sm:p-6 border border-hairline"
+                className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 bg-surface/40 p-3 sm:p-5 border border-hairline"
                 onSubmit={handleSubmit}
               >
                 <div className="sm:col-span-1">
@@ -155,17 +155,17 @@ function TalentPage() {
                       name="attachment"
                       accept="application/pdf,.pdf"
                       required
-                      className="mt-2 w-full border border-hairline bg-transparent px-3 py-2.5 text-xs text-titanium sm:text-sm file:mr-3 file:border-0 file:bg-gold/15 file:px-3 file:py-1.5 file:text-[10px] sm:file:text-xs file:font-semibold file:text-gold hover:file:bg-gold/25"
+                      className="mt-2 w-full border border-hairline bg-transparent px-3 py-2 text-xs text-titanium sm:text-sm file:mr-3 file:border-0 file:bg-gold/15 file:px-3 file:py-1.5 file:text-[10px] sm:file:text-xs file:font-semibold file:text-gold hover:file:bg-gold/25"
                     />
                     <p className="mt-2 text-xs text-smoke">{p.cvHint}</p>
                   </label>
                 </div>
 
-                <div className="sm:col-span-2 mt-1">
+                <div className="sm:col-span-2 mt-0.5">
                   <button
                     type="submit"
                     disabled={status === "loading" || status === "success"}
-                    className="inline-flex w-full sm:w-fit justify-center items-center gap-3 border border-titanium px-5 py-2.5 text-mono-label text-background bg-titanium transition-colors duration-500 hover:bg-transparent hover:text-titanium disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="inline-flex w-full sm:w-fit justify-center items-center gap-3 border border-titanium px-4 py-2 text-mono-label text-background bg-titanium transition-colors duration-500 hover:bg-transparent hover:text-titanium disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {status === "loading"
                       ? lang === "es"
@@ -211,7 +211,7 @@ function Field({
   required?: boolean;
 }) {
   const base =
-    "mt-3 w-full bg-transparent border-b border-hairline py-3 text-titanium placeholder:text-smoke/60 focus:outline-none focus:border-titanium transition-colors duration-500";
+    "mt-2 w-full bg-transparent border-b border-hairline py-2 text-sm text-titanium placeholder:text-smoke/60 focus:outline-none focus:border-titanium transition-colors duration-500";
 
   return (
     <label className="block">
@@ -219,7 +219,7 @@ function Field({
       {textarea ? (
         <textarea
           name={name}
-          rows={3}
+          rows={2}
           placeholder={placeholder}
           required={required}
           className={`${base} resize-none`}
